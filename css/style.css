@@ -1,209 +1,143 @@
-/* ESTILOS RETRO APPLE - PROYECTO FINAL INTERFACES
-   Personalización basada en variables dinámicas para Modo Claro/Oscuro 
-*/
-
 :root {
-	/* PALETA MODO CLARO (System 7 Apple) */
-	--bg-main: #e0e0e0; /* Gris clásico Mac */
-	--bg-card: #ffffff; /* Fondo de tarjetas blanco */
-	--text-primary: #000000; /* Texto negro sólido */
-	--border-retro: #000000; /* Bordes definidos */
-	--accent: #5e5eff; /* Azul retro saturado */
-	--shadow-retro: 5px 5px 0px #000000;
-	--grid-color: rgba(0, 0, 0, 0.05);
-	--grid-size: 30px; /* Tamaño del cuadrado */
-	--bg-primary: #fff;
+    --bg-main: #e0e0e0;
+    --bg-card: #ffffff;
+    --text-primary: #000000;
+    --border-retro: #000000;
+    --accent: #5e5eff;
+    --shadow-retro: 5px 5px 0px #000000;
+    --grid-color: rgba(0, 0, 0, 0.05);
+    --grid-size: 30px;
+    --bg-primary: #fff;
+    --retro-bg: #e0e0e0;
+    --retro-card: #ffffff;
+    --retro-text: #000000;
+    --retro-border: #000000;
 }
 
-/* REQUISITO: Cambio integral de aspectos del HTML en Modo Oscuro */
 [data-bs-theme="dark"] {
-	--bg-main: #1a1a1a; /* Fondo oscuro */
-	--bg-card: #2d2d2d; /* Tarjetas gris oscuro */
-	--text-primary: #e0e0e0; /* Texto claro */
-	--border-retro: #e0e0e0; /* Bordes claros */
-	--accent: #5e5eff; /* Azul cian retro */
-	--shadow-retro: 5px 5px 0px #e0e0e0;
-	--grid-color: rgba(255, 255, 255, 0.03);
-	--btn-text: #e0e0e0;
+    --bg-main: #1a1a1a;
+    --bg-card: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --border-retro: #e0e0e0;
+    --accent: #5e5eff;
+    --shadow-retro: 5px 5px 0px #e0e0e0;
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --btn-text: #e0e0e0;
+    --retro-bg: #1a1a1a;
+    --retro-card: #2d2d2d;
+    --retro-text: #e0e0e0;
+    --retro-border: #e0e0e0;
 }
+
 [data-bs-theme="dark"] .btn {
-	color: var(--btn-text) !important;
+    color: var(--btn-text) !important;
 }
 
-/* APLICACIÓN GLOBAL AL BODY */
 body {
-	background-color: var(--retro-bg) !important;
-	/* Aplicación de la cuadrícula */
-	background-image:
-		linear-gradient(var(--grid-color) 1px, transparent 1px),
-		linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-	background-size: var(--grid-size) var(--grid-size);
-	/* Aseguramos que el fondo no se repita de forma extraña */
-	background-attachment: fixed;
-	transition: background-color 0.3s ease;
+    background-color: var(--retro-bg) !important;
+    color: var(--retro-text) !important;
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* NAVBAR RETRO */
 .navbar {
-	background-color: var(--bg-main) !important;
-	border-bottom: 3px solid var(--border-retro) !important;
+    background-color: var(--bg-main) !important;
+    border-bottom: 3px solid var(--border-retro) !important;
 }
 
 .navbar-brand,
 .nav-link {
-	color: var(--text-primary) !important;
-	text-transform: uppercase;
-	font-weight: bold;
+    color: var(--text-primary) !important;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .nav-link:hover {
-	background-color: var(--border-retro);
-	color: var(--bg-main) !important;
+    background-color: var(--border-retro);
+    color: var(--bg-main) !important;
 }
 
-/* SECCIONES Y HEADER */
-header,
-section {
-	background-color: transparent !important; /* Permite que el color del body mande */
-	border-color: var(--border-retro) !important;
-    border-bottom: 4px solid var(--retro-border) !important;
-    /* Añadimos un margen para que no pegue con la cuadrícula si quieres que destaque más */
-    margin-bottom: 20px;
-}
-
-/* TARJETAS (CARDS) - Estética de ventanas antiguas */
-.card {
-	background-color: var(--bg-card) !important;
-	color: var(--text-primary) !important;
-	border: 3px solid var(--border-retro) !important;
-	border-radius: 0px !important; /* Sin redondeo para estilo vintage */
-	box-shadow: var(--shadow-retro) !important;
-	transition: transform 0.2s ease;
-}
-
-.card:hover {
-	transform: translate(-3px, -3px);
-	box-shadow: 8px 8px 0px var(--border-retro) !important;
-}
-
-/* BOTONES RETRO */
-.btn {
-	border-radius: 0px !important;
-	border: 3px solid var(--border-retro) !important;
-	font-weight: bold;
-	text-transform: uppercase;
-	box-shadow: 3px 3px 0px var(--border-retro);
-}
-
-.btn-primary {
-	background-color: var(--accent) !important;
-	color: white !important;
-}
-.btn-primary:hover {
-	/* Invertimos colores para un efecto retro clásico */
-	background-color: var(--text-primary) !important;
-	color: var(--bg-main) !important;
-}
-
-.btn:active {
-	transform: translate(2px, 2px);
-	box-shadow: none;
-}
-
-/* HABILIDADES (SKILLS) - Cajas personalizadas */
-#skills .border {
-	background-color: var(--bg-card) !important;
-	border: 2px solid var(--border-retro) !important;
-	color: var(--text-primary);
-}
-
-/* FOOTER */
-footer {
-	border-top: 3px solid var(--border-retro);
-	background-color: var(--bg-main) !important;
-	color: var(--text-primary) !important;
-}
-
-/* IMÁGENES */
-.rounded-circle {
-	border: 3px solid var(--border-retro) !important;
-	background-color: var(--bg-card);
-}
-/* Escala de grises Retro Apple */
-:root {
-	/* MODO CLARO */
-	--retro-bg: #e0e0e0; /* Gris claro Mac clásico */
-	--retro-card: #ffffff;
-	--retro-text: #000000;
-	--retro-border: #000000;
-}
-
-/* MODO OSCURO - Requisito: Cambio integral de aspectos del HTML */
-[data-bs-theme="dark"] {
-	--retro-bg: #1a1a1a; /* Gris muy oscuro/Negro */
-	--retro-card: #2d2d2d; /* Escala de grises para tarjetas */
-	--retro-text: #e0e0e0; /* Texto gris claro */
-	--retro-border: #e0e0e0;
-}
-
-/* APLICACIÓN TOTAL AL DOCUMENTO */
-body {
-	background-color: var(--retro-bg) !important;
-	color: var(--retro-text) !important;
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease; /* Transición suave */
-}
-
-/* HEADER Y SECCIONES */
-/* Forzamos a que las secciones hereden el fondo del body */
 header,
 section,
 footer {
-	background-color: transparent !important;
-	border-color: var(--retro-border) !important;
+    background-color: transparent !important;
+    border-color: var(--retro-border) !important;
+    margin-bottom: 20px;
 }
 
-/* CARDS CON ESCALA DE GRISES */
-.card {
-	background-color: var(--retro-card) !important;
-	color: var(--retro-text) !important;
-	border: 3px solid var(--retro-border) !important;
-	box-shadow: 5px 5px 0px var(--retro-border) !important;
+header,
+section {
+    border-bottom: 4px solid var(--retro-border) !important;
 }
-/* --- ESTILO RETRO PARA LA FOTO DE PERFIL --- */
-/* --- ESTILO PURO RETRO PARA FOTO DE PERFIL (Vintage Mac/PC) --- */
-/* --- ESTILO RETRO SUAVIZADO (Vintage Soft) --- */
-/* Se aplica a imágenes, tarjetas y contenedores de formación */
 
-/* --- ESTILO RETRO REDONDEADO PARA FOTO DE PERFIL --- */
+.card,
+.retro-container {
+    background-color: var(--retro-card) !important;
+    color: var(--retro-text) !important;
+    border: 3px solid var(--retro-border) !important;
+    border-radius: 0px !important;
+    box-shadow: 3px 3px 0px var(--retro-border) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px var(--border-retro) !important;
+}
+
+.btn {
+    border-radius: 0px !important;
+    border: 3px solid var(--border-retro) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0px var(--border-retro);
+}
+
+.btn-primary {
+    background-color: var(--accent) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-primary) !important;
+    color: var(--bg-main) !important;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+#skills .border {
+    background-color: var(--bg-card) !important;
+    border: 2px solid var(--border-retro) !important;
+    color: var(--text-primary);
+}
+
+footer {
+    border-top: 3px solid var(--border-retro);
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+}
+
+.rounded-circle {
+    border: 3px solid var(--border-retro) !important;
+    background-color: var(--bg-card);
+}
+
 .img-profile-retro {
-	/* Mantenemos el redondeo circular inicial */
-	border-radius: 50% !important;
-
-	/* Borde grueso y sombra sólida según requisitos visuales */
-	border: 5px solid var(--retro-border) !important;
-	background-color: var(--retro-card);
-	transition: all 0.2s ease-in-out;
-	object-fit: cover; /* Asegura que la foto no se deforme */
+    border-radius: 50% !important;
+    border: 5px solid var(--retro-border) !important;
+    background-color: var(--retro-card);
+    transition: all 0.2s ease-in-out;
+    object-fit: cover;
 }
 
 .img-profile-retro:hover {
-	transform: translate(-4px, -4px);
-	box-shadow: 5px 5px 0px var(--retro-border) !important;
+    transform: translate(-4px, -4px);
+    box-shadow: 5px 5px 0px var(--retro-border) !important;
 }
-
-/* --- TARJETAS CON BORDE SUAVIZADO (Vintage Soft) --- */
-.card,
-.retro-container {
-	border-radius: 0px !important; 
-	border: 3px solid var(--retro-border) !important;
-	box-shadow: 3px 3px 0px var(--retro-border) !important;
-	background-color: var(--retro-card) !important;
-}
-/* .btn-sm{
-    color: #ffffff;
-}
-.btn-outline-dark{
-    color: #ffffff;
-} */
