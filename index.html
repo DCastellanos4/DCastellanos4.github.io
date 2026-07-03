@@ -1,30 +1,43 @@
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="es" data-bs-theme="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>David Castellanos | Portfolio Profesional</title>
+		<title>David Castellanos — QA Automation Engineer</title>
+
+		<!-- SEO -->
+		<meta name="description" content="QA Automation Engineer especializado en Karate DSL y Playwright. Proyectos en producción para Mango y El Corte Inglés desde Tantin Solutions." />
+		<meta name="author" content="David Castellanos" />
+
+		<!-- Open Graph (LinkedIn, WhatsApp, Slack...) -->
+		<meta property="og:title" content="David Castellanos — QA Automation Engineer" />
+		<meta property="og:description" content="QA Automation Engineer especializado en Karate DSL y Playwright. Proyectos en producción para Mango y El Corte Inglés." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://dcastellanos4.github.io/portfolio-retro/" />
+		<meta property="og:image" content="https://dcastellanos4.github.io/portfolio-retro/img/davidcontrake.jpg" />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
-
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-
-		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<script src="js/main.js"></script>
-
-		<nav class="navbar navbar-expand-lg sticky-top shadow-sm border-bottom">
+		<nav class="navbar navbar-expand-lg sticky-top">
 			<div class="container">
-				<a class="navbar-brand fw-bold" href="#">David Castellanos</a>
+				<a class="navbar-brand p-0" href="#">
+					<img src="img/logo.svg" alt="DC" height="30" class="navbar-logo" />
+				</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -34,329 +47,381 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="ms-lg-3 d-flex align-items-center order-lg-last">
-					<button
-						class="btn btn-sm shadow-retro"
-						id="btnTheme"
-						onclick="toggleTheme()"
-					>
-						<span id="themeIcon">🌙</span> <span id="btnText">Modo Oscuro</span>
-					</button>
-				</div>
-
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto text-uppercase fw-bold">
-						<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-						<li class="nav-item">
-							<a class="nav-link" href="#experience">Experiencia</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#skills">Habilidades</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#portfolio">Proyectos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#education">Formación</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#contact">Contacto</a>
-						</li>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+						<li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+						<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+						<li class="nav-item"><a class="nav-link" href="#portfolio">Proyectos</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-		<header id="home" class="py-5 text-center border-bottom">
-			<div class="container py-4">
-				<img
-					src="img/davidcontrake.jpg"
-					class="img-profile-retro mb-4"
-					width="180"
-					alt="David Castellanos"
-				/>
-				<h1 class="display-4 fw-bold">David Castellanos</h1>
-				<p class="lead mb-4">
-					Web Developer | Técnico Superior en desarrollo de aplicaciones web
-				</p>
-				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-					<a href="#contact" class="btn btn-primary btn-lg px-4 shadow-retro"
-						>Contactar</a
-					>
-					<a
-						href="img/cv.pdf"
-						class="btn btn-outline-secondary btn-lg px-4 shadow-retro"
-						target="_blank"
-						>Curriculum</a
-					>
+		<!-- HERO -->
+		<header id="home">
+			<div class="container">
+				<div class="row align-items-center g-5">
+					<div class="col-md-4 text-center text-md-start">
+						<img
+							src="img/davidcontrake.jpg"
+							class="img-profile-retro"
+							width="200"
+							alt="David Castellanos"
+						/>
+					</div>
+					<div class="col-md-8">
+						<p class="hero-greeting">Hola &mdash;</p>
+						<p class="hero-label mb-1"><span class="hero-role">// QA Automation Engineer</span><span class="cursor-blink">_</span></p>
+						<h1 class="hero-name">David<br />Castellanos</h1>
+						<p class="hero-tagline">Encuentro los bugs antes de que los encuentren tus usuarios.</p>
+						<p class="hero-sub mt-2 mb-4">
+							<i class="bi bi-geo-alt"></i> Aranjuez, Madrid &nbsp;&middot;&nbsp;
+							<i class="bi bi-telephone"></i> 635 605 605
+						</p>
+						<div class="d-flex gap-2 flex-wrap">
+							<a href="#contact" class="btn btn-primary px-4">Contactar</a>
+							<a href="img/cv.pdf" class="btn btn-ghost px-4" target="_blank">
+								Descargar CV
+							</a>
+							<a
+								href="https://github.com/DCastellanos4"
+							class="btn btn-icon px-3"
+							target="_blank"
+							aria-label="GitHub"
+						><i class="bi bi-github"></i></a>
+						<a
+							href="https://es.linkedin.com/in/david-castellanos-lopez"
+							class="btn btn-icon px-3"
+								target="_blank"
+								aria-label="LinkedIn"
+							><i class="bi bi-linkedin"></i></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<section id="experience" class="py-5 border-bottom">
+		<!-- ABOUT -->
+		<section id="about">
 			<div class="container">
-				<h2 class="text-center mb-5 fw-bold text-uppercase">
-					Experiencia Profesional
-				</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-9">
-						<div class="card mb-4 border-retro">
-							<div class="card-body p-4">
-								<div
-									class="d-flex justify-content-between align-items-center mb-2"
-								>
-									<h5 class="fw-bold mb-0 text-uppercase">
-										Frontend & Quality Dev (Prácticas)
-									</h5>
-								</div>
-								<h6 class="text-muted fw-bold">
-									Tanting Solutions | Cliente: El Corte Inglés
-								</h6>
-								<p class="card-text mt-3">
-									Aportando soluciones técnicas en proyectos de gran escala para
-									<strong>El Corte Inglés</strong>. Enfoque especializado en:
-								</p>
-								<ul class="card-text">
-									<li>
-										Desarrollo y optimización de interfaces
-										<strong>Frontend</strong>.
-									</li>
-									<li>
-										Aseguramiento de la
-										<strong>Calidad de Código</strong> mediante estándares
-										profesionales.
-									</li>
-									<li>
-										Colaboración en flujos de trabajo basados en metodologías
-										ágiles.
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="card mb-4">
-							<div class="card-body p-4">
-								<h5 class="fw-bold mb-2 text-uppercase">Web Dev Intern</h5>
-								<h6 class="text-muted fw-bold">Club Voleibol Aranjuez</h6>
-								<p class="card-text mt-3">
-									Mantenimiento de la web oficial y optimización de UX
-									utilizando HTML, CSS y JS.
-								</p>
-							</div>
-						</div>
+						<h2 class="section-label mb-4">Perfil</h2>
+						<p class="about-text">
+							QA Automation Engineer en Tantin Solutions. Escribo tests de APIs REST con <strong>Karate DSL</strong> y valido flujos end-to-end con <strong>Playwright</strong> en proyectos de producci&oacute;n para <strong>Mango</strong> y <strong>El Corte Ingl&eacute;s</strong>.
+						</p>
+						<p class="about-text">
+							Manejo JavaScript, PHP y Java, y monto pipelines con <strong>Jenkins</strong> y <strong>GitHub Actions</strong>. Fuera del trabajo entreno un equipo de voleibol &mdash; lo que me ha ense&ntilde;ado m&aacute;s sobre trabajo en equipo que cualquier metodolog&iacute;a &aacute;gil. Busco un sitio donde la calidad entre en el proceso desde el sprint uno, no al final como parche.
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="skills" class="py-5 border-bottom">
-			<div class="container text-center">
-				<h2 class="mb-5 fw-bold text-uppercase">Habilidades Técnicas</h2>
-				<div class="row g-4">
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-filetype-html display-4"></i>
-							<i class="bi bi-filetype-css display-4"></i>
-							<p class="mt-2 fw-bold">HTML5 & CSS3</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-filetype-js display-4"></i>
-							<p class="mt-2 fw-bold">JavaScript</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-code-square display-4"></i>
-							<p class="mt-2 fw-bold">Java & PHP</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-bootstrap display-4"></i>
-							<p class="mt-2 fw-bold">Bootstrap 5</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-github display-4"></i>
-							<p class="mt-2 fw-bold">Git & GitHub</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-cloud-check display-4"></i>
-							<p class="mt-2 fw-bold">AWS Cloud</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-wordpress display-4"></i>
-							<p class="mt-2 fw-bold">WordPress</p>
-						</div>
-					</div>
-					<div class="col-6 col-md-3">
-						<div class="p-4 border shadow-retro h-100">
-							<i class="bi bi-kanban display-4"></i>
-							<p class="mt-2 fw-bold">SCRUM / Agile</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="portfolio" class="py-5 border-bottom">
+		<!-- EXPERIENCE -->
+		<section id="experience">
 			<div class="container">
-				<h2 class="text-center mb-5 fw-bold text-uppercase">
-					Proyectos Destacados
-				</h2>
+				<h2 class="section-label mb-5">Experiencia</h2>
+				<div class="row justify-content-center">
+					<div class="col-md-9">
+						<div class="timeline">
 
-				<div class="row g-4 justify-content-center">
-					<div class="col-md-4">
-						<div class="card h-100 shadow-retro">
-							<div class="card-body">
-								<h5 class="card-title fw-bold text-uppercase">
-									Sistema de gestión de cursos
-								</h5>
-								<p class="card-text small">
-									Aplicación web para la administración de cursos de formación y
-									control de flujos de trabajo.
-								</p>
-								<div class="mt-2">
-									<span class="badge bg-dark rounded-0">PHP</span>
-									<span class="badge bg-dark rounded-0">Git</span>
+							<div class="timeline-item">
+								<div class="timeline-date">Mayo 2026<br />Actualidad</div>
+								<div class="timeline-card">
+									<div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+										<div>
+											<h5 class="fw-bold mb-0">QA Automation Engineer</h5>
+											<p class="text-muted fw-bold mb-0 small">Tantin Solutions &middot; Madrid</p>
+										</div>
+										<span class="badge-retro">En activo</span>
+									</div>
+									<ul class="timeline-list">
+										<li>Escribo y mantengo suites de tests para APIs REST con <strong>Karate DSL</strong>.</li>
+										<li>QA en producción para <strong>Mango</strong> y <strong>El Corte Inglés</strong>.</li>
+										<li>Detecto errores antes de que lleguen a producción y propongo cambios concretos en el proceso.</li>
+										<li>Reporto resultados directamente al equipo de desarrollo y actualizo la suite cuando cambia la API.</li>
+									</ul>
 								</div>
 							</div>
-							<div class="card-footer bg-transparent border-0 pb-3">
+
+							<div class="timeline-item">
+								<div class="timeline-date">Mar 2026<br />Mayo 2026</div>
+								<div class="timeline-card">
+									<div class="mb-3">
+										<h5 class="fw-bold mb-0">
+											QA Automation Intern
+											<span class="fw-normal text-muted small">(Prácticas 2º DAW)</span>
+										</h5>
+										<p class="text-muted fw-bold mb-0 small">Tantin Solutions &middot; Madrid</p>
+									</div>
+									<ul class="timeline-list">
+											<li>Pruebas automatizadas en proyectos de cliente desde el primer día.</li>
+										<li>Integrado en el flujo de trabajo del equipo senior de QA sin período de adaptación.</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="timeline-item">
+								<div class="timeline-date">2023<br />Actualidad</div>
+								<div class="timeline-card">
+									<div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+										<div>
+											<h5 class="fw-bold mb-0">Entrenador de Voleibol</h5>
+											<p class="text-muted fw-bold mb-0 small">Federación Madrileña de Voleibol &middot; Madrid</p>
+										</div>
+										<span class="badge-retro">En activo</span>
+									</div>
+									<ul class="timeline-list">
+										<li>Dirijo los entrenamientos y competiciones de un equipo juvenil.</li>
+										<li>Diseño sesiones semanales adaptadas al nivel del equipo, técnica y táctica.</li>
+										<li>Campeones de la competición escolar de Madrid 2024.</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SKILLS -->
+		<section id="skills">
+			<div class="container">
+				<h2 class="section-label mb-5">Habilidades</h2>
+				<div class="row justify-content-center">
+					<div class="col-lg-11">
+						<div class="row g-3">
+							<div class="col-sm-6 col-lg-4">
+								<div class="skill-group">
+									<p class="skill-group-title"><i class="bi bi-bug me-2"></i>Testing &amp; QA</p>
+									<div class="skill-tags">
+										<span class="skill-tag highlight">Karate DSL</span>
+										<span class="skill-tag highlight">Playwright</span>
+										<span class="skill-tag">API Testing</span>
+										<span class="skill-tag">QA Automation</span>
+										<span class="skill-tag">Backend Testing</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="skill-group">
+									<p class="skill-group-title"><i class="bi bi-code-slash me-2"></i>Lenguajes</p>
+									<div class="skill-tags">
+										<span class="skill-tag highlight">JavaScript</span>
+										<span class="skill-tag highlight">PHP</span>
+										<span class="skill-tag">Java</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="skill-group">
+									<p class="skill-group-title"><i class="bi bi-arrow-repeat me-2"></i>CI/CD &amp; DevOps</p>
+									<div class="skill-tags">
+										<span class="skill-tag highlight">Jenkins</span>
+										<span class="skill-tag highlight">GitHub Actions</span>
+										<span class="skill-tag highlight">AWS</span>
+										<span class="skill-tag">Jira</span>
+										<span class="skill-tag">CI/CD</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="skill-group">
+									<p class="skill-group-title"><i class="bi bi-window me-2"></i>Web &amp; Entorno</p>
+									<div class="skill-tags">
+										<span class="skill-tag">HTML5</span>
+										<span class="skill-tag">CSS3</span>
+										<span class="skill-tag">Vue.js</span>
+										<span class="skill-tag">Git</span>
+										<span class="skill-tag">SCRUM</span>
+										<span class="skill-tag">Corp. env.</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="skill-group">
+									<p class="skill-group-title"><i class="bi bi-cpu me-2"></i>IA &amp; Agentes</p>
+									<div class="skill-tags">
+										<span class="skill-tag highlight">Flujos ag&eacute;nticos</span>
+										<span class="skill-tag">n8n</span>
+										<span class="skill-tag">GitHub Copilot</span>
+										<span class="skill-tag">Antigravity</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROJECTS -->
+		<section id="portfolio">
+			<div class="container">
+				<h2 class="section-label mb-5">Proyectos</h2>
+				<div class="row g-4 justify-content-center">
+
+					<div class="col-md-4">
+						<div class="card h-100">
+							<div class="card-body">
+								<h5 class="card-title fw-bold">Sistema de Gestión de Cursos</h5>
+								<p class="card-text small">
+									Gestión de cursos en PHP: CRUD completo, control de estados y flujo docente.
+								</p>
+								<div class="mt-2 d-flex flex-wrap gap-1">
+									<span class="skill-tag">PHP</span>
+									<span class="skill-tag">Git</span>
+								</div>
+							</div>
+							<div class="card-footer bg-transparent pb-3">
 								<a
 									href="https://github.com/DCastellanos4/PracticaCursosPHP"
-									class="btn btn-sm btn-outline-dark"
+									class="btn btn-sm btn-ghost"
 									target="_blank"
-									>VER CÓDIGO</a
-								>
+								>Ver código</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-md-4">
-						<div class="card h-100 shadow-retro">
+						<div class="card h-100">
 							<div class="card-body">
-								<h5 class="card-title fw-bold text-uppercase">
-									Web Club Voleibol
-								</h5>
+								<h5 class="card-title fw-bold">Web Club Voleibol</h5>
 								<p class="card-text small">
-									Rediseño y optimización de la interfaz del club, mejorando la
-									experiencia de usuario y el rendimiento frontend.
+									Rediseño del sitio del club: layout, velocidad y accesibilidad móvil.
 								</p>
-								<div class="mt-2">
-									<span class="badge bg-dark rounded-0">HTML/CSS</span>
-									<span class="badge bg-dark rounded-0">JS</span>
+								<div class="mt-2 d-flex flex-wrap gap-1">
+									<span class="skill-tag">HTML/CSS</span>
+									<span class="skill-tag">JavaScript</span>
 								</div>
 							</div>
-							<div class="card-footer bg-transparent border-0 pb-3">
+							<div class="card-footer bg-transparent pb-3">
 								<a
 									href="https://clubvoleibolpruebas.netlify.app/"
-									class="btn btn-sm btn-outline-dark"
+									class="btn btn-sm btn-ghost"
 									target="_blank"
-									>VER CÓDIGO</a
-								>
+								>Ver proyecto</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-md-4">
-						<div class="card h-100 shadow-retro">
+						<div class="card h-100">
 							<div class="card-body">
-								<h5 class="card-title fw-bold text-uppercase">
-									Scarlatti-Gest
-								</h5>
+								<h5 class="card-title fw-bold">Scarlatti-Gest</h5>
 								<p class="card-text small">
-									Desarrollo de una arquitectura frontend para el consumo de una
-									API y una gestión de centros academicos.
+									Arquitectura frontend para el consumo de una API REST y
+									gestión de centros académicos.
 								</p>
-								<div class="mt-2">
-									<span class="badge bg-dark rounded-0">Vue</span>
-									<span class="badge bg-dark rounded-0">JS</span>
+								<div class="mt-2 d-flex flex-wrap gap-1">
+									<span class="skill-tag">Vue.js</span>
+									<span class="skill-tag">JavaScript</span>
 								</div>
 							</div>
-							<div class="card-footer bg-transparent border-0 pb-3">
+							<div class="card-footer bg-transparent pb-3">
 								<a
 									href="https://github.com/DCastellanos4/SegundoSprintCliente"
-									class="btn btn-sm btn-outline-dark"
+									class="btn btn-sm btn-ghost"
 									target="_blank"
-									>VER CÓDIGO</a
-								>
+								>Ver código</a>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>
 
-		<section id="education" class="py-5 border-bottom">
+		<!-- EDUCATION -->
+		<section id="education">
 			<div class="container">
-				<h2 class="text-center mb-5 fw-bold text-uppercase">Formación</h2>
+				<h2 class="section-label mb-5">Formación</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-9">
-						<div class="card p-4 shadow-retro">
-							<div class="card-body p-0">
-								<div class="d-flex align-items-start">
-									<i class="bi bi-mortarboard display-6 me-3"></i>
-									<div>
-										<h5 class="fw-bold mb-1 text-uppercase">
-											Técnico Superior en Desarrollo de Aplicaciones Web (DAW)
-										</h5>
-										<p class="mb-2 text-muted fw-bold">
-											I.E.S. Domenico Scarlatti | 2024 - 2026
-										</p>
-										<p class="card-text small">
-											Formación especializada en interfaces, sistemas ERP,
-											desarrollo frontend/backend y metodologías ágiles de
-											trabajo.
-										</p>
-									</div>
-								</div>
+
+						<div class="edu-item d-flex gap-4">
+							<div class="edu-year">2026<br />2027</div>
+							<div>
+								<h5 class="fw-bold mb-1">
+										Máster en Desarrollo Full Stack &amp; Arquitecturas Cloud
+									</h5>
+									<p class="text-muted fw-bold mb-2 small">
+										Tajamar &middot; Madrid &middot; <span class="badge-retro">En curso</span>
+									</p>
+									<p class="small mb-0">
+										Cloud, full stack y automatización de pruebas.
+										Sep&nbsp;2026&nbsp;—&nbsp;Jul&nbsp;2027.
+								</p>
 							</div>
 						</div>
 
-						<div class="card p-4 shadow-retro mt-4">
-							<div class="card-body p-0">
-								<div class="d-flex align-items-start">
-									<i class="bi bi-translate display-6 me-3"></i>
-									<div>
-										<h5 class="fw-bold mb-1 text-uppercase">Inglés Avanzado</h5>
-										<p class="mb-0 text-muted fw-bold">
-											Nivel Profesional / Técnico
-										</p>
-										<p class="mb-0 text-muted fw-bold">B2 LanguageCert</p>
-									</div>
-								</div>
+						<div class="edu-item d-flex gap-4 mt-4">
+							<div class="edu-year">2024<br />2026</div>
+							<div>
+								<h5 class="fw-bold mb-1">
+									Técnico Superior en Desarrollo de Aplicaciones Web (DAW)
+								</h5>
+								<p class="text-muted fw-bold mb-2 small">
+									IES Domenico Scarlatti &middot; Aranjuez, Madrid
+								</p>
+								<p class="small mb-0">
+									Desarrollo web completo: frontend, backend, bases de datos y metodologías ágiles.
+								</p>
 							</div>
 						</div>
+
+						<div class="edu-item d-flex gap-4 mt-4">
+							<div class="edu-year">B2</div>
+							<div>
+								<h5 class="fw-bold mb-1">Inglés — LanguageCert B2</h5>
+								<p class="text-muted fw-bold mb-0 small">Nivel profesional / técnico</p>
+							</div>
+						</div>
+
+						<div class="edu-item d-flex gap-4 mt-4">
+							<div class="edu-year">ES</div>
+							<div>
+								<h5 class="fw-bold mb-1">Español — Nativo</h5>
+								<p class="text-muted fw-bold mb-0 small">Lengua materna</p>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<footer id="contact" class="py-5 text-center">
+		<!-- CONTACT -->
+		<footer id="contact" class="text-center">
 			<div class="container">
-				<h2 class="mb-4 fw-bold">CONTACTO</h2>
-				<p class="mb-4 fw-bold">davidllanos2005@gmail.com</p>
-				<div>
+				<h2 class="section-label d-inline-block mb-4">Contacto</h2>
+				<p class="mb-1">
+					<a id="email-copy" href="mailto:davidllanos2005@gmail.com" class="contact-link" title="Copiar correo">
+						davidllanos2005@gmail.com
+					</a>
+				</p>
+				<p class="mb-4 text-muted small">635 605 605 &middot; Aranjuez, Madrid</p>
+				<div class="d-flex justify-content-center gap-3 flex-wrap">
 					<a
-						href="https://www.linkedin.com/in/david-castellanos-lopez/"
-						class="btn btn-outline-dark mx-2 shadow-retro"
+						href="https://es.linkedin.com/in/david-castellanos-lopez"
+						class="btn btn-ghost"
 						target="_blank"
-						>LinkedIn</a
-					>
+					><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
 					<a
 						href="https://github.com/dcastellanos4"
-						class="btn btn-outline-dark mx-2 shadow-retro"
+						class="btn btn-ghost"
 						target="_blank"
-						>GitHub</a
-					>
+					><i class="bi bi-github me-1"></i>GitHub</a>
+					<a href="img/cv.pdf" class="btn btn-primary" target="_blank">
+						<i class="bi bi-file-earmark-pdf me-1"></i>Descargar CV
+					</a>
 				</div>
+				<p class="mt-5 small text-muted">&copy; 2026 David Castellanos</p>
 			</div>
 		</footer>
 
@@ -365,5 +430,6 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
