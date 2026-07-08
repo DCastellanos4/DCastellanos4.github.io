@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Castellanos López — CV</title>
+<style>
+  /* ATS-safe typography (#font-extraction fix):
+     The bundled variable woff2 fonts (Space Grotesk / DM Sans) render with
+     glyph advances that make PDF text extractors inject spurious spaces inside
+     words (e.g. "SUM M ARY", "Germ any") — which corrupts ATS keyword parsing.
+     This template's job is clean machine-readable parsing, so we use a standard
+     static system sans stack instead. Verified clean via pypdf text extraction.
+     The lang="ja" rules reuse this Latin base stack (with a CJK fallback added);
+     the lang="ar" rules below intentionally define their own Arabic stack. */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Disable fi/fl/ffi ligatures. Headless Chromium substitutes these letter
+       pairs with the Unicode glyphs U+FB01/FB02/FB03 at PDF layout time, and PDF
+       text extractors (what ATS systems read) decode them back to those
+       codepoints, so "verification" becomes "veriﬁcation" and a literal keyword
+       search misses it. Setting this on every element covers headings and
+       competency tags too. Required ligatures (rlig) stay on, so Arabic shaping
+       is unaffected. */
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "dlig" 0;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    /* Disable ligatures here as well; see the * rule above. */
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "dlig" 0;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 2px 0;
+  }
+
+  /* === HEADER === */
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .contact-row a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .contact-row .separator {
+    color: #ccc;
+  }
+
+  /* === OPTIONAL PROFILE PHOTO (opt-in, DACH/European markets — #264) ===
+     Off by default: with no candidate.photo the  slot is empty, no
+     <img> is emitted, and the layout is byte-identical to a photoless CV.
+     When opted in (candidate.photo in config/profile.yml) the photo floats into
+     the top corner and the header/summary text wraps beside it. Photos are
+     penalized by US/UK/many-market ATS, so this is never on by default. */
+  .cv-photo {
+    float: right;
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 0 8px 14px;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+  }
+
+  /* === SECTIONS === */
+  .section {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  /* === PROFESSIONAL SUMMARY === */
+  .summary-text {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #2f2f2f;
+  }
+
+  /* Links must never break across lines */
+  a {
+    white-space: nowrap;
+  }
+
+  /* === CORE COMPETENCIES === */
+  .competencies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .competency-tag {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  /* === WORK EXPERIENCE === */
+  .job {
+    margin-bottom: 14px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .job-company {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .job-period {
+    font-size: 10.5px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .job-role {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .job-location {
+    font-size: 10px;
+    color: #888;
+  }
+
+  .job ul {
+    padding-left: 18px;
+    margin-top: 6px;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .job li strong {
+    font-weight: 600;
+  }
+
+  /* === PROJECTS === */
+  .project {
+    margin-bottom: 12px;
+  }
+
+  .project-title {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .project-badge {
+    font-size: 9px;
+    font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+
+  .project-desc {
+    font-size: 10.5px;
+    color: #444;
+    margin-top: 3px;
+    line-height: 1.55;
+  }
+
+  .project-tech {
+    font-size: 9.5px;
+    color: #888;
+    margin-top: 3px;
+  }
+
+  /* === EDUCATION === */
+  .edu-item {
+    margin-bottom: 8px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .edu-title {
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
+  }
+
+  .edu-org {
+    color: hsl(270, 70%, 45%);
+    font-weight: 500;
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .edu-desc {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* === CERTIFICATIONS === */
+  .cert-table {
+    display: table;
+    width: 100%;
+  }
+
+  .cert-item {
+    display: table-row;
+  }
+
+  .cert-item > * {
+    display: table-cell;
+    vertical-align: baseline;
+    padding-bottom: 6px;
+  }
+
+  .cert-title {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .cert-org {
+    color: hsl(270, 70%, 45%);
+    white-space: nowrap;
+  }
+
+  .cert-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+    text-align: right;
+    width: 44px;
+  }
+
+  /* === SKILLS === */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  .skill-item {
+    font-size: 10.5px;
+    color: #444;
+  }
+
+  .skill-category {
+    font-weight: 600;
+    color: #333;
+    font-size: 10.5px;
+  }
+
+  /* === PRINT === */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Keep a small right gutter for the print box. Right-aligned content
+       (job periods, education years) right-aligns to the content-box edge,
+       and the rightmost glyph's side bearing can spill ~1px past it and get
+       clipped by Chromium's print clip. A plain `.page` padding is reset to 0
+       here for print, which is why padding set outside @media print has no
+       effect; restoring a right gutter inside the print rule fixes it without
+       re-centering the page or hard-coding a per-format max-width. See #1341. */
+    .page {
+      padding: 0 0.18in 0 0;
+    }
+  }
+
+  /* === PAGE BREAK CONTROL === */
+  /* Only avoid breaking small atomic units (a cert row, an education line, the
+     header, a single competency or skill).  Sections and multi-bullet roles are
+     allowed to flow across a page boundary so content packs tight instead of
+     jumping wholesale and leaving large bottom gaps. */
+  .header,
+  .edu-item,
+  .cert-item,
+  .competency-tag,
+  .skill-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Keep a heading attached to the content that follows it, so headings are not
+     orphaned at the bottom of a page. */
+  .section-title,
+  .job-company,
+  .job-role,
+  .project-title {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* === RTL (Arabic) Support === */
+  html[lang="ar"] body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  }
+
+  html[lang="ar"] .header h1,
+  html[lang="ar"] .section-title,
+  html[lang="ar"] .job-company,
+  html[lang="ar"] .project-title,
+  html[lang="ar"] .competency-tag,
+  html[lang="ar"] .skill-category {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  }
+
+  html[lang="ar"] .header-gradient {
+    background: linear-gradient(to left, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+  }
+
+  html[lang="ar"] .job ul {
+    padding-right: 18px;
+    padding-left: 0;
+  }
+
+  html[lang="ar"] .project-badge {
+    margin-right: 6px;
+    margin-left: 0;
+  }
+
+  html[lang="ar"] .cert-year {
+    text-align: left;
+  }
+
+  html[lang="ar"] .cert-table {
+    direction: rtl;
+  }
+
+  html[lang="ar"] .cv-photo {
+    float: left;
+    margin: 0 14px 8px 0;
+  }
+
+  /* === CJK (Japanese) font fallback === */
+  /* The bundled webfonts are Latin-only (see #951). Without a CJK fallback,
+     Japanese text renders as tofu (□) in headless Chromium on any system
+     without a CJK system font (Linux/CI, minimal containers). The Latin brand
+     fonts are kept first so ASCII still uses Space Grotesk / DM Sans, then the
+     browser's per-glyph fallback picks the first installed CJK face for kana
+     and kanji. Mirrors the lang="ar" precedent above. */
+  html[lang="ja"] body {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+      'Yu Gothic', 'YuGothic', 'Noto Sans CJK JP', 'Noto Sans JP',
+      Meiryo, 'MS PGothic', sans-serif;
+  }
+
+  html[lang="ja"] .header h1,
+  html[lang="ja"] .section-title,
+  html[lang="ja"] .job-company,
+  html[lang="ja"] .project-title,
+  html[lang="ja"] .competency-tag,
+  html[lang="ja"] .skill-category {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+      'Yu Gothic', 'YuGothic', 'Noto Sans CJK JP', 'Noto Sans JP',
+      Meiryo, 'MS PGothic', sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  
+  <!-- HEADER -->
+  <div class="header">
+    <h1>David Castellanos López</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <a href="tel:+34 635 605 605">+34 635 605 605</a>
+      <span class="separator">|</span>
+      <a href="mailto:davidllanos2005@gmail.com">davidllanos2005@gmail.com</a>
+      <span class="separator">|</span>
+      <a href="https://es.linkedin.com/in/david-castellanos-lopez">linkedin.com/in/david-castellanos-lopez</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/DCastellanos4">github.com/DCastellanos4</a>
+      <span class="separator">|</span>
+      <span>Aranjuez, Madrid, España</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section">
+    <div class="section-title">Perfil Profesional</div>
+    <div class="summary-text">QA Automation Engineer y Desarrollador Web especializado en asegurar la calidad de plataformas empresariales críticas y en la construcción de arquitecturas Full Stack modernas. Con experiencia comercial en automatización de pruebas para líderes del sector retail como **El Corte Inglés** y **Mango**, así como en el diseño de suites robustas de API y rendimiento. Sólido dominio de tecnologías de desarrollo backend (Java, .NET C#) y frontend (Angular). Altamente orientado a la eficiencia mediante metodologías ágiles y flujos avanzados de CI/CD.</div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section">
+    <div class="section-title">Competencias Clave</div>
+    <div class="competencies-grid">
+            <span class="competency-tag">QA Automation</span>
+      <span class="competency-tag">API Testing</span>
+      <span class="competency-tag">Playwright</span>
+      <span class="competency-tag">Cucumber (BDD)</span>
+      <span class="competency-tag">Karate DSL</span>
+      <span class="competency-tag">JMeter / Gatling</span>
+      <span class="competency-tag">CI/CD Pipelines</span>
+      <span class="competency-tag">Java / .NET C#</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Experiencia Laboral</div>
+    
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Tantin Solutions</span>
+      <span class="job-period">Mayo 2026 - Presente</span>
+    </div>
+    <div class="job-role">QA Automation Engineer <span class="job-location">| Madrid, España</span></div>
+    <ul>
+      <li><strong>Microservicios Unity (El Corte Inglés):</strong> Desarrollo y mantenimiento de la regresión automatizada de APIs utilizando <strong>Karate DSL</strong> para validar los flujos logísticos críticos de disponibilidad, catálogo, reservas y suministro.</li>
+      <li><strong>Mango POS (Point of Sale):</strong> Colaboración activa en la validación funcional de la aplicación de escritorio POS basada en <strong>.NET C#</strong>, <strong>MAUI</strong> y arquitectura <strong>CQRS/MediatR</strong>, garantizando calidad de código medida en SonarQube.</li>
+      <li><strong>Pruebas de Rendimiento:</strong> Planificación y ejecución de simulaciones de carga, estrés y picos con <strong>JMeter</strong> y <strong>Gatling (Java DSL)</strong>, analizando cuellos de botella y logs en entornos de alta transaccionalidad.</li>
+      <li><strong>CI/CD Avanzado:</strong> Diseño, automatización y mantenimiento de pipelines de regresión diaria en <strong>Jenkins</strong> (usando scripts Groovy) e integración en pipelines basados en Git/GitLab.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Tantin Solutions</span>
+      <span class="job-period">Marzo 2026 - Mayo 2026</span>
+    </div>
+    <div class="job-role">QA Automation Intern (Prácticas 2º DAW) <span class="job-location">| Madrid, España</span></div>
+    <ul>
+      <li>Diseño y ejecución supervisada de planes de prueba y scripts de automatización con <strong>Karate DSL</strong> integrados en proyectos de clientes reales de la consultora.</li>
+      <li>Familiarización acelerada con metodologías ágiles (Scrum) y herramientas de gestión de defectos corporativas (Jira).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Club Voleibol Aranjuez</span>
+      <span class="job-period">Abril 2025 - Mayo 2025</span>
+    </div>
+    <div class="job-role">Desarrollador Front-end (Voluntariado) <span class="job-location">| Madrid, España</span></div>
+    <ul>
+      <li>Maquetación, desarrollo y mantenimiento de la página web oficial del club empleando HTML5, CSS3 y JavaScript vanilla.</li>
+      <li>Optimización de la responsividad móvil y corrección de fricciones de usabilidad y rendimiento detectadas con DevTools.</li>
+    </ul>
+  </div>
+
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Proyectos</div>
+    
+  <div class="project">
+    <span class="project-title">Simpleat QA Tests</span> <span class="project-badge">Automatización & Rendimiento</span>
+    <div class="project-desc">Diseño integral y de arquitectura desacoplada para la regresión automatizada E2E, de API y rendimiento de la plataforma SaaS de restauración Simpleat.</div>
+    <div class="project-tech"><strong>Tecnologías:</strong> Playwright, Cucumber (Gherkin/BDD), Karate DSL, Gatling 3.10 (Java DSL), JUnit 5, GitHub Actions.</div>
+  </div>
+
+  <div class="project">
+    <span class="project-title">ATLAS SaaS</span> <span class="project-badge">Plataforma de Calidad</span>
+    <div class="project-desc">Colaboración activa en el testeo y mantenimiento del monolito modular backend y frontend reactivo de la plataforma de análisis inteligente de calidad.</div>
+    <div class="project-tech"><strong>Tecnologías:</strong> Java 21, Spring Boot, Spring Modulith, PostgreSQL, Angular 20, TailwindCSS.</div>
+  </div>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Educación</div>
+    
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-title">Máster en Desarrollo Full Stack &amp; Arquitecturas Cloud</span>
+      <span class="edu-year">Octubre 2026 - Junio 2027</span>
+    </div>
+    <div class="edu-desc"><span class="edu-org">Tajamar Tech</span> | Madrid, España (814 horas, en formación)</div>
+    <div style="font-size: 9.5px; color: #666; margin-top: 2px;">C#, .NET Core (ASP.NET Core), Entity Framework Core (EF Core), SQL Server, Angular, React, Microsoft Azure (AZ-204), AWS (DVA-C02), Docker, Kubernetes.</div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-title">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</span>
+      <span class="edu-year">2024 - 2026</span>
+    </div>
+    <div class="edu-desc"><span class="edu-org">IES Domenico Scarlatti</span> | Aranjuez, Madrid</div>
+  </div>
+
+  </div>
+
+  
+    
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-title">Habilidades</div>
+    
+  <div class="skills-grid">
+    <div class="skill-item"><span class="skill-category">Testing &amp; QA:</span> Playwright, Cucumber (Gherkin/BDD), Karate DSL, JMeter, Gatling (Java DSL), JUnit 5, Testcontainers, Postman.</div>
+    <div class="skill-item"><span class="skill-category">Desarrollo Backend:</span> Java 21, Spring Boot, Spring Modulith, C# (.NET), EF Core, SQL (SQL Server, PostgreSQL, MySQL), Redis.</div>
+    <div class="skill-item"><span class="skill-category">Desarrollo Frontend:</span> TypeScript, Angular 20, React, JavaScript, HTML5/CSS3, TailwindCSS, Bootstrap.</div>
+    <div class="skill-item"><span class="skill-category">Herramientas &amp; DevOps:</span> Git/GitLab, Jenkins (Groovy), GitHub Actions, Docker, Kubernetes (Conceptos).</div>
+    <div class="skill-item"><span class="skill-category">Idiomas:</span> Español (Nativo), Inglés (B2 certificado).</div>
+  </div>
+
+  </div>
+
+</div>
+</body>
+</html>
