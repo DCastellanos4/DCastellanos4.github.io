@@ -34,7 +34,10 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg sticky-top">
+		<div class="custom-cursor"></div>
+		<div class="bg-animation"></div>
+
+		<nav class="navbar navbar-expand-lg fixed-top floating-nav">
 			<div class="container">
 				<a class="navbar-brand p-0" href="#">
 					David Castellanos
@@ -61,89 +64,54 @@
 			</div>
 		</nav>
 
-		<!-- HERO (Definitive Split Screen with Grain Texture) -->
-		<header id="home">
-			<div class="hero-split-container">
+		<!-- HERO -->
+		<header id="home" class="hero-centered">
+			<div class="container hero-container text-center">
+				<div class="hero-glow-blob"></div>
 				
-				<!-- Panel Izquierdo (Naranja Fuego) -->
-				<div class="hero-left-panel">
-					<div class="hero-left-content">
-						<p class="hero-greeting" style="color: rgba(255,255,255,0.7); font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; margin-bottom: 8px;">Hola — mi nombre es</p>
-						<h1 class="hero-left-title">DAVID<br />CASTELLANOS</h1>
-						<p class="hero-left-subtitle">
-							Aseguro la estabilidad y el rendimiento de software empresarial y diseño arquitecturas web escalables.
-						</p>
-						<div class="d-flex gap-3 align-items-center flex-wrap">
-							<a href="#portfolio" class="btn-view-work">VER PROYECTOS <i class="bi bi-arrow-up-right"></i></a>
-							<a href="docs/CV David Castellanos - English.pdf" class="btn btn-ghost" download="CV_David_Castellanos.pdf">
-								<i class="bi bi-file-earmark-pdf me-2"></i>CV
-							</a>
-						</div>
-					</div>
+				<p class="hero-greeting glitch" data-text="Hola — mi nombre es">Hola — mi nombre es</p>
+				<h1 class="hero-main-title">
+					<span class="gradient-text">DAVID</span><br />
+					CASTELLANOS
+				</h1>
 
-					<!-- Hilera de Clientes y Marcas -->
-					<div class="hero-brands-block">
-						<div class="avatar-stack">
-							<div class="avatar-item brand-badge" style="z-index: 3;" title="Mango">
-								<img src="img/logoMANGO.png" alt="Mango" style="width: 28px; height: 28px; object-fit: contain;"/>
-							</div>
-							<div class="avatar-item brand-badge" style="z-index: 2;" title="El Corte Inglés">
-								<img src="img/LOGOECI.webp" alt="El Corte Inglés" style="width: 28px; height: 28px; object-fit: contain;"/>
-							</div>
-							<div class="avatar-item brand-badge" style="z-index: 1;" title="Simpleat">
-								<img src="img/simpleat-icon.png" alt="Simpleat" style="width: 28px; height: 28px; object-fit: contain;"/>
-							</div>
-						</div>
-						<p class="hero-brands-text">
-							Experiencia validando software corporativo para marcas como Mango, El Corte Inglés y Simpleat.
-						</p>
-					</div>
+				<div class="hero-dynamic-text">
+					<span id="typewriter"></span><span class="cursor-blink">|</span>
 				</div>
 
-				<!-- Panel Derecho (Foto + Contenido) -->
-				<div class="hero-right-panel">
-					
-					<!-- Columna Foto -->
-					<div class="hero-photo-col">
-						<img src="img/davidcontrake.jpg" alt="David Castellanos" />
-					</div>
+				<p class="hero-subtitle">
+					Aseguro la estabilidad y el rendimiento de software empresarial y diseño arquitecturas web escalables.
+				</p>
 
-					<!-- Columna Contenido -->
-					<div class="hero-right-content">
-						<!-- Tarjeta de Disponibilidad -->
-						<div class="availability-card">
-							<span class="avail-label">
-								<span class="avail-dot"></span> DISPONIBLE PARA
-							</span>
-							<h2 class="avail-title">Proyectos<br/>QA &amp; Full<br/>Stack</h2>
+				<div class="d-flex gap-3 align-items-center justify-content-center flex-wrap mt-5">
+					<a href="#portfolio" class="btn-neon">VER PROYECTOS <i class="bi bi-arrow-up-right"></i></a>
+					<a href="docs/CV David Castellanos - English.pdf" class="btn btn-ghost-neon" download="CV_David_Castellanos.pdf">
+						<i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV
+					</a>
+				</div>
+
+				<div class="hero-brands-glass mt-5">
+					<p class="hero-brands-text">Validando software corporativo para</p>
+					<div class="avatar-stack justify-content-center mt-2">
+						<div class="avatar-item brand-badge" style="z-index: 3;" title="Mango">
+							<img src="img/logoMANGO.png" alt="Mango" style="width: 28px; height: 28px; object-fit: contain;"/>
 						</div>
-
-						<!-- Tarjeta de Testimonio -->
-						<div class="testimonial-card d-none d-sm-block">
-							<p class="testi-quote">
-								"David diseñó suites automatizadas de API robustas con Karate y Playwright, detectando regresiones antes de producción."
-							</p>
-							<div class="testi-author">
-								<div class="avatar-item" style="margin: 0; width: 28px; height: 28px;">QA</div>
-								<div class="testi-details">
-									<h6>Team Lead QA</h6>
-									<p>Tantin Solutions</p>
-								</div>
-							</div>
+						<div class="avatar-item brand-badge" style="z-index: 2;" title="El Corte Inglés">
+							<img src="img/LOGOECI.webp" alt="El Corte Inglés" style="width: 28px; height: 28px; object-fit: contain;"/>
+						</div>
+						<div class="avatar-item brand-badge" style="z-index: 1;" title="Simpleat">
+							<img src="img/simpleat-icon.png" alt="Simpleat" style="width: 28px; height: 28px; object-fit: contain;"/>
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 		</header>
 
 		<!-- ABOUT -->
-		<section id="about">
+		<section id="about" class="reveal">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-md-9">
+					<div class="col-md-9 glass-panel">
 						<h2 class="section-label mb-4">Sobre Mí</h2>
 						<p class="about-text">
 							Soy <strong>QA Automation Engineer</strong> y <strong>Desarrollador Web</strong>. Mi enfoque principal es garantizar la fiabilidad del código crítico en producción y construir soluciones web sólidas. En mi día a día corporativo en <strong>Tantin Solutions</strong>, he diseñado y automatizado planes de prueba exhaustivos para clientes del calibre de <strong>Mango</strong> y <strong>El Corte Inglés</strong>.
@@ -157,7 +125,7 @@
 		</section>
 
 		<!-- EXPERIENCE -->
-		<section id="experience" class="dark-section">
+		<section id="experience" class="reveal">
 			<div class="container">
 				<h2 class="section-label mb-5">Experiencia Laboral</h2>
 				<div class="row justify-content-center">
@@ -221,7 +189,7 @@
 		</section>
 
 		<!-- SKILLS -->
-		<section id="skills">
+		<section id="skills" class="reveal">
 			<div class="container">
 				<h2 class="section-label mb-5">Habilidades</h2>
 				<div class="row justify-content-center">
@@ -300,7 +268,7 @@
 		</section>
 
 		<!-- PROJECTS -->
-		<section id="portfolio" class="dark-section">
+		<section id="portfolio" class="reveal">
 			<div class="container">
 				<h2 class="section-label mb-5">Proyectos</h2>
 				<div class="row g-4 justify-content-center">
@@ -364,11 +332,11 @@
 		</section>
 
 		<!-- EDUCATION -->
-		<section id="education">
+		<section id="education" class="reveal">
 			<div class="container">
 				<h2 class="section-label mb-5">Formación</h2>
 				<div class="row justify-content-center">
-					<div class="col-md-9">
+					<div class="col-md-9 glass-panel">
 
 						<div class="edu-item">
 							<div class="edu-year">2026 - 2027</div>
@@ -406,8 +374,8 @@
 		</section>
 
 		<!-- CONTACT -->
-		<footer id="contact" class="text-center">
-			<div class="container">
+		<footer id="contact" class="text-center reveal">
+			<div class="container glass-panel">
 				<h2 class="section-label d-inline-block mb-4">Contacto</h2>
 				<p class="mb-3">
 					<a id="email-copy" href="mailto:davidllanos2005@gmail.com" class="contact-link" title="Enviar correo">
