@@ -1,0 +1,4464 @@
+{
+  "timestamp": "2026-10-27T21:51:26.819Z",
+  "totalTests": 98,
+  "passedTests": 93,
+  "failedTests": 5,
+  "testResults": [
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 320,
+        "docClientW": 320,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 977,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 977,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 977,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 401,
+            "width": 179,
+            "delta": 81,
+            "text": "Variante 01\n                  "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p1",
+            "right": 383,
+            "width": 143,
+            "delta": 63,
+            "text": "Variante 01\n                  "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 360,
+        "docClientW": 360,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 937,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 937,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 937,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 401,
+            "width": 179,
+            "delta": 41,
+            "text": "Variante 01\n                  "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p1",
+            "right": 383,
+            "width": 143,
+            "delta": 23,
+            "text": "Variante 01\n                  "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 375,
+        "docClientW": 375,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 922,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 922,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 922,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 401,
+            "width": 179,
+            "delta": 26,
+            "text": "Variante 01\n                  "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p1",
+            "right": 383,
+            "width": 143,
+            "delta": 8,
+            "text": "Variante 01\n                  "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 414,
+        "docClientW": 414,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 883,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 883,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 883,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 580,
+            "width": 179,
+            "delta": 166,
+            "text": "Variante 02\n                  "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p2",
+            "right": 562,
+            "width": 143,
+            "delta": 148,
+            "text": "Variante 02\n                  "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 480,
+        "docClientW": 480,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 817,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 817,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 817,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 580,
+            "width": 179,
+            "delta": 100,
+            "text": "Variante 02\n                  "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p2",
+            "right": 562,
+            "width": 143,
+            "delta": 82,
+            "text": "Variante 02\n                  "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 697,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 697,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 697,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 759,
+            "width": 179,
+            "delta": 159,
+            "text": "Variante 03\n                  "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p3",
+            "right": 741,
+            "width": 143,
+            "delta": 141,
+            "text": "Variante 03\n                  "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1297,
+            "width": 1280,
+            "delta": 529,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 529,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1297,
+            "width": 1280,
+            "delta": 529,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 939,
+            "width": 179,
+            "delta": 171,
+            "text": "Variante 04 // V4\n            "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p4",
+            "right": 921,
+            "width": 143,
+            "delta": 153,
+            "text": "Variante 04 // V4\n            "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1313,
+            "width": 1280,
+            "delta": 321,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 1280,
+            "delta": 321,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 1280,
+            "delta": 321,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 1134,
+            "width": 179,
+            "delta": 142,
+            "text": "Variante 05 // V5\n            "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p5",
+            "right": 1116,
+            "width": 143,
+            "delta": 124,
+            "text": "Variante 05 // V5\n            "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1313,
+            "width": 1280,
+            "delta": 289,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 1280,
+            "delta": 289,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 1280,
+            "delta": 289,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 1134,
+            "width": 179,
+            "delta": 110,
+            "text": "Variante 05 // V5\n            "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p5",
+            "right": 1116,
+            "width": 143,
+            "delta": 92,
+            "text": "Variante 05 // V5\n            "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "table",
+            "id": null,
+            "className": "matrix-table",
+            "right": 1313,
+            "width": 1280,
+            "delta": 113,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "thead",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 1280,
+            "delta": 113,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "tr",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 1280,
+            "delta": 113,
+            "text": "Dimensión Arquitectónica\n     "
+          },
+          {
+            "tag": "th",
+            "id": null,
+            "className": null,
+            "right": 1313,
+            "width": 179,
+            "delta": 113,
+            "text": "Variante 06 // V6\n            "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "matrix-header-cell p6",
+            "right": 1295,
+            "width": 143,
+            "delta": 95,
+            "text": "Variante 06 // V6\n            "
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub",
+      "pageName": "Comparison Hub",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 320,
+        "docClientW": 320,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 360,
+        "docClientW": 360,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 375,
+        "docClientW": 375,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 414,
+        "docClientW": 414,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 480,
+        "docClientW": 480,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1",
+      "pageName": "Preview 1 (Monospace Grid)",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 320,
+        "docClientW": 320,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-left",
+            "right": 450,
+            "width": 600,
+            "delta": 130,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 520,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 896,
+            "width": 800,
+            "delta": 576,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "portrait-glow-halo",
+            "right": 359,
+            "width": 280,
+            "delta": 39,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 360,
+        "docClientW": 360,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-left",
+            "right": 450,
+            "width": 600,
+            "delta": 90,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 560,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 908,
+            "width": 800,
+            "delta": 548,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "portrait-glow-halo",
+            "right": 367,
+            "width": 280,
+            "delta": 7,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 375,
+        "docClientW": 375,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-left",
+            "right": 450,
+            "width": 600,
+            "delta": 75,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 575,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 913,
+            "width": 800,
+            "delta": 538,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 414,
+        "docClientW": 414,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-left",
+            "right": 450,
+            "width": 600,
+            "delta": 36,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 614,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 924,
+            "width": 800,
+            "delta": 510,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 480,
+        "docClientW": 480,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 680,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 944,
+            "width": 800,
+            "delta": 464,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 800,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 980,
+            "width": 800,
+            "delta": 380,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 968,
+            "width": 700,
+            "delta": 200,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 1030,
+            "width": 800,
+            "delta": 262,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 1177,
+            "width": 700,
+            "delta": 185,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 1093,
+            "width": 800,
+            "delta": 101,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 1209,
+            "width": 700,
+            "delta": 185,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-center-amber",
+            "right": 1103,
+            "width": 800,
+            "delta": 79,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 1385,
+            "width": 700,
+            "delta": 185,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 1625,
+            "width": 700,
+            "delta": 185,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 2105,
+            "width": 700,
+            "delta": 185,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2",
+      "pageName": "Preview 2 (Kinetic Bento)",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ambient-glow-orb glow-top-right",
+            "right": 4025,
+            "width": 700,
+            "delta": 185,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 320,
+        "docClientW": 320,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 360,
+        "docClientW": 360,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 375,
+        "docClientW": 375,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 414,
+        "docClientW": 414,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 480,
+        "docClientW": 480,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3",
+      "pageName": "Preview 3 (Enterprise Telemetry)",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 494,
+        "docClientW": 320,
+        "hasOverflow": true,
+        "overflowDelta": 174,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-controls-group",
+            "right": 494,
+            "width": 324,
+            "delta": 174,
+            "text": "Incorporación Verano 2027\n    "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-avail-pill",
+            "right": 389,
+            "width": 220,
+            "delta": 69,
+            "text": "Incorporación Verano 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "avail-text",
+            "right": 378,
+            "width": 184,
+            "delta": 58,
+            "text": "Incorporación Verano 2027"
+          },
+          {
+            "tag": "button",
+            "id": "audio-toggle",
+            "className": "hw-tactile-btn hw-audio-toggle",
+            "right": 494,
+            "width": 93,
+            "delta": 174,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "span",
+            "id": "audio-led",
+            "className": "toggle-led active",
+            "right": 419,
+            "width": 5,
+            "delta": 99,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": false,
+      "failures": [
+        "Horizontal overflow detected: scrollWidth 320px > innerWidth 320px (delta: +174px)",
+        "Culprits: [{\"tag\":\"div\",\"id\":null,\"className\":\"hw-controls-group\",\"right\":494,\"width\":324,\"delta\":174,\"text\":\"Incorporación Verano 2027\\n    \"},{\"tag\":\"div\",\"id\":null,\"className\":\"hw-avail-pill\",\"right\":389,\"width\":220,\"delta\":69,\"text\":\"Incorporación Verano 2027\"},{\"tag\":\"span\",\"id\":null,\"className\":\"avail-text\",\"right\":378,\"width\":184,\"delta\":58,\"text\":\"Incorporación Verano 2027\"},{\"tag\":\"button\",\"id\":\"audio-toggle\",\"className\":\"hw-tactile-btn hw-audio-toggle\",\"right\":494,\"width\":93,\"delta\":174,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"span\",\"id\":\"audio-led\",\"className\":\"toggle-led active\",\"right\":419,\"width\":5,\"delta\":99,\"text\":\"\"}]",
+        "Mobile menu expanded causes horizontal overflow (scrollWidth 320 > innerWidth 320)"
+      ]
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 494,
+        "docClientW": 360,
+        "hasOverflow": true,
+        "overflowDelta": 134,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-controls-group",
+            "right": 494,
+            "width": 324,
+            "delta": 134,
+            "text": "Incorporación Verano 2027\n    "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-avail-pill",
+            "right": 389,
+            "width": 220,
+            "delta": 29,
+            "text": "Incorporación Verano 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "avail-text",
+            "right": 378,
+            "width": 184,
+            "delta": 18,
+            "text": "Incorporación Verano 2027"
+          },
+          {
+            "tag": "button",
+            "id": "audio-toggle",
+            "className": "hw-tactile-btn hw-audio-toggle",
+            "right": 494,
+            "width": 93,
+            "delta": 134,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "span",
+            "id": "audio-led",
+            "className": "toggle-led active",
+            "right": 419,
+            "width": 5,
+            "delta": 59,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": false,
+      "failures": [
+        "Horizontal overflow detected: scrollWidth 360px > innerWidth 360px (delta: +134px)",
+        "Culprits: [{\"tag\":\"div\",\"id\":null,\"className\":\"hw-controls-group\",\"right\":494,\"width\":324,\"delta\":134,\"text\":\"Incorporación Verano 2027\\n    \"},{\"tag\":\"div\",\"id\":null,\"className\":\"hw-avail-pill\",\"right\":389,\"width\":220,\"delta\":29,\"text\":\"Incorporación Verano 2027\"},{\"tag\":\"span\",\"id\":null,\"className\":\"avail-text\",\"right\":378,\"width\":184,\"delta\":18,\"text\":\"Incorporación Verano 2027\"},{\"tag\":\"button\",\"id\":\"audio-toggle\",\"className\":\"hw-tactile-btn hw-audio-toggle\",\"right\":494,\"width\":93,\"delta\":134,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"span\",\"id\":\"audio-led\",\"className\":\"toggle-led active\",\"right\":419,\"width\":5,\"delta\":59,\"text\":\"\"}]",
+        "Mobile menu expanded causes horizontal overflow (scrollWidth 360 > innerWidth 360)"
+      ]
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 494,
+        "docClientW": 375,
+        "hasOverflow": true,
+        "overflowDelta": 119,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-controls-group",
+            "right": 494,
+            "width": 324,
+            "delta": 119,
+            "text": "Incorporación Verano 2027\n    "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-avail-pill",
+            "right": 389,
+            "width": 220,
+            "delta": 14,
+            "text": "Incorporación Verano 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "avail-text",
+            "right": 378,
+            "width": 184,
+            "delta": 3,
+            "text": "Incorporación Verano 2027"
+          },
+          {
+            "tag": "button",
+            "id": "audio-toggle",
+            "className": "hw-tactile-btn hw-audio-toggle",
+            "right": 494,
+            "width": 93,
+            "delta": 119,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "span",
+            "id": "audio-led",
+            "className": "toggle-led active",
+            "right": 419,
+            "width": 5,
+            "delta": 44,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": false,
+      "failures": [
+        "Horizontal overflow detected: scrollWidth 375px > innerWidth 375px (delta: +119px)",
+        "Culprits: [{\"tag\":\"div\",\"id\":null,\"className\":\"hw-controls-group\",\"right\":494,\"width\":324,\"delta\":119,\"text\":\"Incorporación Verano 2027\\n    \"},{\"tag\":\"div\",\"id\":null,\"className\":\"hw-avail-pill\",\"right\":389,\"width\":220,\"delta\":14,\"text\":\"Incorporación Verano 2027\"},{\"tag\":\"span\",\"id\":null,\"className\":\"avail-text\",\"right\":378,\"width\":184,\"delta\":3,\"text\":\"Incorporación Verano 2027\"},{\"tag\":\"button\",\"id\":\"audio-toggle\",\"className\":\"hw-tactile-btn hw-audio-toggle\",\"right\":494,\"width\":93,\"delta\":119,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"span\",\"id\":\"audio-led\",\"className\":\"toggle-led active\",\"right\":419,\"width\":5,\"delta\":44,\"text\":\"\"}]",
+        "Mobile menu expanded causes horizontal overflow (scrollWidth 375 > innerWidth 375)"
+      ]
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 494,
+        "docClientW": 414,
+        "hasOverflow": true,
+        "overflowDelta": 80,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-controls-group",
+            "right": 494,
+            "width": 324,
+            "delta": 80,
+            "text": "Incorporación Verano 2027\n    "
+          },
+          {
+            "tag": "button",
+            "id": "audio-toggle",
+            "className": "hw-tactile-btn hw-audio-toggle",
+            "right": 494,
+            "width": 93,
+            "delta": 80,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "span",
+            "id": "audio-led",
+            "className": "toggle-led active",
+            "right": 419,
+            "width": 5,
+            "delta": 5,
+            "text": ""
+          },
+          {
+            "tag": "span",
+            "id": "audio-text",
+            "className": "btn-text",
+            "right": 481,
+            "width": 54,
+            "delta": 67,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 447,
+            "width": 401,
+            "delta": 33,
+            "text": "CALIBRATION: DIN EN ISO 9001 /"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": false,
+      "failures": [
+        "Horizontal overflow detected: scrollWidth 414px > innerWidth 414px (delta: +80px)",
+        "Culprits: [{\"tag\":\"div\",\"id\":null,\"className\":\"hw-controls-group\",\"right\":494,\"width\":324,\"delta\":80,\"text\":\"Incorporación Verano 2027\\n    \"},{\"tag\":\"button\",\"id\":\"audio-toggle\",\"className\":\"hw-tactile-btn hw-audio-toggle\",\"right\":494,\"width\":93,\"delta\":80,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"span\",\"id\":\"audio-led\",\"className\":\"toggle-led active\",\"right\":419,\"width\":5,\"delta\":5,\"text\":\"\"},{\"tag\":\"span\",\"id\":\"audio-text\",\"className\":\"btn-text\",\"right\":481,\"width\":54,\"delta\":67,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"div\",\"id\":null,\"className\":\"cal-spec\",\"right\":447,\"width\":401,\"delta\":33,\"text\":\"CALIBRATION: DIN EN ISO 9001 /\"}]",
+        "Mobile menu expanded causes horizontal overflow (scrollWidth 414 > innerWidth 414)"
+      ]
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 494,
+        "docClientW": 480,
+        "hasOverflow": true,
+        "overflowDelta": 14,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "hw-controls-group",
+            "right": 494,
+            "width": 324,
+            "delta": 14,
+            "text": "Incorporación Verano 2027\n    "
+          },
+          {
+            "tag": "button",
+            "id": "audio-toggle",
+            "className": "hw-tactile-btn hw-audio-toggle",
+            "right": 494,
+            "width": 93,
+            "delta": 14,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "span",
+            "id": "audio-text",
+            "className": "btn-text",
+            "right": 481,
+            "width": 54,
+            "delta": 1,
+            "text": "[AUDIO: ON]"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 761,
+            "width": 299,
+            "delta": 281,
+            "text": "SPEC: REF-2026 // FULL STACK +"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 1032,
+            "width": 255,
+            "delta": 552,
+            "text": "CHASSIS: CNC-MILLED BONE & GRA"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": false,
+      "failures": [
+        "Horizontal overflow detected: scrollWidth 480px > innerWidth 480px (delta: +14px)",
+        "Culprits: [{\"tag\":\"div\",\"id\":null,\"className\":\"hw-controls-group\",\"right\":494,\"width\":324,\"delta\":14,\"text\":\"Incorporación Verano 2027\\n    \"},{\"tag\":\"button\",\"id\":\"audio-toggle\",\"className\":\"hw-tactile-btn hw-audio-toggle\",\"right\":494,\"width\":93,\"delta\":14,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"span\",\"id\":\"audio-text\",\"className\":\"btn-text\",\"right\":481,\"width\":54,\"delta\":1,\"text\":\"[AUDIO: ON]\"},{\"tag\":\"div\",\"id\":null,\"className\":\"cal-spec\",\"right\":761,\"width\":299,\"delta\":281,\"text\":\"SPEC: REF-2026 // FULL STACK +\"},{\"tag\":\"div\",\"id\":null,\"className\":\"cal-spec\",\"right\":1032,\"width\":255,\"delta\":552,\"text\":\"CHASSIS: CNC-MILLED BONE & GRA\"}]",
+        "Mobile menu expanded causes horizontal overflow (scrollWidth 480 > innerWidth 480)"
+      ]
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 761,
+            "width": 299,
+            "delta": 161,
+            "text": "SPEC: REF-2026 // FULL STACK +"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 1032,
+            "width": 255,
+            "delta": 432,
+            "text": "CHASSIS: CNC-MILLED BONE & GRA"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 675,
+            "width": 131,
+            "delta": 75,
+            "text": "STATUS: VERIFICADO"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 630,
+            "width": 211,
+            "delta": 30,
+            "text": "AUDITADO POR TANTIN SOLUTIONS"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 821,
+            "width": 175,
+            "delta": 221,
+            "text": "APROBADO PARA PRODUCCIÓN"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 1032,
+            "width": 255,
+            "delta": 264,
+            "text": "CHASSIS: CNC-MILLED BONE & GRA"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 821,
+            "width": 175,
+            "delta": 53,
+            "text": "APROBADO PARA PRODUCCIÓN"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 915,
+            "width": 211,
+            "delta": 147,
+            "text": "COLLISION SYNTHESIZER: ACTIVE"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 966,
+            "width": 364,
+            "delta": 198,
+            "text": "BACKEND · FRONTEND · CLOUD & D"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 864,
+            "width": 204,
+            "delta": 96,
+            "text": "FORMACIÓN OFICIAL ACREDITADA"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 1032,
+            "width": 255,
+            "delta": 40,
+            "text": "CHASSIS: CNC-MILLED BONE & GRA"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "cal-spec",
+            "right": 1032,
+            "width": 255,
+            "delta": 8,
+            "text": "CHASSIS: CNC-MILLED BONE & GRA"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4",
+      "pageName": "Preview 4 (Industrial Hardware)",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 320,
+        "docClientW": 320,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 342,
+            "width": 20,
+            "delta": 22,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 505,
+            "width": 151,
+            "delta": 185,
+            "text": "03\n            KARATE INTEGRAT"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 378,
+            "width": 24,
+            "delta": 58,
+            "text": "03"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 505,
+            "width": 119,
+            "delta": 185,
+            "text": "KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 537,
+            "width": 20,
+            "delta": 217,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 360,
+        "docClientW": 360,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 505,
+            "width": 151,
+            "delta": 145,
+            "text": "03\n            KARATE INTEGRAT"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 378,
+            "width": 24,
+            "delta": 18,
+            "text": "03"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 505,
+            "width": 119,
+            "delta": 145,
+            "text": "KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 537,
+            "width": 20,
+            "delta": 177,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 673,
+            "width": 124,
+            "delta": 313,
+            "text": "04\n            PLAYWRIGHT E2E"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 375,
+        "docClientW": 375,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 505,
+            "width": 151,
+            "delta": 130,
+            "text": "03\n            KARATE INTEGRAT"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 378,
+            "width": 24,
+            "delta": 3,
+            "text": "03"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 505,
+            "width": 119,
+            "delta": 130,
+            "text": "KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 537,
+            "width": 20,
+            "delta": 162,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 673,
+            "width": 124,
+            "delta": 298,
+            "text": "04\n            PLAYWRIGHT E2E"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 414,
+        "docClientW": 414,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 505,
+            "width": 151,
+            "delta": 91,
+            "text": "03\n            KARATE INTEGRAT"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 505,
+            "width": 119,
+            "delta": 91,
+            "text": "KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 537,
+            "width": 20,
+            "delta": 123,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 673,
+            "width": 124,
+            "delta": 259,
+            "text": "04\n            PLAYWRIGHT E2E"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 573,
+            "width": 24,
+            "delta": 159,
+            "text": "04"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 480,
+        "docClientW": 480,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 505,
+            "width": 151,
+            "delta": 25,
+            "text": "03\n            KARATE INTEGRAT"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 505,
+            "width": 119,
+            "delta": 25,
+            "text": "KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 537,
+            "width": 20,
+            "delta": 57,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 673,
+            "width": 124,
+            "delta": 193,
+            "text": "04\n            PLAYWRIGHT E2E"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 573,
+            "width": 24,
+            "delta": 93,
+            "text": "04"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 681,
+            "width": 124,
+            "delta": 81,
+            "text": "04\n            PLAYWRIGHT E2E"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 681,
+            "width": 92,
+            "delta": 81,
+            "text": "PLAYWRIGHT E2E"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 713,
+            "width": 20,
+            "delta": 113,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 836,
+            "width": 111,
+            "delta": 236,
+            "text": "05\n            GATLING LOAD"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 749,
+            "width": 24,
+            "delta": 149,
+            "text": "05"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 836,
+            "width": 111,
+            "delta": 68,
+            "text": "05\n            GATLING LOAD"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 836,
+            "width": 79,
+            "delta": 68,
+            "text": "GATLING LOAD"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "pip-line",
+            "right": 868,
+            "width": 20,
+            "delta": 100,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 1011,
+            "width": 131,
+            "delta": 243,
+            "text": "06\n            ENTERPRISE PROD"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-icon",
+            "right": 904,
+            "width": 24,
+            "delta": 136,
+            "text": "06"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-pip",
+            "right": 1011,
+            "width": 131,
+            "delta": 19,
+            "text": "06\n            ENTERPRISE PROD"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "pip-label",
+            "right": 1011,
+            "width": 99,
+            "delta": 19,
+            "text": "ENTERPRISE PROD"
+          },
+          {
+            "tag": "div",
+            "id": "pipeline-track",
+            "className": "pipeline-track",
+            "right": 2296,
+            "width": 2296,
+            "delta": 1304,
+            "text": "STAGE 01 // COMMIT & LINT\n    "
+          },
+          {
+            "tag": "article",
+            "id": null,
+            "className": "pipeline-card stage-integration",
+            "right": 1132,
+            "width": 340,
+            "delta": 140,
+            "text": "STAGE 03 // KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "card-glass-glow",
+            "right": 1131,
+            "width": 338,
+            "delta": 139,
+            "text": ""
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "pipeline-track",
+            "className": "pipeline-track",
+            "right": 2296,
+            "width": 2296,
+            "delta": 1272,
+            "text": "STAGE 01 // COMMIT & LINT\n    "
+          },
+          {
+            "tag": "article",
+            "id": null,
+            "className": "pipeline-card stage-integration",
+            "right": 1132,
+            "width": 340,
+            "delta": 108,
+            "text": "STAGE 03 // KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "card-glass-glow",
+            "right": 1131,
+            "width": 338,
+            "delta": 107,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-meta-header",
+            "right": 1105,
+            "width": 286,
+            "delta": 81,
+            "text": "STAGE 03 // KARATE INTEGRATION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "stage-status-pass",
+            "right": 1105,
+            "width": 90,
+            "delta": 81,
+            "text": "✓ 0 REGRESSIONS"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "pipeline-track",
+            "className": "pipeline-track",
+            "right": 2560,
+            "width": 2560,
+            "delta": 1360,
+            "text": "STAGE 01 // COMMIT & LINT\n    "
+          },
+          {
+            "tag": "article",
+            "id": null,
+            "className": "pipeline-card stage-integration",
+            "right": 1264,
+            "width": 384,
+            "delta": 64,
+            "text": "STAGE 03 // KARATE INTEGRATION"
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "card-glass-glow",
+            "right": 1263,
+            "width": 382,
+            "delta": 63,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-meta-header",
+            "right": 1237,
+            "width": 330,
+            "delta": 37,
+            "text": "STAGE 03 // KARATE INTEGRATION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "stage-status-pass",
+            "right": 1237,
+            "width": 101,
+            "delta": 37,
+            "text": "✓ 0 REGRESSIONS"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "pipeline-track",
+            "className": "pipeline-track",
+            "right": 2896,
+            "width": 2896,
+            "delta": 1456,
+            "text": "STAGE 01 // COMMIT & LINT\n    "
+          },
+          {
+            "tag": "article",
+            "id": null,
+            "className": "pipeline-card stage-e2e",
+            "right": 1904,
+            "width": 440,
+            "delta": 464,
+            "text": "STAGE 04 // PLAYWRIGHT E2E\n   "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "card-glass-glow",
+            "right": 1903,
+            "width": 438,
+            "delta": 463,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-meta-header",
+            "right": 1877,
+            "width": 386,
+            "delta": 437,
+            "text": "STAGE 04 // PLAYWRIGHT E2E\n   "
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "stage-code-badge",
+            "right": 1681,
+            "width": 190,
+            "delta": 241,
+            "text": "STAGE 04 // PLAYWRIGHT E2E"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": "pipeline-track",
+            "className": "pipeline-track",
+            "right": 2896,
+            "width": 2896,
+            "delta": 976,
+            "text": "STAGE 01 // COMMIT & LINT\n    "
+          },
+          {
+            "tag": "article",
+            "id": null,
+            "className": "pipeline-card stage-load",
+            "right": 2376,
+            "width": 440,
+            "delta": 456,
+            "text": "STAGE 05 // GATLING LOAD\n     "
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "card-glass-glow",
+            "right": 2375,
+            "width": 438,
+            "delta": 455,
+            "text": ""
+          },
+          {
+            "tag": "div",
+            "id": null,
+            "className": "stage-meta-header",
+            "right": 2349,
+            "width": 386,
+            "delta": 429,
+            "text": "STAGE 05 // GATLING LOAD\n     "
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "stage-code-badge",
+            "right": 2139,
+            "width": 176,
+            "delta": 219,
+            "text": "STAGE 05 // GATLING LOAD"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5",
+      "pageName": "Preview 5 (3D WebGL Pipeline)",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "320px (iPhone SE 1st / Ultra-narrow)",
+        "width": 320,
+        "height": 568,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 320,
+        "docW": 320,
+        "bodyW": 320,
+        "docClientW": 320,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4736,
+            "width": 4795,
+            "delta": 4416,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 422,
+            "width": 481,
+            "delta": 102,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 428,
+            "width": 6,
+            "delta": 108,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1015,
+            "width": 587,
+            "delta": 695,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1021,
+            "width": 6,
+            "delta": 701,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "360px (Galaxy S8/S9 / Android Small)",
+        "width": 360,
+        "height": 640,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 360,
+        "docW": 360,
+        "bodyW": 360,
+        "docClientW": 360,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4723,
+            "width": 4795,
+            "delta": 4363,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 408,
+            "width": 481,
+            "delta": 48,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 414,
+            "width": 6,
+            "delta": 54,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1001,
+            "width": 587,
+            "delta": 641,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1007,
+            "width": 6,
+            "delta": 647,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "375px (iPhone 13 mini / iPhone 8)",
+        "width": 375,
+        "height": 667,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 375,
+        "docW": 375,
+        "bodyW": 375,
+        "docClientW": 375,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4723,
+            "width": 4795,
+            "delta": 4348,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 408,
+            "width": 481,
+            "delta": 33,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 414,
+            "width": 6,
+            "delta": 39,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1001,
+            "width": 587,
+            "delta": 626,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1007,
+            "width": 6,
+            "delta": 632,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "414px (iPhone XR / Plus / Max)",
+        "width": 414,
+        "height": 896,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 414,
+        "docW": 414,
+        "bodyW": 414,
+        "docClientW": 414,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4718,
+            "width": 4795,
+            "delta": 4304,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 996,
+            "width": 587,
+            "delta": 582,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1002,
+            "width": 6,
+            "delta": 588,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1311,
+            "width": 309,
+            "delta": 897,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1317,
+            "width": 6,
+            "delta": 903,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "480px (Phablet / Wide mobile)",
+        "width": 480,
+        "height": 800,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 480,
+        "docW": 480,
+        "bodyW": 480,
+        "docClientW": 480,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4719,
+            "width": 4795,
+            "delta": 4239,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 997,
+            "width": 587,
+            "delta": 517,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1003,
+            "width": 6,
+            "delta": 523,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1313,
+            "width": 309,
+            "delta": 833,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1318,
+            "width": 6,
+            "delta": 838,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "600px (Small Tablet / Foldable)",
+        "width": 600,
+        "height": 960,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 600,
+        "docW": 600,
+        "bodyW": 600,
+        "docClientW": 600,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4723,
+            "width": 4795,
+            "delta": 4123,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1001,
+            "width": 587,
+            "delta": 401,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1007,
+            "width": 6,
+            "delta": 407,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1316,
+            "width": 309,
+            "delta": 716,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1322,
+            "width": 6,
+            "delta": 722,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "768px (iPad Mini / Tablet Portrait)",
+        "width": 768,
+        "height": 1024,
+        "isMobile": true
+      },
+      "metrics": {
+        "winW": 768,
+        "docW": 768,
+        "bodyW": 768,
+        "docClientW": 768,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4739,
+            "width": 4795,
+            "delta": 3971,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1017,
+            "width": 587,
+            "delta": 249,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1023,
+            "width": 6,
+            "delta": 255,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1333,
+            "width": 309,
+            "delta": 565,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1338,
+            "width": 6,
+            "delta": 570,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "992px (Tablet Landscape / Netbook)",
+        "width": 992,
+        "height": 600,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 992,
+        "docW": 977,
+        "bodyW": 977,
+        "docClientW": 977,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4724,
+            "width": 4795,
+            "delta": 3732,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1002,
+            "width": 587,
+            "delta": 10,
+            "text": "CONSTRUYO SOFTWARE QUE FUNCION"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1008,
+            "width": 6,
+            "delta": 16,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1318,
+            "width": 309,
+            "delta": 326,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1323,
+            "width": 6,
+            "delta": 331,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "1024px (iPad Pro / Small Laptop)",
+        "width": 1024,
+        "height": 768,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1024,
+        "docW": 1009,
+        "bodyW": 1009,
+        "docClientW": 1009,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4721,
+            "width": 4795,
+            "delta": 3697,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1315,
+            "width": 309,
+            "delta": 291,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1321,
+            "width": 6,
+            "delta": 297,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1557,
+            "width": 236,
+            "delta": 533,
+            "text": "INCORPORACIÓN VERANO 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1563,
+            "width": 6,
+            "delta": 539,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "1200px (Standard Desktop)",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1200,
+        "docW": 1185,
+        "bodyW": 1185,
+        "docClientW": 1185,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4724,
+            "width": 4795,
+            "delta": 3524,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1318,
+            "width": 309,
+            "delta": 118,
+            "text": "EL CORTE INGLÉS · MANGO · SIMP"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1323,
+            "width": 6,
+            "delta": 123,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1559,
+            "width": 236,
+            "delta": 359,
+            "text": "INCORPORACIÓN VERANO 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1565,
+            "width": 6,
+            "delta": 365,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "1440px (Wide Desktop / 2K)",
+        "width": 1440,
+        "height": 900,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1440,
+        "docW": 1425,
+        "bodyW": 1425,
+        "docClientW": 1425,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4735,
+            "width": 4795,
+            "delta": 3295,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1571,
+            "width": 236,
+            "delta": 131,
+            "text": "INCORPORACIÓN VERANO 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1576,
+            "width": 6,
+            "delta": 136,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 1812,
+            "width": 236,
+            "delta": 372,
+            "text": "MADRID · ABIERTO A REMOTO"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 1818,
+            "width": 6,
+            "delta": 378,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "1920px (Full HD 1080p)",
+        "width": 1920,
+        "height": 1080,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 1920,
+        "docW": 1905,
+        "bodyW": 1905,
+        "docClientW": 1905,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4735,
+            "width": 4795,
+            "delta": 2815,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 2332,
+            "width": 513,
+            "delta": 412,
+            "text": "KINETIC SWISS BRUTALISM // VAN"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 2338,
+            "width": 6,
+            "delta": 418,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 2818,
+            "width": 481,
+            "delta": 898,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 2824,
+            "width": 6,
+            "delta": 904,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism)",
+      "viewport": {
+        "name": "3840px (4K Ultra HD)",
+        "width": 3840,
+        "height": 2160,
+        "isMobile": false
+      },
+      "metrics": {
+        "winW": 3840,
+        "docW": 3825,
+        "bodyW": 3825,
+        "docClientW": 3825,
+        "hasOverflow": false,
+        "overflowDelta": 0,
+        "overflowingElements": [
+          {
+            "tag": "div",
+            "id": null,
+            "className": "ticker-track",
+            "right": 4735,
+            "width": 4795,
+            "delta": 895,
+            "text": "DAVID CASTELLANOS // FULL STAC"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 3968,
+            "width": 236,
+            "delta": 128,
+            "text": "INCORPORACIÓN VERANO 2027"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 3974,
+            "width": 6,
+            "delta": 134,
+            "text": "■"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-item",
+            "right": 4210,
+            "width": 236,
+            "delta": 370,
+            "text": "MADRID · ABIERTO A REMOTO"
+          },
+          {
+            "tag": "span",
+            "id": null,
+            "className": "ticker-sep",
+            "right": 4216,
+            "width": 6,
+            "delta": 376,
+            "text": "■"
+          }
+        ],
+        "brokenImages": [],
+        "failedSheets": []
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "hub-file",
+      "pageName": "Comparison Hub (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-1-file",
+      "pageName": "Preview 1 (Monospace Grid) (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-2-file",
+      "pageName": "Preview 2 (Kinetic Bento) (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-3-file",
+      "pageName": "Preview 3 (Enterprise Telemetry) (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-4-file",
+      "pageName": "Preview 4 (Industrial Hardware) (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-5-file",
+      "pageName": "Preview 5 (3D WebGL Pipeline) (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "page": "preview-6-file",
+      "pageName": "Preview 6 (Kinetic Swiss Brutalism) (file://)",
+      "viewport": {
+        "name": "1200px file:// desktop",
+        "width": 1200,
+        "height": 800,
+        "isMobile": false
+      },
+      "metrics": {
+        "docW": 1185,
+        "winW": 1200,
+        "hasOverflow": false,
+        "brokenImgs": 0
+      },
+      "passed": true,
+      "failures": []
+    }
+  ]
+}

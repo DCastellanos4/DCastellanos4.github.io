@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Castellanos — Full Stack Developer & QA Engineer con experiencia enterprise en El Corte Inglés, Mango y Simpleat. Arquitecturas Cloud, C#, Java, Angular, Playwright. Incorporación Verano 2027.">
+  <title>David Castellanos — Full Stack Developer &amp; QA Engineer · Kinetic Bento</title>
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  
+  <!-- Google Fonts: Plus Jakarta Sans (Headings/Display) + Outfit (Body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Variant 2 Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Radiant Mesh & Mouse Spotlight Backdrop -->
+  <div class="ambient-glow-orb glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow-orb glow-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow-orb glow-center-amber" aria-hidden="true"></div>
+
+  <!-- Universal Floating Preview Switcher (Required Contract) -->
+  <aside class="preview-switcher" aria-label="Selector de Variantes de Portfolio">
+    <div class="switcher-inner">
+      <a href="../index.html" class="switcher-link switcher-hub" title="Volver al Hub de Comparación">
+        <span class="switcher-dot"></span> Hub
+      </a>
+      <span class="switcher-divider" aria-hidden="true">/</span>
+      <a href="../preview-1/index.html" class="switcher-link" title="Variante 1: Precision Monospace & Architectural Grid">
+        <span class="switcher-num">1</span> Monospace
+      </a>
+      <a href="../preview-2/index.html" class="switcher-link active" aria-current="page" title="Variante 2: Modern Kinetic Bento-Box & Spatial Craft">
+        <span class="switcher-num">2</span> Bento
+      </a>
+      <a href="../preview-3/index.html" class="switcher-link" title="Variante 3: Enterprise Telemetry & Interactive Terminal">
+        <span class="switcher-num">3</span> Telemetry
+      </a>
+    </div>
+  </aside>
+
+  <!-- Floating Glass Dock Navigation -->
+  <header class="dock-header" id="dock-header">
+    <nav class="dock-nav" aria-label="Navegación principal">
+      <a href="#inicio" class="dock-brand" aria-label="David Castellanos — Inicio">
+        <span class="dock-monogram">DC</span>
+        <span class="dock-name">David Castellanos</span>
+      </a>
+
+      <button class="dock-toggle" id="dock-toggle" aria-expanded="false" aria-controls="dock-links" aria-label="Abrir menú de navegación">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="dock-links" id="dock-links">
+        <a href="#inicio" class="dock-link active">Inicio</a>
+        <a href="#sobre-mi" class="dock-link">Sobre Mí</a>
+        <a href="#proyectos" class="dock-link">Proyectos</a>
+        <a href="#habilidades" class="dock-link">Habilidades</a>
+        <a href="#experiencia" class="dock-link">Experiencia</a>
+        <a href="#formacion" class="dock-link">Formación</a>
+        <a href="#contacto" class="dock-link dock-link-cta">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="page-container">
+
+    <!-- ====================================================================
+         HERO SECTION: ASYMMETRIC 12-COLUMN BENTO CLUSTER
+         ==================================================================== -->
+    <section class="section-hero" id="inicio" aria-labelledby="hero-title">
+      <div class="bento-grid">
+
+        <!-- Card A: Master Identity Card (Col Span 7) -->
+        <article class="bento-card card-identity spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="status-pill-row">
+              <span class="status-kicker-pill">
+                <span class="pill-spark" aria-hidden="true"></span>
+                Full Stack Developer &amp; QA Engineer
+              </span>
+              <span class="stack-badge-tag">(C#, Java, Angular, Cloud, Playwright)</span>
+            </div>
+
+            <h1 class="hero-name" id="hero-title">
+              <span class="text-gradient">DAVID CASTELLANOS</span>
+            </h1>
+
+            <blockquote class="value-prop-quote">
+              &ldquo;Construyo software que funciona y diseño los tests que lo demuestran.&rdquo;
+            </blockquote>
+
+            <p class="hero-narrative">
+              Full Stack con mentalidad de calidad, experiencia enterprise y arquitecturas Cloud.
+            </p>
+
+            <!-- Magnetic Email Copy Pill -->
+            <div class="magnetic-copy-wrapper">
+              <button type="button" class="magnetic-copy-pill" id="hero-email-copy" data-email="davidllanos2005@gmail.com" aria-label="Copiar correo davidllanos2005@gmail.com al portapapeles">
+                <span class="copy-pill-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </span>
+                <span class="copy-pill-text" id="hero-email-label">davidllanos2005@gmail.com</span>
+                <span class="copy-pill-action" aria-hidden="true">Copiar</span>
+              </button>
+              <div class="copy-tooltip" id="hero-copy-tooltip" role="status" aria-live="polite"></div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-actions">
+              <a href="#proyectos" class="btn-bento btn-primary">
+                <span>VER LO QUE CONSTRUYO</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="../../docs/CV%20David%20Castellanos%20-%20English.pdf" download="CV_David_Castellanos.pdf" class="btn-bento btn-glass" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>DESCARGAR CV</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card B: Portrait & Availability Presence Card (Col Span 5) -->
+        <article class="bento-card card-portrait spotlight-card" data-tilt>
+          <div class="portrait-container">
+            <div class="portrait-glow-halo" aria-hidden="true"></div>
+            <img src="../../img/Image.jpg" alt="Retrato profesional de David Castellanos" class="portrait-img" loading="eager" width="785" height="621">
+            
+            <!-- Floating Glass Availability Pill -->
+            <div class="availability-glass-pill" role="status">
+              <span class="status-beacon">
+                <span class="beacon-core"></span>
+                <span class="beacon-pulse"></span>
+              </span>
+              <div class="availability-meta">
+                <span class="avail-title">Incorporación Verano 2027</span>
+                <span class="avail-sub">Madrid · Abierto a remoto</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card C: Enterprise Validation Stack (Col Span 6) -->
+        <article class="bento-card card-enterprise spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="card-header-row">
+              <span class="bento-tag-kicker">TRACK RECORD ENTERPRISE</span>
+              <span class="verified-check" title="Software validado en producción">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Validado
+              </span>
+            </div>
+
+            <h2 class="enterprise-statement">
+              Software probado en producción para El Corte Inglés, Mango y Simpleat.
+            </h2>
+
+            <div class="client-brand-grid">
+              <!-- El Corte Inglés -->
+              <div class="client-brand-item" tabindex="0">
+                <div class="brand-logo-frame">
+                  <img src="../../img/LOGOECI.webp" alt="El Corte Inglés" class="brand-logo logo-eci" loading="lazy">
+                </div>
+                <div class="brand-info">
+                  <span class="brand-name">El Corte Inglés</span>
+                  <span class="brand-scope">Microservicios Unity · Karate DSL</span>
+                </div>
+              </div>
+
+              <!-- Mango -->
+              <div class="client-brand-item" tabindex="0">
+                <div class="brand-logo-frame">
+                  <img src="../../img/logoMANGO.png" alt="Mango" class="brand-logo logo-mango" loading="lazy">
+                </div>
+                <div class="brand-info">
+                  <span class="brand-name">Mango</span>
+                  <span class="brand-scope">POS Desktop · SonarQube · CQRS</span>
+                </div>
+              </div>
+
+              <!-- Simpleat -->
+              <div class="client-brand-item" tabindex="0">
+                <div class="brand-logo-frame">
+                  <img src="../../img/simpleat-icon.png" alt="Simpleat" class="brand-logo logo-simpleat" loading="lazy">
+                </div>
+                <div class="brand-info">
+                  <span class="brand-name">Simpleat</span>
+                  <span class="brand-scope">SaaS Menús QR · Playwright E2E</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card D: Testimonial Spotlight Card (Col Span 6) -->
+        <article class="bento-card card-testimonial spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="card-header-row">
+              <span class="bento-tag-kicker">TESTIMONIO ENTERPRISE</span>
+              <span class="quote-mark-icon" aria-hidden="true">&ldquo;</span>
+            </div>
+
+            <blockquote class="testimonial-quote">
+              &ldquo;Detectó regresiones críticas en los servicios de El Corte Inglés antes de que llegaran a producción. Diseñó las suites de API que hoy siguen en uso.&rdquo;
+            </blockquote>
+
+            <div class="testimonial-author-row">
+              <div class="author-avatar-badge" aria-hidden="true">
+                <span>PC</span>
+              </div>
+              <div class="author-meta">
+                <span class="author-name">Pedro Cuello</span>
+                <span class="author-role">Tantin Solutions</span>
+              </div>
+              <div class="author-verified-tag">
+                <span class="verified-dot"></span> Regresión Crítica Prevenida
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: SOBRE MÍ (ABOUT ME BENTO)
+         ==================================================================== -->
+    <section class="section-block" id="sobre-mi" aria-labelledby="about-heading">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">PERFIL &amp; TRAYECTORIA</span>
+        <h2 class="section-heading" id="about-heading">Sobre Mí</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Main Narrative Card (Col Span 8) -->
+        <article class="bento-card card-about-narrative spotlight-card">
+          <div class="card-inner">
+            <div class="about-paragraphs">
+              <p class="about-lead">
+                Soy desarrollador Full Stack con experiencia comercial en entornos enterprise. A los 21 años ya he automatizado suites de pruebas que corren en producción para El Corte Inglés y Mango, y construido plataformas SaaS desde cero con Spring Boot, Angular y despliegues Cloud.
+              </p>
+              <p>
+                Mi perfil es híbrido por convicción: diseño APIs en C# y Java, construyo interfaces con Angular y React, y después escribo los tests que garantizan que todo funciona — E2E con Playwright, integración con Karate DSL, carga con Gatling. No delego la calidad: la integro en cada línea de código. Esa doble visión dev + QA es lo que hace que el software que construyo llegue a producción con confianza.
+              </p>
+              <p>
+                Actualmente curso el Máster en Full Stack &amp; Cloud en Tajamar Tech, donde profundizo en ASP.NET Core, arquitecturas en Azure y AWS, y orquestación con Docker y Kubernetes. Disponible para incorporación a partir de verano de 2027.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Metrics & Highlights Pod (Col Span 4) -->
+        <div class="about-highlights-col">
+          <article class="bento-card card-metric spotlight-card">
+            <div class="metric-top">
+              <span class="metric-number">21</span>
+              <span class="metric-unit">AÑOS</span>
+            </div>
+            <p class="metric-label">Desarrollo Full Stack con experiencia comercial enterprise probada</p>
+          </article>
+
+          <article class="bento-card card-metric spotlight-card">
+            <div class="metric-top">
+              <span class="metric-number">3</span>
+              <span class="metric-unit">CLIENTES</span>
+            </div>
+            <p class="metric-label">Software validado en producción: El Corte Inglés, Mango y Simpleat</p>
+          </article>
+
+          <article class="bento-card card-metric spotlight-card">
+            <div class="metric-top">
+              <span class="metric-number">814h</span>
+              <span class="metric-unit">MÁSTER</span>
+            </div>
+            <p class="metric-label">Full Stack &amp; Cloud en Tajamar Tech (C#, .NET, Azure, AWS, Docker)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: PROYECTOS (FEATURED PROJECTS BENTO)
+         ==================================================================== -->
+    <section class="section-block" id="proyectos" aria-labelledby="projects-heading">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">ARQUITECTURA &amp; INGENIERÍA</span>
+        <h2 class="section-heading" id="projects-heading">Proyectos</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Project 1: Simpleat (Col Span 8) -->
+        <article class="bento-card card-project project-simpleat spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="project-header">
+              <div class="project-tagline-wrap">
+                <span class="project-tagline">SaaS · Menús Digitales · QR</span>
+                <span class="live-badge">Producción</span>
+              </div>
+              <h3 class="project-title">Simpleat</h3>
+            </div>
+
+            <p class="project-description">
+              Plataforma SaaS de menús digitales y pedidos por QR para restauración. Arquitectura desacoplada con suites E2E (Playwright + Cucumber BDD), pruebas de API (Karate) y carga transaccional (Gatling), orquestado desde GitHub Actions.
+            </p>
+
+            <div class="project-spec-visual">
+              <div class="qr-mockup-pill">
+                <div class="qr-icon-wrap" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                </div>
+                <div class="qr-label">
+                  <span class="qr-title">Menús QR &amp; Pedidos</span>
+                  <span class="qr-meta">Latencia P95 &lt; 45ms</span>
+                </div>
+              </div>
+              <div class="test-health-badge">
+                <span class="health-dot"></span>
+                <span>Playwright E2E + Gatling CI Validated</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag tag-highlight">Playwright</span>
+              <span class="tech-tag tag-highlight">Cucumber BDD</span>
+              <span class="tech-tag">Karate DSL</span>
+              <span class="tech-tag">Gatling</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: ATLAS Platform (Col Span 4) -->
+        <article class="bento-card card-project project-atlas spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="project-header">
+              <div class="project-tagline-wrap">
+                <span class="project-tagline">SaaS · Análisis de Calidad</span>
+                <span class="live-badge badge-modulith">Modulith</span>
+              </div>
+              <h3 class="project-title">ATLAS Platform</h3>
+            </div>
+
+            <p class="project-description">
+              Plataforma modular de análisis de calidad de software construida con Clean Architecture. Backend en Spring Modulith con PostgreSQL, frontend en Angular 20, contenedorizada con Docker.
+            </p>
+
+            <div class="modulith-schematic-pill">
+              <span class="schematic-node">Spring Modulith</span>
+              <span class="schematic-arrow" aria-hidden="true">→</span>
+              <span class="schematic-node">Angular 20</span>
+              <span class="schematic-arrow" aria-hidden="true">→</span>
+              <span class="schematic-node">Docker</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag tag-highlight">Spring Modulith</span>
+              <span class="tech-tag tag-highlight">Angular 20</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Java 21</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Enlace Mental (Col Span 6) -->
+        <article class="bento-card card-project project-enlace spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="project-header">
+              <div class="project-tagline-wrap">
+                <span class="project-tagline">Juego Multijugador · WebSockets</span>
+                <span class="live-badge badge-ws">
+                  <span class="pulse-ring" aria-hidden="true"></span>
+                  Realtime WS
+                </span>
+              </div>
+              <h3 class="project-title">Enlace Mental — TFG</h3>
+            </div>
+
+            <p class="project-description">
+              Juego web multijugador de convergencia de palabras en tiempo real. Frontend en React, backend en Node.js con Socket.io y WebSockets para sincronización instantánea entre jugadores.
+            </p>
+
+            <div class="ws-telemetry-strip">
+              <span class="telemetry-item">
+                <span class="tele-dot" aria-hidden="true"></span>
+                Socket.io Ping: <strong>16ms</strong>
+              </span>
+              <span class="telemetry-item">Sincronización Bidireccional</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag tag-highlight">React</span>
+              <span class="tech-tag tag-highlight">Node.js</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">WebSockets</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Goated Wear (Col Span 6) -->
+        <article class="bento-card card-project project-goated spotlight-card" data-tilt>
+          <div class="card-inner">
+            <div class="project-header">
+              <div class="project-tagline-wrap">
+                <span class="project-tagline">E-commerce · Sportswear</span>
+                <span class="live-badge badge-ecom">100% CWV</span>
+              </div>
+              <h3 class="project-title">Goated Wear</h3>
+            </div>
+
+            <p class="project-description">
+              Infraestructura web y catálogo online para marca de ropa deportiva y camisetas de fútbol. Diseño de producto, gestión de inventario digital y optimización de conversión.
+            </p>
+
+            <div class="perf-metric-strip">
+              <div class="perf-pill">
+                <span class="perf-val">100</span>
+                <span class="perf-sub">Performance</span>
+              </div>
+              <div class="perf-pill">
+                <span class="perf-val">100</span>
+                <span class="perf-sub">SEO</span>
+              </div>
+              <div class="perf-pill">
+                <span class="perf-val">0.8s</span>
+                <span class="perf-sub">LCP Speed</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag tag-highlight">E-commerce</span>
+              <span class="tech-tag tag-highlight">Web Design</span>
+              <span class="tech-tag">SEO</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: HABILIDADES (SKILLS MATRIX BENTO)
+         ==================================================================== -->
+    <section class="section-block" id="habilidades" aria-labelledby="skills-heading">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">TECNOLOGÍAS &amp; COMPETENCIAS</span>
+        <h2 class="section-heading" id="skills-heading">Habilidades</h2>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="skills-filter-bar" role="tablist" aria-label="Filtrar habilidades por categoría">
+        <button type="button" class="filter-pill active" data-category="all" role="tab" aria-selected="true">
+          Todos <span class="filter-count">31</span>
+        </button>
+        <button type="button" class="filter-pill" data-category="backend" role="tab" aria-selected="false">
+          Backend <span class="filter-count">8</span>
+        </button>
+        <button type="button" class="filter-pill" data-category="frontend" role="tab" aria-selected="false">
+          Frontend <span class="filter-count">8</span>
+        </button>
+        <button type="button" class="filter-pill" data-category="cloud" role="tab" aria-selected="false">
+          Cloud &amp; DevOps <span class="filter-count">8</span>
+        </button>
+        <button type="button" class="filter-pill" data-category="qa" role="tab" aria-selected="false">
+          Testing &amp; QA <span class="filter-count">8</span>
+        </button>
+        <button type="button" class="filter-pill" data-category="idiomas" role="tab" aria-selected="false">
+          Idiomas <span class="filter-count">2</span>
+        </button>
+      </div>
+
+      <div class="bento-grid skills-pods-grid">
+
+        <!-- Pod 1: Backend (8 skills) -->
+        <article class="bento-card skill-pod-card spotlight-card" data-category="backend">
+          <div class="card-inner">
+            <div class="pod-header">
+              <div class="pod-title-wrap">
+                <span class="pod-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </span>
+                <h3 class="pod-title">Backend</h3>
+              </div>
+              <span class="pod-count">8 Tecnologías</span>
+            </div>
+
+            <div class="skill-pills-list">
+              <span class="skill-pill pill-highlight">C# / ASP.NET Core</span>
+              <span class="skill-pill pill-highlight">Java / Spring Boot</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Spring Modulith</span>
+              <span class="skill-pill">EF Core</span>
+              <span class="skill-pill">PostgreSQL / SQL Server</span>
+              <span class="skill-pill">Redis</span>
+              <span class="skill-pill">PHP</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pod 2: Frontend (8 skills) -->
+        <article class="bento-card skill-pod-card spotlight-card" data-category="frontend">
+          <div class="card-inner">
+            <div class="pod-header">
+              <div class="pod-title-wrap">
+                <span class="pod-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </span>
+                <h3 class="pod-title">Frontend</h3>
+              </div>
+              <span class="pod-count">8 Tecnologías</span>
+            </div>
+
+            <div class="skill-pills-list">
+              <span class="skill-pill pill-highlight">Angular</span>
+              <span class="skill-pill pill-highlight">React</span>
+              <span class="skill-pill pill-highlight">TypeScript</span>
+              <span class="skill-pill">Vue.js</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">Bootstrap 5</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">HTML5 / CSS3</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pod 3: Cloud & DevOps (8 skills) -->
+        <article class="bento-card skill-pod-card spotlight-card" data-category="cloud">
+          <div class="card-inner">
+            <div class="pod-header">
+              <div class="pod-title-wrap">
+                <span class="pod-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </span>
+                <h3 class="pod-title">Cloud &amp; DevOps</h3>
+              </div>
+              <span class="pod-count">8 Tecnologías</span>
+            </div>
+
+            <div class="skill-pills-list">
+              <span class="skill-pill pill-highlight">AWS</span>
+              <span class="skill-pill pill-highlight">Azure</span>
+              <span class="skill-pill pill-highlight">Docker</span>
+              <span class="skill-pill">Linux</span>
+              <span class="skill-pill">Nginx</span>
+              <span class="skill-pill">Jenkins (Groovy)</span>
+              <span class="skill-pill">GitHub Actions</span>
+              <span class="skill-pill">GitLab CI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pod 4: Testing & QA (8 skills) -->
+        <article class="bento-card skill-pod-card spotlight-card" data-category="qa">
+          <div class="card-inner">
+            <div class="pod-header">
+              <div class="pod-title-wrap">
+                <span class="pod-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </span>
+                <h3 class="pod-title">Testing &amp; QA</h3>
+              </div>
+              <span class="pod-count">8 Tecnologías</span>
+            </div>
+
+            <div class="skill-pills-list">
+              <span class="skill-pill pill-highlight">Playwright</span>
+              <span class="skill-pill pill-highlight">Karate DSL</span>
+              <span class="skill-pill pill-highlight">Cucumber (BDD)</span>
+              <span class="skill-pill">JMeter</span>
+              <span class="skill-pill">Gatling (Java DSL)</span>
+              <span class="skill-pill">JUnit 5</span>
+              <span class="skill-pill">SonarQube</span>
+              <span class="skill-pill">Postman</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pod 5: Idiomas (2 skills) -->
+        <article class="bento-card skill-pod-card spotlight-card" data-category="idiomas">
+          <div class="card-inner">
+            <div class="pod-header">
+              <div class="pod-title-wrap">
+                <span class="pod-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </span>
+                <h3 class="pod-title">Idiomas</h3>
+              </div>
+              <span class="pod-count">2 Idiomas</span>
+            </div>
+
+            <div class="skill-pills-list">
+              <span class="skill-pill pill-highlight">Español (Nativo)</span>
+              <span class="skill-pill pill-highlight">Inglés (B2 certificado)</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: EXPERIENCIA LABORAL (WORK EXPERIENCE TIMELINE BENTO)
+         ==================================================================== -->
+    <section class="section-block" id="experiencia" aria-labelledby="experience-heading">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">TRAYECTORIA PROFESIONAL</span>
+        <h2 class="section-heading" id="experience-heading">Experiencia Laboral</h2>
+      </div>
+
+      <div class="bento-grid experience-timeline-grid">
+
+        <!-- Role 1: Tantin Solutions - Enterprise QA -->
+        <article class="bento-card card-experience spotlight-card">
+          <div class="card-inner">
+            <div class="exp-header-row">
+              <div class="exp-time-badge">
+                <span class="time-dot" aria-hidden="true"></span>
+                Mayo 2026 — Agosto 2026
+              </div>
+              <span class="exp-tier-badge">Enterprise</span>
+            </div>
+
+            <h3 class="exp-title">QA Automation Engineer</h3>
+            <div class="exp-company">Tantin Solutions · Madrid</div>
+
+            <ul class="exp-bullet-list">
+              <li>Automaticé pruebas de integración de APIs con Karate DSL para los microservicios Unity de El Corte Inglés, reduciendo el tiempo de validación de releases.</li>
+              <li>Validé la consistencia funcional del sistema POS de escritorio de Mango (.NET, MAUI, CQRS) integrado con SonarQube para análisis estático continuo.</li>
+              <li>Diseñé escenarios de carga y estrés con JMeter y Gatling (Java DSL) que identificaron cuellos de botella antes de despliegues en producción.</li>
+              <li>Construí y mantuve pipelines de CI/CD en Jenkins (Groovy) y GitLab, ejecutando suites de regresión automatizadas en cada commit.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Role 2: Tantin Solutions - Intern -->
+        <article class="bento-card card-experience spotlight-card">
+          <div class="card-inner">
+            <div class="exp-header-row">
+              <div class="exp-time-badge">
+                <span class="time-dot" aria-hidden="true"></span>
+                Marzo 2026 — Mayo 2026
+              </div>
+              <span class="exp-tier-badge tier-intern">Prácticas 2º DAW</span>
+            </div>
+
+            <h3 class="exp-title">QA Automation Intern (Prácticas 2º DAW)</h3>
+            <div class="exp-company">Tantin Solutions · Madrid</div>
+
+            <ul class="exp-bullet-list">
+              <li>Diseñé y ejecuté pruebas automatizadas con Karate DSL y JUnit en proyectos enterprise reales desde la primera semana de incorporación.</li>
+              <li>Integración directa en sprints Scrum con gestión de incidencias en Jira, participando en dailies y refinamientos de backlog.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Role 3: Club Voleibol Aranjuez -->
+        <article class="bento-card card-experience spotlight-card">
+          <div class="card-inner">
+            <div class="exp-header-row">
+              <div class="exp-time-badge">
+                <span class="time-dot" aria-hidden="true"></span>
+                Abril 2025 — Mayo 2025
+              </div>
+              <span class="exp-tier-badge tier-volunteer">Voluntariado</span>
+            </div>
+
+            <h3 class="exp-title">Front-end Developer</h3>
+            <div class="exp-company">Club Voleibol Aranjuez · Madrid (Voluntariado)</div>
+
+            <ul class="exp-bullet-list">
+              <li>Diseñé, desarrollé y desplegué el sitio web oficial del club con HTML5, CSS3 y JavaScript vanilla, optimizando Core Web Vitals y responsividad.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: FORMACIÓN (ACADEMIC CREDENTIALS BENTO)
+         ==================================================================== -->
+    <section class="section-block" id="formacion" aria-labelledby="education-heading">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">ACREDITACIÓN ACADÉMICA</span>
+        <h2 class="section-heading" id="education-heading">Formación</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Degree 1: Máster Tajamar Tech (Col Span 6) -->
+        <article class="bento-card card-education spotlight-card">
+          <div class="card-inner">
+            <div class="edu-time-badge">
+              <span class="edu-dot" aria-hidden="true"></span>
+              2026 — 2027
+            </div>
+
+            <h3 class="edu-degree">Máster en Desarrollo Full Stack &amp; Arquitecturas Cloud</h3>
+            <div class="edu-institution">Tajamar Tech · Madrid · En curso</div>
+
+            <p class="edu-description">
+              Especialización de 814 horas en C#, ASP.NET Core, EF Core, Angular, React, Docker, Kubernetes y arquitecturas en Microsoft Azure y AWS. Finalización: junio 2027.
+            </p>
+          </div>
+        </article>
+
+        <!-- Degree 2: DAW IES Domenico Scarlatti (Col Span 6) -->
+        <article class="bento-card card-education spotlight-card">
+          <div class="card-inner">
+            <div class="edu-time-badge">
+              <span class="edu-dot" aria-hidden="true"></span>
+              2024 — 2026
+            </div>
+
+            <h3 class="edu-degree">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+            <div class="edu-institution">IES Domenico Scarlatti · Aranjuez, Madrid</div>
+
+            <p class="edu-description">
+              Diseño de bases de datos relacionales, desarrollo web frontend/backend, control de versiones (Git) y metodologías ágiles.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: CONTACTO / HABLEMOS (TACTILE BENTO CONTACT & FOOTER)
+         ==================================================================== -->
+    <section class="section-block" id="contacto" aria-labelledby="contact-heading">
+      <div class="bento-grid">
+        <article class="bento-card card-contact-master spotlight-card">
+          <div class="card-inner">
+            <div class="contact-header-content">
+              <span class="section-eyebrow">CONECTEMOS</span>
+              <h2 class="contact-heading" id="contact-heading">Hablemos</h2>
+              <p class="contact-subtext">
+                Full Stack con mentalidad de calidad, experiencia enterprise y arquitecturas Cloud.
+              </p>
+              <div class="contact-location-pill">
+                <span class="loc-pin" aria-hidden="true">📍</span>
+                Madrid · Incorporación verano 2027 · Abierto a remoto
+              </div>
+            </div>
+
+            <!-- Prominent Magnetic Copy Box -->
+            <div class="contact-action-zone">
+              <button type="button" class="contact-email-card" id="contact-email-copy" data-email="davidllanos2005@gmail.com" aria-label="Copiar correo davidllanos2005@gmail.com">
+                <div class="email-card-left">
+                  <span class="email-label">CORREO ELECTRÓNICO DIRECTO</span>
+                  <span class="email-val" id="contact-email-label">davidllanos2005@gmail.com</span>
+                </div>
+                <div class="email-card-right">
+                  <span class="copy-badge" id="contact-copy-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copiar</span>
+                  </span>
+                </div>
+              </button>
+            </div>
+
+            <!-- External Social & Document Outbound Grid -->
+            <div class="contact-links-grid">
+              <!-- LinkedIn -->
+              <a href="https://es.linkedin.com/in/david-castellanos-lopez" class="outbound-tile" target="_blank" rel="noopener noreferrer">
+                <div class="outbound-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="outbound-text">
+                  <span class="outbound-name">LinkedIn</span>
+                  <span class="outbound-meta">/in/david-castellanos-lopez</span>
+                </div>
+                <span class="outbound-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/DCastellanos4" class="outbound-tile" target="_blank" rel="noopener noreferrer">
+                <div class="outbound-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </div>
+                <div class="outbound-text">
+                  <span class="outbound-name">GitHub</span>
+                  <span class="outbound-meta">@DCastellanos4</span>
+                </div>
+                <span class="outbound-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <!-- Resume Download -->
+              <a href="../../docs/CV%20David%20Castellanos%20-%20English.pdf" download="CV_David_Castellanos.pdf" class="outbound-tile outbound-tile-cv" target="_blank" rel="noopener noreferrer">
+                <div class="outbound-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="outbound-text">
+                  <span class="outbound-name">Curriculum Vitae</span>
+                  <span class="outbound-meta">Descargar PDF (English)</span>
+                </div>
+                <span class="outbound-arrow" aria-hidden="true">↓</span>
+              </a>
+            </div>
+
+            <!-- Footer Baseline -->
+            <footer class="bento-footer">
+              <p class="copyright">
+                &copy; 2026 David Castellanos. Todos los derechos reservados.
+              </p>
+              <p class="design-credits">
+                Variante 2: Modern Kinetic Bento-Box &amp; Spatial Craft
+              </p>
+            </footer>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Back-to-Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Variant 2 Vanilla JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>

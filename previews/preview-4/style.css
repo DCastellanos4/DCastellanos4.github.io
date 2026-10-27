@@ -1,0 +1,2198 @@
+/* ==========================================================================
+   VARIANT 4: INDUSTRIAL HARDWARE & PHYSICAL LAB
+   Design Philosophy: Teenage Engineering (OP-1, Field Series),
+                      Dieter Rams (Braun 10 Principles of Good Design),
+                      Nothing OS (Dot-Matrix Typography & Exposed Architecture)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. ROOT DESIGN TOKENS & SYSTEM VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Chassis Color Palette */
+  --chassis-bone: #e8e6e1;
+  --chassis-bone-light: #f4f3ef;
+  --chassis-bone-dark: #d5d3cc;
+  --chassis-graphite: #18191c;
+  --chassis-graphite-dark: #101114;
+  --chassis-graphite-light: #26282e;
+  --chassis-surface: #1e2024;
+  --chassis-card-bg: #ffffff;
+  --chassis-border: #383a40;
+  --chassis-border-subtle: #d0cecb;
+  --chassis-border-dark: #2a2c33;
+
+  /* Accent Hardware Signals */
+  --accent-vermilion: #ff4800;
+  --accent-vermilion-hover: #e03f00;
+  --accent-vermilion-glow: rgba(255, 72, 0, 0.35);
+  --accent-amber-lcd: #ffaa00;
+  --accent-amber-glow: rgba(255, 170, 0, 0.4);
+  --accent-phosphor-green: #39ff14;
+  --accent-phosphor-glow: rgba(57, 255, 20, 0.4);
+  --accent-laser-cyan: #00d2ff;
+
+  /* Typography Colors */
+  --text-dark: #121316;
+  --text-dark-muted: #585a62;
+  --text-light: #f0f0f2;
+  --text-light-muted: #9699a2;
+
+  /* Typography Families */
+  --font-mono: 'Space Mono', 'JetBrains Mono', 'SF Mono', Monaco, Menlo, Consolas, monospace;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout Geometry */
+  --header-height: 54px;
+  --nav-height: 50px;
+  --max-chassis-width: 1320px;
+  --border-radius-chassis: 8px;
+  --border-radius-pill: 9999px;
+  --border-radius-card: 6px;
+
+  /* Tactile Physics & Elevation */
+  --shadow-chassis: 0 16px 36px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-tactile-btn: 0 3px 0 #b33200, 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-tactile-graphite: 0 3px 0 #08090a, 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-tactile-bone: 0 3px 0 #b5b3ad, 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-inset-bevel: inset 1px 1px 2px rgba(0, 0, 0, 0.35), inset -1px -1px 2px rgba(255, 255, 255, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   02. GLOBAL RESET & OVERFLOW GUARDS (Strict Zero Horizontal Scroll)
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.industrial-lab-body {
+  font-family: var(--font-sans);
+  background-color: var(--chassis-bone);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Perforated speaker/chassis texture overlay */
+.chassis-texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.22;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* --------------------------------------------------------------------------
+   03. HARDWARE TOP BAR & TELEMETRY HUD (Sticky)
+   -------------------------------------------------------------------------- */
+.hw-topbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: var(--header-height);
+  background-color: var(--chassis-graphite);
+  color: var(--text-light);
+  border-bottom: 2px solid var(--chassis-border);
+  z-index: 999;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+}
+
+.hw-topbar-inner {
+  max-width: var(--max-chassis-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.hw-id-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+.hw-chassis-tag {
+  background: #000000;
+  color: var(--accent-vermilion);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 72, 0, 0.4);
+}
+
+.hw-spec-tag {
+  color: var(--text-light-muted);
+  font-size: 0.75rem;
+}
+
+.hw-status-led {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-phosphor-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-phosphor-green);
+  animation: pulse-led 2s infinite ease-in-out;
+}
+
+@keyframes pulse-led {
+  0%, 100% { opacity: 1; filter: brightness(1.2); }
+  50% { opacity: 0.4; filter: brightness(0.8); }
+}
+
+/* Center LCD Readout */
+.hw-center-telemetry {
+  display: flex;
+  align-items: center;
+}
+
+.lcd-badge {
+  background-color: #0d0f0d;
+  color: var(--accent-amber-lcd);
+  border: 1px solid rgba(255, 170, 0, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(255, 170, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lcd-label {
+  color: #8c6614;
+}
+
+.lcd-divider {
+  color: #4a3810;
+}
+
+/* Right Controls Group */
+.hw-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hw-avail-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #111215;
+  border: 1px solid var(--chassis-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--border-radius-pill);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.pulse-optic {
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-laser-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--accent-laser-cyan);
+}
+
+.avail-text {
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* Tactile Audio Master Toggle */
+.hw-audio-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--chassis-graphite-light);
+  color: var(--text-light);
+  border: 1px solid var(--chassis-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  min-height: 44px; /* Hit target standard */
+  min-width: 44px;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-inset-bevel);
+}
+
+.hw-audio-toggle:hover {
+  background: #32353d;
+}
+
+.hw-audio-toggle:active {
+  transform: translateY(1px);
+}
+
+.toggle-led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #44474f;
+  transition: all 0.2s ease;
+}
+
+.toggle-led.active {
+  background-color: var(--accent-vermilion);
+  box-shadow: 0 0 8px var(--accent-vermilion);
+}
+
+/* --------------------------------------------------------------------------
+   04. HARDWARE SECONDARY NAVIGATION
+   -------------------------------------------------------------------------- */
+.hw-nav {
+  position: sticky;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--chassis-bone-light);
+  border-bottom: 2px solid var(--chassis-border-subtle);
+  z-index: 998;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.hw-nav-inner {
+  max-width: var(--max-chassis-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hw-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-knob {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #555 30%, #222 100%);
+  border-radius: 50%;
+  border: 1px solid #111;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.hw-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hw-nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.65rem;
+  color: var(--text-dark-muted);
+  text-decoration: none;
+  border-radius: 4px;
+  min-height: 44px;
+  transition: all 0.15s ease;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.hw-nav-item .item-num {
+  color: var(--accent-vermilion);
+  font-size: 0.7rem;
+}
+
+.hw-nav-item:hover,
+.hw-nav-item.active {
+  color: var(--text-dark);
+  background-color: var(--chassis-bone-dark);
+}
+
+.hw-mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--chassis-border-subtle);
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.menu-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-dark);
+}
+
+/* --------------------------------------------------------------------------
+   05. MAIN CHASSIS WORKSPACE & INSTRUMENT PANELS
+   -------------------------------------------------------------------------- */
+.hw-chassis-container {
+  max-width: var(--max-chassis-width);
+  margin: 1.5rem auto 4rem;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Common Machined Instrument Panel Container */
+.hw-panel {
+  background-color: var(--chassis-bone-light);
+  border: 2px solid var(--chassis-border);
+  border-radius: var(--border-radius-chassis);
+  position: relative;
+  box-shadow: var(--shadow-chassis);
+  overflow: hidden;
+}
+
+/* 4 Corner Torx/Allen Screws */
+.chassis-screw {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #e2e2e2 20%, #999 70%, #555 100%);
+  border-radius: 50%;
+  border: 1px solid #333;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 3px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.chassis-screw::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 1.5px;
+  background-color: #222;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.screw-tl { top: 8px; left: 8px; }
+.screw-tr { top: 8px; right: 8px; }
+.screw-bl { bottom: 8px; left: 8px; }
+.screw-br { bottom: 8px; right: 8px; }
+
+/* Panel Header Calibration Bar */
+.panel-header-bar {
+  background-color: var(--chassis-graphite);
+  color: var(--text-light-muted);
+  border-bottom: 1px solid var(--chassis-border);
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  gap: 1rem;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+/* Panel Bottom Ruler Bar */
+.panel-ruler-bar {
+  background-color: var(--chassis-bone-dark);
+  border-top: 1px solid var(--chassis-border-subtle);
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-dark-muted);
+  overflow: hidden;
+  user-select: none;
+}
+
+.ruler-subtick {
+  width: 1px;
+  height: 6px;
+  background-color: #a5a39d;
+}
+
+.ruler-tick {
+  font-weight: 600;
+}
+
+/* Common Section Heading Styles */
+.section-title-wrap {
+  padding: 1.75rem 2rem 1rem;
+}
+
+.section-code {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-vermilion);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.section-sub {
+  color: var(--text-dark-muted);
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+  max-width: 800px;
+}
+
+/* --------------------------------------------------------------------------
+   06. HERO SECTION: INDUSTRIAL INSTRUMENT PLATE
+   -------------------------------------------------------------------------- */
+.hero-panel {
+  background: linear-gradient(180deg, #f8f7f4 0%, var(--chassis-bone-light) 100%);
+}
+
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  padding: 2.5rem 2.25rem 2rem;
+  align-items: center;
+}
+
+.hero-badge-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.strip-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--chassis-bone-dark);
+  border: 1px solid var(--chassis-border-subtle);
+  border-radius: 3px;
+  color: var(--text-dark);
+  letter-spacing: 0.04em;
+}
+
+.strip-pill.accent-vermilion {
+  background-color: #000000;
+  color: var(--accent-vermilion);
+  border-color: rgba(255, 72, 0, 0.4);
+}
+
+.hero-name-plate {
+  font-family: var(--font-display);
+  font-size: 2.125rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+/* Quote Housing Box */
+.hero-quote-housing {
+  background: #ffffff;
+  border: 2px solid var(--chassis-border);
+  border-left: 6px solid var(--accent-vermilion);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.quote-housing-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent-vermilion);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.06em;
+}
+
+.hero-primary-quote {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+}
+
+.hero-secondary-narrative {
+  font-size: 1.0625rem;
+  color: var(--text-dark-muted);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Enterprise Banner in Hero */
+.hero-enterprise-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #18191c;
+  color: var(--text-light);
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--chassis-border);
+}
+
+.banner-led {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-phosphor-green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--accent-phosphor-green);
+  flex-shrink: 0;
+}
+
+/* Tactile Hardware Buttons */
+.hero-cta-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-tactile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-decoration: none;
+  min-height: 46px; /* Touch friendly >= 44px */
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-tactile .btn-notch {
+  width: 4px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 1px;
+}
+
+/* Vermilion Button */
+.btn-vermilion {
+  background-color: var(--accent-vermilion);
+  color: #ffffff;
+  border: 1px solid #cc3a00;
+  box-shadow: var(--shadow-tactile-btn);
+}
+
+.btn-vermilion:hover {
+  background-color: var(--accent-vermilion-hover);
+}
+
+.btn-vermilion:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #b33200, 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Graphite Button */
+.btn-graphite {
+  background-color: var(--chassis-graphite);
+  color: var(--text-light);
+  border: 1px solid var(--chassis-border);
+  box-shadow: var(--shadow-tactile-graphite);
+}
+
+.btn-graphite:hover {
+  background-color: #23252b;
+}
+
+.btn-graphite:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #08090a, 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Bone Button */
+.btn-bone {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  border: 1px solid var(--chassis-border-subtle);
+  box-shadow: var(--shadow-tactile-bone);
+}
+
+.btn-bone:hover {
+  background-color: #f7f6f2;
+}
+
+.btn-bone:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #b5b3ad, 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------------------------------------
+   07. HERO CONSOLE & OPTICAL RETICLE HOUSING
+   -------------------------------------------------------------------------- */
+.hero-console-col {
+  display: flex;
+  justify-content: center;
+}
+
+.chassis-console-frame {
+  background-color: var(--chassis-graphite);
+  border: 2px solid var(--chassis-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 440px;
+}
+
+.console-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-light-muted);
+  border-bottom: 1px solid var(--chassis-border);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.console-dials {
+  display: flex;
+  gap: 4px;
+}
+
+.dial-mark {
+  font-size: 8px;
+  color: #44474f;
+}
+
+.dial-mark.active {
+  color: var(--accent-vermilion);
+}
+
+.portrait-housing {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--chassis-border);
+  background-color: #0b0c0e;
+}
+
+.candidate-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: contrast(1.04) grayscale(15%);
+  display: block;
+}
+
+/* Optical Reticle Overlay */
+.optical-reticle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.reticle-line {
+  position: absolute;
+  background-color: rgba(255, 72, 0, 0.25);
+}
+
+.reticle-line.h-line {
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+}
+
+.reticle-line.v-line {
+  left: 50%;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+}
+
+.reticle-bracket {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: var(--accent-vermilion);
+  border-style: solid;
+}
+
+.reticle-bracket.tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.reticle-bracket.tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+.reticle-bracket.bl { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+.reticle-bracket.br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+
+.reticle-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--accent-vermilion);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+/* LCD Readout Deck below portrait */
+.lcd-readout-deck {
+  background: #0d0f0d;
+  border: 1px solid rgba(255, 170, 0, 0.25);
+  border-radius: 4px;
+  padding: 0.75rem 0.9rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent-amber-lcd);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.lcd-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.lcd-key {
+  color: #8c6614;
+}
+
+.lcd-data {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.text-amber {
+  color: var(--accent-amber-lcd);
+}
+
+.text-green {
+  color: var(--accent-phosphor-green);
+}
+
+/* --------------------------------------------------------------------------
+   08. SECTION 01: SOBRE MÍ (Narrative Cards)
+   -------------------------------------------------------------------------- */
+.bio-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 2.25rem;
+}
+
+.hw-card {
+  background: #ffffff;
+  border: 1.5px solid var(--chassis-border);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hw-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.featured-bio-card {
+  border-color: var(--accent-vermilion);
+  background: #fffcfb;
+}
+
+.card-machined-header {
+  background-color: var(--chassis-bone-dark);
+  border-bottom: 1px solid var(--chassis-border-subtle);
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.card-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+.card-status-dot.active-vermilion {
+  background-color: var(--accent-vermilion);
+  box-shadow: 0 0 6px var(--accent-vermilion);
+}
+
+.bio-card-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  flex-grow: 1;
+}
+
+.bio-text {
+  font-size: 0.9375rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.card-footer-spec {
+  background-color: #faf9f6;
+  border-top: 1px solid var(--chassis-border-subtle);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-dark-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   09. SECTION 02: ENTERPRISE & PEDRO CUELLO TESTIMONIAL
+   -------------------------------------------------------------------------- */
+.clients-chassis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 2rem;
+}
+
+.client-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.client-logo-box {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.client-img {
+  max-height: 48px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.client-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.client-role-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent-vermilion);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.client-desc {
+  font-size: 0.875rem;
+  color: var(--text-dark-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.client-stat-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.stat-pill {
+  background: var(--chassis-bone);
+  border: 1px solid var(--chassis-border-subtle);
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Testimonial Instrument Housing */
+.testimonial-instrument-housing {
+  background: var(--chassis-graphite);
+  color: var(--text-light);
+  border: 2px solid var(--chassis-border);
+  border-radius: var(--border-radius-card);
+  margin: 0 2rem 2.5rem;
+  padding: 2rem 2.25rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.housing-top-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-light-muted);
+  border-bottom: 1px solid var(--chassis-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.housing-tag {
+  color: var(--accent-phosphor-green);
+  font-weight: 700;
+}
+
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-author-plate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar-badge {
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-vermilion);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.author-company {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-light-muted);
+}
+
+.author-seal {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid rgba(57, 255, 20, 0.4);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent-phosphor-green);
+}
+
+/* --------------------------------------------------------------------------
+   10. SECTION 03: 4 FEATURED PROJECTS (Modular Cards & Drawers)
+   -------------------------------------------------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 2.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-num {
+  color: var(--accent-vermilion);
+  font-size: 0.6875rem;
+}
+
+.project-tagline {
+  color: var(--text-dark-muted);
+  font-size: 0.6875rem;
+}
+
+.project-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.project-summary {
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.project-specs-deck {
+  background-color: var(--chassis-bone);
+  border: 1px solid var(--chassis-border-subtle);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.spec-name {
+  color: var(--text-dark-muted);
+}
+
+.spec-val {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.hw-badge {
+  background-color: #ffffff;
+  border: 1px solid var(--chassis-border);
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Card Drawer Trigger */
+.card-drawer-trigger-bar {
+  border-top: 1px solid var(--chassis-border-subtle);
+  background-color: #faf9f6;
+  padding: 0.5rem 1rem;
+}
+
+.drawer-toggle-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px; /* Hit target */
+  width: 100%;
+}
+
+.drawer-toggle-btn .btn-indicator {
+  color: var(--accent-vermilion);
+  font-size: 0.875rem;
+}
+
+.project-drawer {
+  background-color: #1a1b1e;
+  color: var(--text-light);
+  border-top: 1px solid var(--chassis-border);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  transition: all 0.25s ease;
+}
+
+.project-drawer .drawer-inner {
+  padding: 1rem 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. SECTION 04: MATTER.JS 2D REAL-TIME PHYSICS SANDBOX
+   -------------------------------------------------------------------------- */
+.physics-panel {
+  background-color: #141517;
+  border-color: #2e3036;
+}
+
+.physics-panel .section-heading {
+  color: #ffffff;
+}
+
+.physics-panel .section-sub {
+  color: var(--text-light-muted);
+}
+
+.physics-control-deck {
+  background-color: #1c1e22;
+  border-top: 1px solid var(--chassis-border);
+  border-bottom: 2px solid #000000;
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.deck-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.deck-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-light-muted);
+  letter-spacing: 0.05em;
+}
+
+.button-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tactile-control-btn {
+  background-color: #27292f;
+  color: var(--text-light);
+  border: 1px solid var(--chassis-border);
+  border-radius: 4px;
+  padding: 0.5rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px; /* Hit target */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.08), 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.12s ease;
+}
+
+.tactile-control-btn:hover {
+  background-color: #34373f;
+}
+
+.tactile-control-btn:active {
+  transform: translateY(2px);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.tactile-control-btn.active {
+  background-color: var(--accent-vermilion);
+  color: #ffffff;
+  border-color: #e03f00;
+  box-shadow: 0 0 10px rgba(255, 72, 0, 0.5);
+}
+
+.tactile-control-btn.active .btn-indicator {
+  color: #ffffff;
+}
+
+.btn-shake {
+  background-color: #202420;
+  border-color: #2a3a2a;
+  color: var(--accent-phosphor-green);
+}
+
+.btn-shake:hover {
+  background-color: #283628;
+}
+
+.btn-respawn {
+  background-color: #262420;
+  border-color: #3a3424;
+  color: var(--accent-amber-lcd);
+}
+
+.btn-respawn:hover {
+  background-color: #383226;
+}
+
+/* Physics Telemetry LCD Screen */
+.chamber-lcd-screen {
+  background-color: #0b0d0c;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 1.25rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8), 0 0 12px rgba(57, 255, 20, 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.chamber-lcd-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.lcd-t-key {
+  color: #306636;
+  font-size: 0.625rem;
+}
+
+.lcd-t-val {
+  color: var(--accent-phosphor-green);
+  font-weight: 700;
+}
+
+/* Physics Canvas Housing */
+.physics-chamber-housing {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background-color: #0e0f11;
+  overflow: hidden;
+  touch-action: pan-y; /* CRITICAL: Allows vertical scroll outside badges */
+}
+
+.physics-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.physics-canvas:active {
+  cursor: grabbing;
+}
+
+.chamber-interaction-tip {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid var(--chassis-border);
+  color: var(--text-light);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  pointer-events: none;
+  animation: float-tip 3s infinite ease-in-out;
+  white-space: nowrap;
+}
+
+@keyframes float-tip {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -4px); }
+}
+
+/* Static Fallback Grid */
+.physics-fallback-grid {
+  padding: 2rem;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #121316;
+  color: #ffffff;
+}
+
+.fallback-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-amber-lcd);
+  margin-bottom: 1rem;
+}
+
+.fallback-badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. SECTION 05: 31 SKILLS MATRIX (Comprehensive Categorized Spec Grid)
+   -------------------------------------------------------------------------- */
+.matrix-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 2rem 1.5rem;
+}
+
+.matrix-tab-btn {
+  background: #ffffff;
+  border: 1px solid var(--chassis-border-subtle);
+  border-radius: 4px;
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-dark-muted);
+  cursor: pointer;
+  min-height: 44px; /* Hit target */
+  transition: all 0.15s ease;
+}
+
+.matrix-tab-btn:hover {
+  background-color: var(--chassis-bone);
+  color: var(--text-dark);
+}
+
+.matrix-tab-btn.active {
+  background-color: var(--chassis-graphite);
+  color: #ffffff;
+  border-color: var(--chassis-graphite);
+}
+
+.matrix-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 2.5rem;
+}
+
+.matrix-category-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-tag {
+  color: var(--accent-vermilion);
+  font-size: 0.6875rem;
+}
+
+.cat-count {
+  font-size: 0.6875rem;
+  color: var(--text-dark-muted);
+}
+
+.skills-spec-list {
+  list-style: none;
+  padding: 0.75rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px dashed var(--chassis-border-subtle);
+  gap: 0.75rem;
+}
+
+.skill-name {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.skill-detail {
+  font-size: 0.75rem;
+  color: var(--text-dark-muted);
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   13. SECTION 06: EXPERIENCE & EDUCATION TIMELINES
+   -------------------------------------------------------------------------- */
+.timeline-dual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 2rem 2.5rem;
+}
+
+.column-header-plate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--chassis-graphite);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.timeline-item {
+  padding: 1.25rem;
+}
+
+.timeline-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timeline-badge-date {
+  background: var(--chassis-bone);
+  border: 1px solid var(--chassis-border-subtle);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 700;
+  color: var(--accent-vermilion);
+}
+
+.timeline-company {
+  color: var(--text-dark-muted);
+  font-weight: 600;
+}
+
+.timeline-role {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-bullet-list {
+  list-style-type: square;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.degree-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #18191c;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.status-pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-amber-lcd);
+  border-radius: 50%;
+  animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* --------------------------------------------------------------------------
+   14. SECTION 07: CONTACT & HARDWARE PORTS
+   -------------------------------------------------------------------------- */
+.contact-panel {
+  background: #ffffff;
+}
+
+.contact-chassis-box {
+  padding: 2.25rem;
+}
+
+.contact-header-block {
+  margin-bottom: 2rem;
+}
+
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.channel-card {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.channel-icon-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ch-icon {
+  font-size: 1.25rem;
+}
+
+.ch-type {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-dark-muted);
+}
+
+.channel-value {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  word-break: break-all;
+}
+
+.copy-toast {
+  margin-top: 1.5rem;
+  background-color: #111215;
+  color: var(--accent-phosphor-green);
+  border: 1px solid var(--accent-phosphor-green);
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: slide-up 0.2s ease-out;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   15. INDUSTRIAL FOOTER
+   -------------------------------------------------------------------------- */
+.hw-footer {
+  background-color: var(--chassis-graphite);
+  color: var(--text-light-muted);
+  border-top: 2px solid var(--chassis-border);
+  padding: 2rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hw-footer-inner {
+  max-width: var(--max-chassis-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-meta-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--chassis-border);
+  padding-bottom: 1rem;
+}
+
+.footer-serial {
+  color: var(--accent-vermilion);
+  font-weight: 700;
+}
+
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-links-row a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-links-row a:hover {
+  color: var(--accent-vermilion);
+}
+
+.div-slash {
+  color: #44474f;
+}
+
+/* --------------------------------------------------------------------------
+   16. ANALOG POTENTIOMETER HUD & BACK TO TOP BUTTON
+   -------------------------------------------------------------------------- */
+.analog-hud {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 990;
+  pointer-events: none;
+}
+
+.potentiometer-widget {
+  background: var(--chassis-graphite);
+  border: 1px solid var(--chassis-border);
+  border-radius: 6px;
+  padding: 0.4rem 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pot-dial {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #888 35%, #222 100%);
+  border-radius: 50%;
+  border: 1px solid #111;
+  position: relative;
+  transition: transform 0.1s linear;
+}
+
+.pot-dial::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  width: 2px;
+  height: 6px;
+  background: var(--accent-vermilion);
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.pot-readout {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-light);
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pot-label {
+  color: var(--text-light-muted);
+}
+
+.pot-val {
+  color: var(--accent-amber-lcd);
+  font-weight: 700;
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  background: var(--chassis-graphite);
+  color: var(--text-light);
+  border: 1px solid var(--chassis-border);
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 990;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.back-to-top-btn.visible {
+  display: flex;
+}
+
+.back-to-top-btn:hover {
+  background: var(--accent-vermilion);
+  border-color: #cc3a00;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   17. UNIVERSAL FLOATING PREVIEW SWITCHER (INTERFACE CONTRACT)
+   -------------------------------------------------------------------------- */
+.preview-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(18, 19, 22, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--border-radius-pill);
+  padding: 0.35rem 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.switcher-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.switcher-link {
+  color: #a0a3ab;
+  text-decoration: none;
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--border-radius-pill);
+  font-weight: 600;
+  min-height: 44px; /* Hit target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.switcher-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.switcher-link.active,
+.switcher-link.active-p4 {
+  background: var(--accent-vermilion);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 72, 0, 0.5);
+}
+
+.switcher-divider {
+  color: #4b4f59;
+  font-size: 0.7rem;
+}
+
+/* --------------------------------------------------------------------------
+   18. RESPONSIVE BREAKPOINTS (320px to 4K Ultra-wide)
+   -------------------------------------------------------------------------- */
+
+/* Tablet & Smaller Desktops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-console-col {
+    order: -1;
+  }
+
+  .bio-cards-grid,
+  .clients-chassis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid,
+  .matrix-categories-grid,
+  .timeline-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 50px;
+    --nav-height: 46px;
+  }
+
+  .hw-topbar-inner {
+    padding: 0 0.75rem;
+  }
+
+  .hw-spec-tag {
+    display: none;
+  }
+
+  .hw-center-telemetry {
+    display: none;
+  }
+
+  .hw-mobile-menu-btn {
+    display: flex;
+  }
+
+  .hw-nav-links {
+    position: fixed;
+    top: calc(var(--header-height) + var(--nav-height));
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: var(--chassis-graphite);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.25rem;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--chassis-border);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    display: none;
+    overflow-x: clip;
+  }
+
+  .hw-nav-links.open {
+    display: flex;
+  }
+
+  .hw-nav-item {
+    color: var(--text-light);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    background: #202227;
+  }
+
+  .hero-name-plate {
+    font-size: 1.625rem;
+  }
+
+  .hero-primary-quote {
+    font-size: 1.125rem;
+  }
+
+  .physics-chamber-housing {
+    height: 380px;
+  }
+
+  .physics-control-deck {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-toggle-row {
+    flex-wrap: wrap;
+  }
+
+  .chamber-lcd-screen {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analog-hud {
+    display: none;
+  }
+
+  .preview-switcher {
+    width: calc(100% - 20px);
+    max-width: 400px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .switcher-inner {
+    justify-content: space-between;
+    gap: 0.2rem;
+  }
+
+  .switcher-link {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Phablets & Large Mobiles (<= 600px) */
+@media (max-width: 600px) {
+  .hw-topbar {
+    height: auto;
+    min-height: var(--header-height);
+  }
+
+  .hw-topbar-inner {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .hw-controls-group {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hw-avail-pill {
+    max-width: 100%;
+  }
+
+  .hw-center-telemetry {
+    display: none !important;
+  }
+}
+
+/* Ultra-Narrow Mobile (<= 480px / 320px) */
+@media (max-width: 480px) {
+  .hw-topbar-inner {
+    padding: 0.35rem;
+  }
+
+  .hw-spec-tag {
+    display: none !important;
+  }
+
+  .cal-spec {
+    display: none !important;
+  }
+
+  .panel-header-bar {
+    padding: 0.35rem 0.75rem;
+    min-height: 24px;
+    overflow-x: clip;
+  }
+
+  .hw-controls-group {
+    gap: 0.35rem;
+  }
+
+  .hw-avail-pill {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .hw-audio-toggle {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Universal Container Zero Horizontal Overflow Guards */
+  html,
+  body.industrial-lab-body,
+  .hw-topbar,
+  .hw-topbar-inner,
+  .hw-nav,
+  .hw-nav-inner,
+  .hw-chassis-container,
+  .hw-panel,
+  .panel-header-bar,
+  .panel-ruler-bar {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: clip;
+  }
+
+  .hero-split-grid {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title-wrap {
+    padding: 1.25rem 1rem 0.75rem;
+  }
+
+  .bio-cards-grid,
+  .clients-chassis-grid,
+  .projects-grid,
+  .matrix-categories-grid,
+  .timeline-dual-grid {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .testimonial-instrument-housing {
+    margin: 0 1rem 1.5rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-chassis-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-name-plate {
+    font-size: 1.375rem;
+  }
+
+  .hero-cta-cluster {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .portrait-housing {
+    height: 280px;
+  }
+
+  .preview-switcher {
+    padding: 0.2rem 0.35rem;
+  }
+
+  .switcher-link {
+    padding: 0.2rem 0.35rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* 4K Ultra-Wide Monitors (>= 2560px) */
+@media (min-width: 2560px) {
+  :root {
+    --max-chassis-width: 1720px;
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  .physics-chamber-housing {
+    height: 560px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   19. ACCESSIBILITY: REDUCED MOTION PREFERENCES
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .hw-status-led,
+  .status-pulse-dot,
+  .chamber-interaction-tip {
+    animation: none !important;
+  }
+}

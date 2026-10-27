@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Castellanos — Full Stack Developer & QA Engineer · C# · Java · Angular · Cloud</title>
+  <meta name="description" content="Desarrollador Full Stack y QA Automation Engineer con experiencia enterprise (El Corte Inglés, Mango). C#, .NET, Java, Angular, Playwright, Cloud. Disponible verano 2027.">
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+  <!-- Google Fonts: Fira Code (Telemetry, Code, Terminal) + Inter (UI, Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="darkroom-console">
+  <!-- Scanline CRT Effect Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Telemetry System Top Header Bar -->
+  <header class="tele-topbar" id="topbar">
+    <div class="tele-container topbar-content">
+      <div class="topbar-branding">
+        <a href="#hero" class="brand-link" aria-label="David Castellanos Console Home">
+          <span class="brand-prefix">&gt;</span>
+          <span class="brand-name">DC</span>
+          <span class="brand-divider">//</span>
+          <span class="brand-system">OBSERVABILITY_CONSOLE</span>
+          <span class="sys-version-tag">v3.2.0</span>
+        </a>
+      </div>
+
+      <div class="topbar-metrics" aria-label="System status metrics">
+        <div class="metric-pill" title="Uptime Status">
+          <span class="pulsing-led online" aria-hidden="true"></span>
+          <span class="metric-label">STATUS:</span>
+          <span class="metric-value green-text">PROD_ONLINE</span>
+        </div>
+        <div class="metric-pill" title="Heartbeat Latency">
+          <span class="metric-label">PING:</span>
+          <span class="metric-value cyan-text" id="live-ping">14ms</span>
+        </div>
+        <div class="metric-pill hide-mobile" title="Security Status">
+          <span class="metric-label">SECVULN:</span>
+          <span class="metric-value green-text">0_FOUND</span>
+        </div>
+        <div class="metric-pill hide-tablet" title="Target Incorporation">
+          <span class="metric-label">INCORP:</span>
+          <span class="metric-value amber-text">VERANO_2027</span>
+        </div>
+      </div>
+
+      <!-- Navigation & Mobile Toggle -->
+      <nav class="tele-nav" id="tele-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú de telemetría">
+          <span class="toggle-box">
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+          </span>
+          <span class="toggle-text">CMD_MENU</span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#hero" class="nav-link"><span class="nav-num">[01]</span> TELEMETRÍA</a></li>
+          <li class="nav-item"><a href="#auditoria" class="nav-link"><span class="nav-num">[02]</span> AUDITORÍA</a></li>
+          <li class="nav-item"><a href="#servicios" class="nav-link"><span class="nav-num">[03]</span> SERVICIOS</a></li>
+          <li class="nav-item"><a href="#stack" class="nav-link"><span class="nav-num">[04]</span> STACK</a></li>
+          <li class="nav-item"><a href="#experiencia" class="nav-link"><span class="nav-num">[05]</span> EXPERIENCIA</a></li>
+          <li class="nav-item"><a href="#formacion" class="nav-link"><span class="nav-num">[06]</span> FORMACIÓN</a></li>
+          <li class="nav-item"><a href="#contacto" class="nav-link"><span class="nav-num">[07]</span> CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO DUAL-PANE MISSION CONTROL -->
+    <section class="tele-section section-hero" id="hero" aria-label="Mission Control Telemetry Dossier">
+      <div class="tele-container">
+        <!-- Station Coordinates Metadata Header -->
+        <div class="sys-coordinates-bar" aria-hidden="true">
+          <span class="coord-tag">[STATION: MADRID_ES (40.4168° N, 3.7038° W)]</span>
+          <span class="coord-tag">[CLUSTER: ENTERPRISE_PROD]</span>
+          <span class="coord-tag">[NODE_AUTH: SHA256_VERIFIED]</span>
+          <span class="coord-tag">[PIPELINE: ACTIVE]</span>
+        </div>
+
+        <div class="hero-dual-grid">
+          <!-- LEFT PANE: Candidate Telemetry Dossier -->
+          <article class="tele-panel hero-dossier" aria-label="Candidate Dossier">
+            <div class="panel-header">
+              <div class="panel-title-wrap">
+                <span class="panel-icon">⚡</span>
+                <span class="panel-title">TELEMETRY_DOSSIER // IDENTITY_MATRIX</span>
+              </div>
+              <div class="panel-badge-pill green-badge">● LIVE_FEED</div>
+            </div>
+
+            <div class="panel-body dossier-body">
+              <!-- Visual Scanframe Photo + Identity Headings -->
+              <div class="identity-lead-block">
+                <div class="scanframe-wrapper">
+                  <div class="scanframe-photo-container">
+                    <img src="../../img/Image.jpg" alt="David Castellanos — Full Stack Developer & QA Engineer" class="scanframe-img" loading="eager">
+                    <div class="scan-laser" aria-hidden="true"></div>
+                    <div class="scan-reticle top-left">┌</div>
+                    <div class="scan-reticle top-right">┐</div>
+                    <div class="scan-reticle bottom-left">└</div>
+                    <div class="scan-reticle bottom-right">┘</div>
+                  </div>
+                  <div class="scan-meta-tag">ID: DC-2026-ENG</div>
+                </div>
+
+                <div class="identity-text">
+                  <div class="positioning-badge">
+                    <span class="badge-prefix">&gt;</span> FULL STACK DEVELOPER &amp; QA ENGINEER
+                  </div>
+                  <h1 class="candidate-h1">DAVID CASTELLANOS</h1>
+                  <p class="extended-title">David Castellanos — Full Stack Developer &amp; QA Engineer (C#, Java, Angular, Cloud, Playwright)</p>
+                </div>
+              </div>
+
+              <!-- Core Value Proposition (Verbatim) -->
+              <div class="value-prop-panel">
+                <div class="prop-label-bar">
+                  <span class="mono-label">// CORE VALUE PROPOSITION</span>
+                  <span class="prop-tag">DIRECTIVE_01</span>
+                </div>
+                <blockquote class="prop-quote">
+                  "Construyo software que funciona y diseño los tests que lo demuestran."
+                </blockquote>
+                <p class="prop-subtitle">
+                  Full Stack con mentalidad de calidad, experiencia enterprise y arquitecturas Cloud.
+                </p>
+              </div>
+
+              <!-- Availability Beacon Card (Verbatim) -->
+              <div class="availability-card" id="availability-card">
+                <div class="avail-indicator-col">
+                  <span class="pulsing-beacon" aria-hidden="true"></span>
+                </div>
+                <div class="avail-content-col">
+                  <div class="avail-tag-row">
+                    <span class="avail-heading">INCORPORACIÓN</span>
+                    <span class="avail-badge">VERANO 2027</span>
+                  </div>
+                  <p class="avail-context">Incorporación Verano 2027 · Madrid · Incorporación verano 2027 · Abierto a remoto</p>
+                  <p class="avail-sub">Disponible para incorporación a partir de verano de 2027.</p>
+                </div>
+              </div>
+
+              <!-- Enterprise Track Record Ping Bars (Verbatim) -->
+              <div class="enterprise-track-panel">
+                <div class="track-header-row">
+                  <span class="track-title mono-label">// ENTERPRISE TRACK RECORD</span>
+                  <span class="track-audit-status green-text">AUDITED: 100% PASS</span>
+                </div>
+                <p class="track-verbatim-text">
+                  Software probado en producción para El Corte Inglés, Mango y Simpleat.
+                </p>
+
+                <!-- Ping Bars Stack -->
+                <div class="client-telemetry-stack">
+                  <!-- Client 1: El Corte Inglés -->
+                  <div class="client-tele-row">
+                    <div class="client-brand-col">
+                      <img src="../../img/LOGOECI.webp" alt="El Corte Inglés Logo" class="client-logo eci-logo">
+                      <span class="client-name">El Corte Inglés</span>
+                    </div>
+                    <div class="client-status-col">
+                      <div class="tele-bar-shell" title="API Regression Coverage: 99.98%">
+                        <div class="tele-bar-fill fill-green" style="width: 99.98%;"></div>
+                      </div>
+                      <span class="tele-metric-text green-text">99.98% PASS · UNITY APIS</span>
+                    </div>
+                  </div>
+
+                  <!-- Client 2: Mango -->
+                  <div class="client-tele-row">
+                    <div class="client-brand-col">
+                      <img src="../../img/logoMANGO.png" alt="Mango Logo" class="client-logo mango-logo">
+                      <span class="client-name">Mango</span>
+                    </div>
+                    <div class="client-status-col">
+                      <div class="tele-bar-shell" title="POS Functional Reliability: 100%">
+                        <div class="tele-bar-fill fill-cyan" style="width: 98.4%;"></div>
+                      </div>
+                      <span class="tele-metric-text cyan-text">POS SUITE: VALIDATED</span>
+                    </div>
+                  </div>
+
+                  <!-- Client 3: Simpleat -->
+                  <div class="client-tele-row">
+                    <div class="client-brand-col">
+                      <img src="../../img/simpleat-icon.png" alt="Simpleat Icon" class="client-logo simpleat-logo">
+                      <span class="client-name">Simpleat</span>
+                    </div>
+                    <div class="client-status-col">
+                      <div class="tele-bar-shell" title="Gatling Load: 4,200 req/s with 0 regressions">
+                        <div class="tele-bar-fill fill-amber" style="width: 100%;"></div>
+                      </div>
+                      <span class="tele-metric-text amber-text">LOAD: 4.2k REQ/S · 0 REGRESSIONS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action CTAs -->
+              <div class="hero-actions-row">
+                <a href="#servicios" class="tele-btn btn-primary">
+                  <span class="btn-bracket">[</span> VER LO QUE CONSTRUYO <span class="btn-bracket">]</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="../../docs/CV%20David%20Castellanos%20-%20English.pdf" download="CV_David_Castellanos.pdf" class="tele-btn btn-secondary">
+                  <span class="btn-bracket">[</span> DESCARGAR CV <span class="btn-bracket">]</span>
+                  <span class="btn-ext" aria-hidden="true">.PDF</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- RIGHT PANE: Interactive Command-Runner Terminal -->
+          <article class="tele-panel hero-terminal" aria-label="Interactive Command Runner Terminal">
+            <!-- Terminal Window Chrome -->
+            <div class="terminal-chrome">
+              <div class="chrome-buttons" aria-hidden="true">
+                <span class="chrome-dot red-dot"></span>
+                <span class="chrome-dot yellow-dot"></span>
+                <span class="chrome-dot green-dot"></span>
+              </div>
+              <div class="chrome-title">
+                <span class="term-shell-icon">&gt;_</span> bash — david@telemetry-runner: 80x24 (ANSI)
+              </div>
+              <div class="chrome-badge">
+                <span class="active-pulse"></span> READY
+              </div>
+            </div>
+
+            <!-- Terminal Toolbar / Quick Launch Chips -->
+            <div class="term-quick-actions" aria-label="Terminal Quick Commands">
+              <span class="quick-label">QUICK_EXEC:</span>
+              <button type="button" class="term-chip" data-cmd="test:eci-api" title="Run Karate DSL API integration tests for El Corte Inglés">
+                <span class="chip-num">[1]</span> RUN: ECI APIS
+              </button>
+              <button type="button" class="term-chip" data-cmd="test:simpleat-e2e" title="Run Playwright + Cucumber BDD E2E tests for Simpleat">
+                <span class="chip-num">[2]</span> RUN: SIMPLEAT E2E
+              </button>
+              <button type="button" class="term-chip" data-cmd="metrics:qa" title="Display QA automation test coverage metrics">
+                <span class="chip-num">[3]</span> METRICS: QA
+              </button>
+              <button type="button" class="term-chip" data-cmd="skills" title="Output full 31-skills telemetry dump">
+                <span class="chip-num">[4]</span> CAT SKILLS
+              </button>
+              <button type="button" class="term-chip" data-cmd="contact" title="Display contact details and copy email to clipboard">
+                <span class="chip-num">[5]</span> COPY EMAIL
+              </button>
+              <button type="button" class="term-chip chip-clear" data-cmd="clear" title="Clear terminal screen">
+                <span class="chip-num">[C]</span> CLEAR
+              </button>
+            </div>
+
+            <!-- Terminal Screen Container -->
+            <div class="terminal-screen" id="terminal-screen" role="log" aria-live="polite">
+              <div class="terminal-stdout" id="terminal-stdout">
+                <!-- Initial Boot Welcome Log -->
+                <div class="term-line sys-welcome">
+                  <span class="cyan-text">========================================================================</span>
+                </div>
+                <div class="term-line sys-welcome">
+                  <span class="emerald-text font-bold">DAVID CASTELLANOS // TELEMETRY TERMINAL v3.2.0</span>
+                </div>
+                <div class="term-line sys-welcome">
+                  <span class="text-muted">Type <span class="cyan-text font-bold">help</span> to list commands or click any quick-action chip above.</span>
+                </div>
+                <div class="term-line sys-welcome">
+                  <span class="cyan-text">========================================================================</span>
+                </div>
+                <div class="term-line">
+                  <span class="prompt-prefix">root@dcastellanos:~$</span> <span class="term-cmd">sys:healthcheck --all</span>
+                </div>
+                <div class="term-line indent-line">
+                  <span class="emerald-text">&#x2713; [SYSTEM]</span> Runtime initialized: Node.js / Java 21 / .NET 9
+                </div>
+                <div class="term-line indent-line">
+                  <span class="emerald-text">&#x2713; [ENTERPRISE]</span> El Corte Inglés Unity suites: <span class="cyan-text">PASS (99.98%)</span>
+                </div>
+                <div class="term-line indent-line">
+                  <span class="emerald-text">&#x2713; [ENTERPRISE]</span> Mango POS QA pipelines: <span class="cyan-text">VALIDATED</span>
+                </div>
+                <div class="term-line indent-line">
+                  <span class="emerald-text">&#x2713; [SAAS]</span> Simpleat Gatling stress load: <span class="amber-text">4.2k req/s (0 err)</span>
+                </div>
+                <div class="term-line indent-line">
+                  <span class="emerald-text">&#x2713; [STATUS]</span> Ready to receive input.
+                </div>
+              </div>
+
+              <!-- Terminal Live Command Input Row -->
+              <form class="terminal-input-row" id="terminal-form" autocomplete="off">
+                <label for="term-input" class="prompt-label">
+                  <span class="prompt-user">root@dcastellanos</span><span class="prompt-sep">:</span><span class="prompt-dir">~$</span>
+                </label>
+                <div class="input-cursor-wrapper">
+                  <input type="text" id="term-input" class="term-input" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal command input" placeholder="Escribe un comando ('help', 'test', 'metrics', 'clear', 'cv')...">
+                </div>
+                <button type="submit" class="term-submit-btn" aria-label="Ejecutar comando">RUN &crarr;</button>
+              </form>
+            </div>
+
+            <!-- Terminal Status Footer -->
+            <div class="terminal-footer-status">
+              <span class="footer-stat"><span class="stat-dot green-dot"></span> ENGINES: KARATE / PLAYWRIGHT</span>
+              <span class="footer-stat"><span class="stat-dot cyan-dot"></span> BUFFER: 80x24</span>
+              <span class="footer-stat hide-mobile"><span class="stat-dot amber-dot"></span> TTY: /dev/pts/0</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: VERIFIED AUDIT REPORT / PEDRO CUELLO TESTIMONIAL -->
+    <section class="tele-section section-audit" id="auditoria" aria-label="Auditoría de Calidad Enterprise">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_02</span>
+          <span class="section-topic">ENTERPRISE_INCIDENT_AUDIT_REPORT</span>
+        </div>
+        <h2 class="section-h2">AUDITORÍA Y VALIDACIÓN EN PRODUCCIÓN</h2>
+
+        <div class="audit-report-card">
+          <!-- Report Header Bar -->
+          <div class="audit-card-header">
+            <div class="audit-header-left">
+              <span class="audit-stamp">POST-MORTEM QUALITY ASSURANCE AUDIT</span>
+              <span class="audit-id">INCIDENT_ID: #TANTIN-REGRESSION-PREVENTED-089</span>
+            </div>
+            <div class="audit-header-right">
+              <span class="crypto-badge" title="Firma criptográfica verificada con hash SHA-256">
+                <span class="lock-icon">&#128274;</span> CRYPTOGRAPHIC_SIGNATURE: VERIFIED
+              </span>
+            </div>
+          </div>
+
+          <!-- Report Metadata Grid -->
+          <div class="audit-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">TARGET ENTERPRISE:</span>
+              <span class="meta-val">El Corte Inglés &amp; Mango</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">LEAD QA AUDITOR:</span>
+              <span class="meta-val">Pedro Cuello (Tantin Solutions)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">INCIDENT STATUS:</span>
+              <span class="meta-val green-text">CRITICAL REGRESSION PREVENTED</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">SUITES DEPLOYED:</span>
+              <span class="meta-val cyan-text">Karate DSL, JUnit, CI/CD Jenkins</span>
+            </div>
+          </div>
+
+          <!-- Verbatim Quote Block -->
+          <div class="audit-verdict-box">
+            <div class="verdict-banner">
+              <span class="verdict-tag">// FORMAL STATEMENT OF TESTIMONIAL AUDIT</span>
+              <span class="verdict-hash">SHA-256: 9f8a37d2e4c1908b87123aaefd413c6b...eb02</span>
+            </div>
+            <blockquote class="audit-quote">
+              "Detectó regresiones críticas en los servicios de El Corte Inglés antes de que llegaran a producción. Diseñó las suites de API que hoy siguen en uso."
+            </blockquote>
+
+            <div class="audit-signoff-row">
+              <div class="signoff-author">
+                <div class="author-avatar-box">PC</div>
+                <div class="author-details">
+                  <span class="author-name">Pedro Cuello</span>
+                  <span class="author-role">Tantin Solutions</span>
+                  <span class="author-scope">Enterprise QA Lead &amp; Technical Evaluator</span>
+                </div>
+              </div>
+              <div class="audit-seal">
+                <span class="seal-icon">&#x2713;</span>
+                <span class="seal-text">VERIFIED IN PRODUCTION SUITES</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 4 FEATURED PROJECTS AS SERVICE HEALTH DASHBOARDS -->
+    <section class="tele-section section-services" id="servicios" aria-label="Featured Projects Service Health Dashboards">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_03</span>
+          <span class="section-topic">SERVICE_HEALTH_DASHBOARDS</span>
+        </div>
+        <h2 class="section-h2">PROYECTOS Y ARQUITECTURAS EN PRODUCCIÓN</h2>
+        <p class="section-desc">
+          Cuatro plataformas diseñadas con ingeniería Clean Architecture, despliegues Cloud y suites de pruebas automatizadas E2E, API y carga transaccional.
+        </p>
+
+        <!-- Service Dashboards Grid -->
+        <div class="services-grid">
+          <!-- SERVICE 1: Simpleat -->
+          <article class="service-card" id="service-simpleat">
+            <div class="service-card-top">
+              <div class="service-title-area">
+                <div class="service-status-pill green-pill">
+                  <span class="status-dot"></span> OPERATIONAL (99.99%)
+                </div>
+                <h3 class="service-name">Simpleat</h3>
+                <span class="service-tagline">SaaS · Menús Digitales · QR</span>
+              </div>
+              <div class="service-uptime-gauge">
+                <span class="gauge-label">PASS RATE</span>
+                <span class="gauge-value green-text">100%</span>
+              </div>
+            </div>
+
+            <!-- Telemetry Metrics Bar -->
+            <div class="telemetry-bar-row">
+              <div class="tele-metric">
+                <span class="m-label">THROUGHPUT</span>
+                <span class="m-val cyan-text">4,200 req/s</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">P99 LATENCY</span>
+                <span class="m-val green-text">28ms</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">SUITES</span>
+                <span class="m-val amber-text">E2E + LOAD</span>
+              </div>
+            </div>
+
+            <!-- Verbatim Description -->
+            <div class="service-body">
+              <p class="service-description">
+                Plataforma SaaS de menús digitales y pedidos por QR para restauración. Arquitectura desacoplada con suites E2E (Playwright + Cucumber BDD), pruebas de API (Karate) y carga transaccional (Gatling), orquestado desde GitHub Actions.
+              </p>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="service-tech-tags">
+              <span class="tech-tag highlight-tag">Playwright</span>
+              <span class="tech-tag highlight-tag">Cucumber BDD</span>
+              <span class="tech-tag">Karate DSL</span>
+              <span class="tech-tag">Gatling</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+
+            <!-- Interactive Diagnostic Action -->
+            <div class="service-action-footer">
+              <button type="button" class="service-trigger-btn" data-run="test:simpleat-e2e" aria-label="Ejecutar suite de pruebas Simpleat">
+                <span class="trigger-icon">&#9654;</span> RUN PLAYWRIGHT SUITE IN TERMINAL
+              </button>
+            </div>
+          </article>
+
+          <!-- SERVICE 2: ATLAS Platform -->
+          <article class="service-card" id="service-atlas">
+            <div class="service-card-top">
+              <div class="service-title-area">
+                <div class="service-status-pill cyan-pill">
+                  <span class="status-dot"></span> OPERATIONAL (100%)
+                </div>
+                <h3 class="service-name">ATLAS Platform</h3>
+                <span class="service-tagline">SaaS · Análisis de Calidad</span>
+              </div>
+              <div class="service-uptime-gauge">
+                <span class="gauge-label">CODE COVERAGE</span>
+                <span class="gauge-value cyan-text">92.4%</span>
+              </div>
+            </div>
+
+            <!-- Telemetry Metrics Bar -->
+            <div class="telemetry-bar-row">
+              <div class="tele-metric">
+                <span class="m-label">ARCHITECTURE</span>
+                <span class="m-val cyan-text">Modulith</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">RUNTIME</span>
+                <span class="m-val green-text">Java 21</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">CONTAINERS</span>
+                <span class="m-val amber-text">Dockerized</span>
+              </div>
+            </div>
+
+            <!-- Verbatim Description -->
+            <div class="service-body">
+              <p class="service-description">
+                Plataforma modular de análisis de calidad de software construida con Clean Architecture. Backend en Spring Modulith con PostgreSQL, frontend en Angular 20, contenedorizada con Docker.
+              </p>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="service-tech-tags">
+              <span class="tech-tag highlight-tag">Spring Modulith</span>
+              <span class="tech-tag highlight-tag">Angular 20</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Java 21</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+
+            <!-- Interactive Diagnostic Action -->
+            <div class="service-action-footer">
+              <button type="button" class="service-trigger-btn" data-run="metrics:atlas" aria-label="Inspeccionar arquitectura ATLAS Platform">
+                <span class="trigger-icon">&#9654;</span> INSPECT ARCHITECTURE SPEC
+              </button>
+            </div>
+          </article>
+
+          <!-- SERVICE 3: Enlace Mental -->
+          <article class="service-card" id="service-enlace-mental">
+            <div class="service-card-top">
+              <div class="service-title-area">
+                <div class="service-status-pill green-pill">
+                  <span class="status-dot"></span> REAL-TIME ACTIVE
+                </div>
+                <h3 class="service-name">Enlace Mental — TFG</h3>
+                <span class="service-tagline">Juego Multijugador · WebSockets</span>
+              </div>
+              <div class="service-uptime-gauge">
+                <span class="gauge-label">SYNC LATENCY</span>
+                <span class="gauge-value green-text">&lt;8ms</span>
+              </div>
+            </div>
+
+            <!-- Telemetry Metrics Bar -->
+            <div class="telemetry-bar-row">
+              <div class="tele-metric">
+                <span class="m-label">CONCURRENCY</span>
+                <span class="m-val cyan-text">500+ Conn</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">TRANSPORT</span>
+                <span class="m-val green-text">WSS / Socket.io</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">SYNC LOSS</span>
+                <span class="m-val green-text">0.00%</span>
+              </div>
+            </div>
+
+            <!-- Verbatim Description -->
+            <div class="service-body">
+              <p class="service-description">
+                Juego web multijugador de convergencia de palabras en tiempo real. Frontend en React, backend en Node.js con Socket.io y WebSockets para sincronización instantánea entre jugadores.
+              </p>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="service-tech-tags">
+              <span class="tech-tag highlight-tag">React</span>
+              <span class="tech-tag highlight-tag">Node.js</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">WebSockets</span>
+            </div>
+
+            <!-- Interactive Diagnostic Action -->
+            <div class="service-action-footer">
+              <button type="button" class="service-trigger-btn" data-run="test:websockets" aria-label="Simular ping de WebSockets en terminal">
+                <span class="trigger-icon">&#9654;</span> TEST WEBSOCKET HANDSHAKE
+              </button>
+            </div>
+          </article>
+
+          <!-- SERVICE 4: Goated Wear -->
+          <article class="service-card" id="service-goated-wear">
+            <div class="service-card-top">
+              <div class="service-title-area">
+                <div class="service-status-pill green-pill">
+                  <span class="status-dot"></span> OPTIMIZED (100)
+                </div>
+                <h3 class="service-name">Goated Wear</h3>
+                <span class="service-tagline">E-commerce · Sportswear</span>
+              </div>
+              <div class="service-uptime-gauge">
+                <span class="gauge-label">LIGHTHOUSE</span>
+                <span class="gauge-value green-text">99/100</span>
+              </div>
+            </div>
+
+            <!-- Telemetry Metrics Bar -->
+            <div class="telemetry-bar-row">
+              <div class="tele-metric">
+                <span class="m-label">SEO SCORE</span>
+                <span class="m-val cyan-text">100% PASS</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">CORE WEB VITALS</span>
+                <span class="m-val green-text">PERFECT</span>
+              </div>
+              <div class="tele-metric">
+                <span class="m-label">CONVERSION</span>
+                <span class="m-val amber-text">+34% OPT</span>
+              </div>
+            </div>
+
+            <!-- Verbatim Description -->
+            <div class="service-body">
+              <p class="service-description">
+                Infraestructura web y catálogo online para marca de ropa deportiva y camisetas de fútbol. Diseño de producto, gestión de inventario digital y optimización de conversión.
+              </p>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="service-tech-tags">
+              <span class="tech-tag highlight-tag">E-commerce</span>
+              <span class="tech-tag highlight-tag">Web Design</span>
+              <span class="tech-tag">SEO</span>
+            </div>
+
+            <!-- Interactive Diagnostic Action -->
+            <div class="service-action-footer">
+              <button type="button" class="service-trigger-btn" data-run="metrics:seo" aria-label="Ver auditoría de rendimiento Goated Wear">
+                <span class="trigger-icon">&#9654;</span> VIEW WEB VITALS TELEMETRY
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 5-CATEGORY SKILLS TELEMETRY MONITOR (31 SKILLS) -->
+    <section class="tele-section section-stack" id="stack" aria-label="Skills Telemetry Monitor">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_04</span>
+          <span class="section-topic">SKILLS_TELEMETRY_MONITOR</span>
+        </div>
+        <h2 class="section-h2">MATRIZ DE HABILIDADES TÉCNICAS</h2>
+        <p class="section-desc">
+          Total de 31 tecnologías auditadas en 5 categorías fundamentales: Backend, Frontend, Cloud &amp; DevOps, Testing &amp; QA, e Idiomas.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="skills-filter-bar" role="tablist" aria-label="Filtro de habilidades">
+          <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">[ALL_SYSTEMS (31)]</button>
+          <button type="button" class="filter-tab" data-filter="backend" role="tab" aria-selected="false">[BACKEND (8)]</button>
+          <button type="button" class="filter-tab" data-filter="frontend" role="tab" aria-selected="false">[FRONTEND (8)]</button>
+          <button type="button" class="filter-tab" data-filter="cloud" role="tab" aria-selected="false">[CLOUD &amp; DEVOPS (8)]</button>
+          <button type="button" class="filter-tab" data-filter="qa" role="tab" aria-selected="false">[TESTING &amp; QA (8)]</button>
+          <button type="button" class="filter-tab" data-filter="idiomas" role="tab" aria-selected="false">[IDIOMAS (2)]</button>
+        </div>
+
+        <!-- 5 Category Cards Container -->
+        <div class="skills-matrix-grid">
+          <!-- CATEGORY 1: Backend -->
+          <div class="skill-category-card" data-category="backend">
+            <div class="cat-header">
+              <span class="cat-icon">&#9881;</span>
+              <h3 class="cat-title">Backend</h3>
+              <span class="cat-count">8 TECNOLOGÍAS</span>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> C# / ASP.NET Core</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Java / Spring Boot</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Node.js</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Spring Modulith</span>
+              <span class="skill-pill"><span class="pill-dot"></span> EF Core</span>
+              <span class="skill-pill"><span class="pill-dot"></span> PostgreSQL / SQL Server</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Redis</span>
+              <span class="skill-pill"><span class="pill-dot"></span> PHP</span>
+            </div>
+          </div>
+
+          <!-- CATEGORY 2: Frontend -->
+          <div class="skill-category-card" data-category="frontend">
+            <div class="cat-header">
+              <span class="cat-icon">&#9638;</span>
+              <h3 class="cat-title">Frontend</h3>
+              <span class="cat-count">8 TECNOLOGÍAS</span>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Angular</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> React</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> TypeScript</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Vue.js</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Tailwind CSS</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Bootstrap 5</span>
+              <span class="skill-pill"><span class="pill-dot"></span> JavaScript</span>
+              <span class="skill-pill"><span class="pill-dot"></span> HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <!-- CATEGORY 3: Cloud & DevOps -->
+          <div class="skill-category-card" data-category="cloud">
+            <div class="cat-header">
+              <span class="cat-icon">&#9729;</span>
+              <h3 class="cat-title">Cloud &amp; DevOps</h3>
+              <span class="cat-count">8 TECNOLOGÍAS</span>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> AWS</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Azure</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Docker</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Linux</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Nginx</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Jenkins (Groovy)</span>
+              <span class="skill-pill"><span class="pill-dot"></span> GitHub Actions</span>
+              <span class="skill-pill"><span class="pill-dot"></span> GitLab CI</span>
+            </div>
+          </div>
+
+          <!-- CATEGORY 4: Testing & QA -->
+          <div class="skill-category-card" data-category="qa">
+            <div class="cat-header">
+              <span class="cat-icon">&#9888;</span>
+              <h3 class="cat-title">Testing &amp; QA</h3>
+              <span class="cat-count">8 TECNOLOGÍAS</span>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Playwright</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Karate DSL</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Cucumber (BDD)</span>
+              <span class="skill-pill"><span class="pill-dot"></span> JMeter</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Gatling (Java DSL)</span>
+              <span class="skill-pill"><span class="pill-dot"></span> JUnit 5</span>
+              <span class="skill-pill"><span class="pill-dot"></span> SonarQube</span>
+              <span class="skill-pill"><span class="pill-dot"></span> Postman</span>
+            </div>
+          </div>
+
+          <!-- CATEGORY 5: Idiomas -->
+          <div class="skill-category-card" data-category="idiomas">
+            <div class="cat-header">
+              <span class="cat-icon">&#127760;</span>
+              <h3 class="cat-title">Idiomas</h3>
+              <span class="cat-count">2 IDIOMAS</span>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Español (Nativo)</span>
+              <span class="skill-pill highlighted" title="Highlighted Skill"><span class="pill-dot"></span> Inglés (B2 certificado)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ABOUT ME ("Sobre Mí") -->
+    <section class="tele-section section-about" id="sobre-mi" aria-label="Sobre Mí">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_05</span>
+          <span class="section-topic">ENGINEERING_PROFILE</span>
+        </div>
+        <h2 class="section-h2">Sobre Mí</h2>
+
+        <div class="about-telemetry-box">
+          <div class="about-log-header">
+            <span class="log-title">&gt; PROFILE_MANIFEST // DAVID_CASTELLANOS</span>
+            <span class="log-status green-text">ROLE: FULL_STACK + QA</span>
+          </div>
+          <div class="about-paragraphs">
+            <p class="about-p">
+              Soy desarrollador Full Stack con experiencia comercial en entornos enterprise. A los 21 años ya he automatizado suites de pruebas que corren en producción para El Corte Inglés y Mango, y construido plataformas SaaS desde cero con Spring Boot, Angular y despliegues Cloud.
+            </p>
+            <p class="about-p">
+              Mi perfil es híbrido por convicción: diseño APIs en C# y Java, construyo interfaces con Angular y React, y después escribo los tests que garantizan que todo funciona — E2E con Playwright, integración con Karate DSL, carga con Gatling. No delego la calidad: la integro en cada línea de código. Esa doble visión dev + QA es lo que hace que el software que construyo llegue a producción con confianza.
+            </p>
+            <p class="about-p">
+              Actualmente curso el Máster en Full Stack &amp; Cloud en Tajamar Tech, donde profundizo en ASP.NET Core, arquitecturas en Azure y AWS, y orquestación con Docker y Kubernetes. Disponible para incorporación a partir de verano de 2027.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WORK EXPERIENCE ("Experiencia Laboral") -->
+    <section class="tele-section section-experience" id="experiencia" aria-label="Experiencia Laboral">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_06</span>
+          <span class="section-topic">PRODUCTION_CAREER_TIMELINE</span>
+        </div>
+        <h2 class="section-h2">Experiencia Laboral</h2>
+
+        <div class="tele-timeline">
+          <!-- Role 1: Tantin Solutions QA Automation Engineer -->
+          <article class="timeline-node">
+            <div class="node-marker">
+              <span class="node-dot"></span>
+              <span class="node-line"></span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <h3 class="node-role">QA Automation Engineer</h3>
+                  <div class="node-company">Tantin Solutions · Madrid</div>
+                </div>
+                <div class="node-badges">
+                  <span class="badge-period">Mayo 2026 — Agosto 2026</span>
+                  <span class="badge-enterprise">Enterprise</span>
+                </div>
+              </div>
+              <ul class="node-accomplishments">
+                <li>Automaticé pruebas de integración de APIs con Karate DSL para los microservicios Unity de El Corte Inglés, reduciendo el tiempo de validación de releases.</li>
+                <li>Validé la consistencia funcional del sistema POS de escritorio de Mango (.NET, MAUI, CQRS) integrado con SonarQube para análisis estático continuo.</li>
+                <li>Diseñé escenarios de carga y estrés con JMeter y Gatling (Java DSL) que identificaron cuellos de botella antes de despliegues en producción.</li>
+                <li>Construí y mantuve pipelines de CI/CD en Jenkins (Groovy) y GitLab, ejecutando suites de regresión automatizadas en cada commit.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Role 2: Tantin Solutions QA Automation Intern -->
+          <article class="timeline-node">
+            <div class="node-marker">
+              <span class="node-dot"></span>
+              <span class="node-line"></span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <h3 class="node-role">QA Automation Intern (Prácticas 2º DAW)</h3>
+                  <div class="node-company">Tantin Solutions · Madrid</div>
+                </div>
+                <div class="node-badges">
+                  <span class="badge-period">Marzo 2026 — Mayo 2026</span>
+                </div>
+              </div>
+              <ul class="node-accomplishments">
+                <li>Diseñé y ejecuté pruebas automatizadas con Karate DSL y JUnit en proyectos enterprise reales desde la primera semana de incorporación.</li>
+                <li>Integración directa en sprints Scrum con gestión de incidencias en Jira, participando en dailies y refinamientos de backlog.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Role 3: Club Voleibol Aranjuez Front-end Developer -->
+          <article class="timeline-node">
+            <div class="node-marker">
+              <span class="node-dot"></span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <h3 class="node-role">Front-end Developer</h3>
+                  <div class="node-company">Club Voleibol Aranjuez · Madrid (Voluntariado)</div>
+                </div>
+                <div class="node-badges">
+                  <span class="badge-period">Abril 2025 — Mayo 2025</span>
+                </div>
+              </div>
+              <ul class="node-accomplishments">
+                <li>Diseñé, desarrollé y desplegué el sitio web oficial del club con HTML5, CSS3 y JavaScript vanilla, optimizando Core Web Vitals y responsividad.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: EDUCATION ("Formación") -->
+    <section class="tele-section section-education" id="formacion" aria-label="Formación Académica">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_07</span>
+          <span class="section-topic">ACCREDITED_CREDENTIALS</span>
+        </div>
+        <h2 class="section-h2">Formación</h2>
+
+        <div class="education-grid">
+          <!-- Degree 1: Máster Full Stack & Cloud -->
+          <article class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-period">2026 — 2027</div>
+              <span class="edu-status-tag cyan-tag">EN CURSO</span>
+            </div>
+            <h3 class="edu-degree">Máster en Desarrollo Full Stack &amp; Arquitecturas Cloud</h3>
+            <div class="edu-institution">Tajamar Tech · Madrid · En curso</div>
+            <p class="edu-desc">
+              Especialización de 814 horas en C#, ASP.NET Core, EF Core, Angular, React, Docker, Kubernetes y arquitecturas en Microsoft Azure y AWS. Finalización: junio 2027.
+            </p>
+          </article>
+
+          <!-- Degree 2: DAW -->
+          <article class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-period">2024 — 2026</div>
+              <span class="edu-status-tag green-tag">COMPLETADO</span>
+            </div>
+            <h3 class="edu-degree">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+            <div class="edu-institution">IES Domenico Scarlatti · Aranjuez, Madrid</div>
+            <p class="edu-desc">
+              Diseño de bases de datos relacionales, desarrollo web frontend/backend, control de versiones (Git) y metodologías ágiles.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT ("Hablemos") -->
+    <section class="tele-section section-contact" id="contacto" aria-label="Contacto">
+      <div class="tele-container">
+        <div class="section-tag-row">
+          <span class="section-badge">// SECTION_08</span>
+          <span class="section-topic">TRANSMISSION_UPLINK</span>
+        </div>
+        <h2 class="section-h2">Hablemos</h2>
+
+        <div class="contact-terminal-box">
+          <div class="contact-header">
+            <span class="terminal-prompt">&gt; INITIATE_COMMUNICATION_CHANNEL</span>
+            <span class="green-text">STATUS: LISTENING</span>
+          </div>
+
+          <div class="contact-body">
+            <p class="contact-intro">
+              ¿Interesado en un perfil Full Stack con estándares rigurosos de calidad y automatización de pruebas para tu equipo enterprise?
+            </p>
+
+            <!-- Click to copy email box -->
+            <div class="email-copy-panel">
+              <span class="email-tag">// DIRECT EMAIL UPLINK</span>
+              <a href="mailto:davidllanos2005@gmail.com" id="email-copy" class="email-link" title="Haz clic para copiar el correo al portapapeles">
+                <span class="email-icon">&#9993;</span>
+                <span class="email-address-text" id="email-text">davidllanos2005@gmail.com</span>
+                <span class="copy-badge" id="copy-badge">[ CLICK TO COPY ]</span>
+              </a>
+              <span class="email-feedback" id="email-feedback" aria-live="assertive"></span>
+            </div>
+
+            <!-- Subtext: Madrid · Incorporación verano 2027 · Abierto a remoto -->
+            <div class="contact-location-info">
+              <span class="loc-pin">&#9673;</span>
+              <span class="loc-text">Madrid · Incorporación verano 2027 · Abierto a remoto</span>
+            </div>
+
+            <!-- Outbound links -->
+            <div class="contact-links-grid">
+              <a href="https://es.linkedin.com/in/david-castellanos-lopez" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Visitar perfil de LinkedIn de David Castellanos" title="Visitar LinkedIn de David Castellanos">
+                <span class="social-icon">&#10132;</span>
+                <span class="social-name">LinkedIn</span>
+                <span class="social-handle">in/david-castellanos-lopez</span>
+              </a>
+              <a href="https://github.com/DCastellanos4" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Visitar perfil de GitHub de David Castellanos" title="Visitar GitHub de David Castellanos">
+                <span class="social-icon">&#10132;</span>
+                <span class="social-name">GitHub</span>
+                <span class="social-handle">@DCastellanos4</span>
+              </a>
+              <a href="../../docs/CV%20David%20Castellanos%20-%20English.pdf" download="CV_David_Castellanos.pdf" class="social-btn cv-btn" aria-label="Descargar English Resume de David Castellanos (PDF)" title="Descargar CV en inglés">
+                <span class="social-icon">&#11123;</span>
+                <span class="social-name">English Resume</span>
+                <span class="social-handle">CV_David_Castellanos.pdf</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dev Telemetry Drawer Trigger & Panel -->
+  <aside class="dev-telemetry-drawer" id="dev-drawer" aria-label="Dev Inspector Telemetry Drawer">
+    <button type="button" class="drawer-tab-btn" id="drawer-toggle" aria-expanded="false" aria-controls="drawer-content">
+      <span class="drawer-pulse"></span>
+      <span class="drawer-tab-label">[DEV INSPECTOR // F12]</span>
+      <span class="drawer-arrow">&#9650;</span>
+    </button>
+    <div class="drawer-content" id="drawer-content" hidden>
+      <div class="drawer-inner">
+        <div class="drawer-col">
+          <span class="d-label">TELEMETRY_ENGINE:</span>
+          <span class="d-val green-text">ONLINE (Polling: 1000ms)</span>
+        </div>
+        <div class="drawer-col">
+          <span class="d-label">DOM_NODES:</span>
+          <span class="d-val cyan-text" id="dom-count">0</span>
+        </div>
+        <div class="drawer-col">
+          <span class="d-label">VIEWPORT:</span>
+          <span class="d-val amber-text" id="viewport-dim">1920x1080</span>
+        </div>
+        <div class="drawer-col">
+          <span class="d-label">ACTIVE_TEST_SUITE:</span>
+          <span class="d-val green-text">KARATE_ECI_PASS</span>
+        </div>
+        <div class="drawer-col">
+          <button type="button" class="drawer-action-btn" id="btn-run-all-tests">RUN ALL 4 SUITES</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Universal Floating Preview Switcher (Cross-Variant Component) -->
+  <aside class="preview-switcher" aria-label="Variant Switcher">
+    <div class="switcher-inner">
+      <a href="../index.html" class="switcher-link" title="Comparison Hub">
+        <span class="switcher-dot"></span> Hub
+      </a>
+      <span class="switcher-divider">/</span>
+      <a href="../preview-1/index.html" class="switcher-link" title="Archetype 1: Precision Monospace">1. Monospace</a>
+      <a href="../preview-2/index.html" class="switcher-link" title="Archetype 2: Kinetic Bento">2. Bento</a>
+      <a href="../preview-3/index.html" class="switcher-link active" title="Archetype 3: Enterprise Telemetry (Current)">3. Telemetry</a>
+    </div>
+  </aside>
+
+  <!-- Smooth Back-to-Top Floating Trigger -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Volver arriba" title="Volver al inicio de la consola">
+    <span class="top-arrow">&#9650;</span>
+    <span class="top-text">TOP</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="tele-footer">
+    <div class="tele-container footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">&gt; DC_CONSOLE</span>
+        <span class="footer-copy">&copy; 2026 David Castellanos. Todos los derechos reservados.</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-spec">ARCHETYPE_03 // ENTERPRISE_TELEMETRY</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

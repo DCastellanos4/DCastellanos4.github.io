@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Castellanos — Full Stack Developer & QA Engineer (C#, Java, Angular, Cloud, Playwright) · Industrial Hardware & Physical Lab</title>
+  <meta name="description" content="David Castellanos — Full Stack Developer & QA Engineer (C#, Java, Angular, Cloud, Playwright). Construyo software que funciona y diseño los tests que lo demuestran. Software probado en producción para El Corte Inglés, Mango y Simpleat. Incorporación Verano 2027.">
+  <link rel="icon" type="image/svg+xml" href="../../img/logo.svg">
+
+  <!-- Google Fonts: Space Mono & JetBrains Mono (Technical/Monospace) + Space Grotesk & Inter (Industrial Display/Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="industrial-lab-body" data-lenis-prevent-touch="false">
+
+  <!-- Background Technical Perforated Texture Overlay -->
+  <div class="chassis-texture-overlay" aria-hidden="true"></div>
+
+  <!-- Sticky Top Industrial Telemetry & Hardware Control Bar -->
+  <header class="hw-topbar" id="hw-topbar">
+    <div class="hw-topbar-inner">
+      <!-- Machine Identifier Plate -->
+      <div class="hw-id-group">
+        <span class="hw-chassis-tag">DEV-UNIT: 04</span>
+        <span class="hw-spec-tag">TE-RAMS-2027 // PHYSICAL LAB</span>
+        <span class="hw-status-led" id="hw-power-led" title="Hardware Status: Online"></span>
+      </div>
+
+      <!-- Center Telemetry LCD Readout -->
+      <div class="hw-center-telemetry">
+        <div class="lcd-badge" id="lcd-scroll-gauge">
+          <span class="lcd-label">SCROLL:</span>
+          <span class="lcd-value" id="lcd-scroll-val">000%</span>
+          <span class="lcd-divider">|</span>
+          <span class="lcd-label">POS:</span>
+          <span class="lcd-value" id="lcd-pos-val">0000PX</span>
+        </div>
+      </div>
+
+      <!-- Right Physical Controls: Audio Toggle & Availability -->
+      <div class="hw-controls-group">
+        <div class="hw-avail-pill">
+          <span class="pulse-optic"></span>
+          <span class="avail-text">Incorporación Verano 2027</span>
+        </div>
+
+        <!-- Tactile Web Audio Synthesizer Master Toggle -->
+        <button type="button" class="hw-tactile-btn hw-audio-toggle" id="audio-toggle" aria-label="Toggle Web Audio Feedback" aria-pressed="true">
+          <span class="toggle-led active" id="audio-led"></span>
+          <span class="btn-text" id="audio-text">[AUDIO: ON]</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Hardware Secondary Navigation -->
+  <nav class="hw-nav" id="main-nav" aria-label="Navegación del Laboratorio">
+    <div class="hw-nav-inner">
+      <a href="#inicio" class="hw-brand" aria-label="Inicio David Castellanos">
+        <span class="brand-knob" aria-hidden="true"></span>
+        <span class="brand-title">DC // HW-LAB.04</span>
+      </a>
+
+      <!-- Navigation Links with Tactile Feedback -->
+      <div class="hw-nav-links" id="hw-nav-links">
+        <a href="#sobre-mi" class="hw-nav-item"><span class="item-num">01</span><span>SOBRE MÍ</span></a>
+        <a href="#enterprise" class="hw-nav-item"><span class="item-num">02</span><span>ENTERPRISE</span></a>
+        <a href="#proyectos" class="hw-nav-item"><span class="item-num">03</span><span>PROYECTOS</span></a>
+        <a href="#skills-lab" class="hw-nav-item"><span class="item-num">04</span><span>PHYSICS LAB</span></a>
+        <a href="#habilidades" class="hw-nav-item"><span class="item-num">05</span><span>MATRIZ SKILLS</span></a>
+        <a href="#experiencia" class="hw-nav-item"><span class="item-num">06</span><span>TRAYECTORIA</span></a>
+        <a href="#contacto" class="hw-nav-item"><span class="item-num">07</span><span>CONTACTO</span></a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="hw-mobile-menu-btn" id="hw-mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN CHASSIS WORKSPACE -->
+  <main class="hw-chassis-container">
+
+    <!-- HERO SECTION: Industrial Instrument Plate -->
+    <section class="hw-panel hero-panel" id="inicio">
+      <!-- 4 Milled Allen Screws at Corners -->
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <!-- Technical Top Calibration Bar -->
+      <div class="panel-header-bar">
+        <div class="cal-spec">CALIBRATION: DIN EN ISO 9001 // QA AUTOMATION STANDARDS</div>
+        <div class="cal-spec">SPEC: REF-2026 // FULL STACK + QA DUALITY</div>
+        <div class="cal-spec">CHASSIS: CNC-MILLED BONE &amp; GRAPHITE</div>
+      </div>
+
+      <div class="hero-split-grid">
+        <!-- Left Column: Core Positioning & Verbatim Copy -->
+        <div class="hero-content-col">
+          <div class="hero-badge-strip">
+            <span class="strip-pill accent-vermilion">LABORATORIO DE CALIDAD &amp; FULL STACK</span>
+            <span class="strip-pill">MADRID · ABIERTO A REMOTO</span>
+            <span class="strip-pill">40.4168° N, 3.7038° W</span>
+          </div>
+
+          <!-- Master Title & Positioning -->
+          <h1 class="hero-name-plate">David Castellanos — Full Stack Developer &amp; QA Engineer (C#, Java, Angular, Cloud, Playwright)</h1>
+
+          <!-- Value Proposition (100% Verbatim) -->
+          <div class="hero-quote-housing">
+            <div class="quote-housing-tag">CORE VALUE PROPOSITION // PROPOSICIÓN CENTRAL</div>
+            <p class="hero-primary-quote">"Construyo software que funciona y diseño los tests que lo demuestran."</p>
+          </div>
+
+          <!-- Secondary Identity Narrative (100% Verbatim) -->
+          <p class="hero-secondary-narrative">Full Stack con mentalidad de calidad, experiencia enterprise y arquitecturas Cloud.</p>
+
+          <!-- Enterprise Validation Notice (100% Verbatim) -->
+          <div class="hero-enterprise-banner">
+            <span class="banner-led"></span>
+            <span class="banner-text">Software probado en producción para El Corte Inglés, Mango y Simpleat.</span>
+          </div>
+
+          <!-- Tactile Hardware Action Buttons -->
+          <div class="hero-cta-cluster">
+            <a href="#skills-lab" class="btn-tactile btn-vermilion" id="cta-physics">
+              <span class="btn-notch"></span>
+              <span class="btn-label">LANZAR PHYSICS LAB</span>
+              <span class="btn-arrow">↓</span>
+            </a>
+            <a href="#proyectos" class="btn-tactile btn-graphite" id="cta-projects">
+              <span class="btn-notch"></span>
+              <span class="btn-label">INSPECCIONAR PROYECTOS</span>
+            </a>
+            <a href="../../docs/CV%20David%20Castellanos%20-%20English.pdf" class="btn-tactile btn-bone" download="CV_David_Castellanos.pdf" id="cta-cv">
+              <span class="btn-notch"></span>
+              <span class="btn-label">DESCARGAR CV (ENG)</span>
+              <span class="btn-icon">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Optical Viewfinder & Hardware Telemetry Console -->
+        <div class="hero-console-col">
+          <div class="chassis-console-frame">
+            <!-- Viewfinder Header with Potentiometer Accents -->
+            <div class="console-head">
+              <span class="console-title">OPTICAL RETICLE // APERTURE 1.4</span>
+              <div class="console-dials" aria-hidden="true">
+                <span class="dial-mark">●</span>
+                <span class="dial-mark">●</span>
+                <span class="dial-mark active">●</span>
+              </div>
+            </div>
+
+            <!-- Candidate Portrait in Precision Optical Housing -->
+            <div class="portrait-housing">
+              <img src="../../img/Image.jpg" alt="David Castellanos — Full Stack Developer &amp; QA Engineer" class="candidate-portrait-img">
+              
+              <!-- Optical Crosshair Overlay (CSS) -->
+              <div class="optical-reticle-overlay" aria-hidden="true">
+                <div class="reticle-line h-line"></div>
+                <div class="reticle-line v-line"></div>
+                <div class="reticle-bracket tl"></div>
+                <div class="reticle-bracket tr"></div>
+                <div class="reticle-bracket bl"></div>
+                <div class="reticle-bracket br"></div>
+                <div class="reticle-tag">FOCUS: LOCKED</div>
+              </div>
+            </div>
+
+            <!-- Dot-Matrix Telemetry Readout Deck below portrait -->
+            <div class="lcd-readout-deck">
+              <div class="lcd-row">
+                <span class="lcd-key">SYS.EXP:</span>
+                <span class="lcd-data">ENTERPRISE PROD (ECI / MANGO)</span>
+              </div>
+              <div class="lcd-row">
+                <span class="lcd-key">CORE.STACK:</span>
+                <span class="lcd-data">C# · JAVA · ANGULAR · PLAYWRIGHT · CLOUD</span>
+              </div>
+              <div class="lcd-row">
+                <span class="lcd-key">AVAILABILITY:</span>
+                <span class="lcd-data text-amber">INCORPORACIÓN VERANO 2027</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Precision Measurement Bottom Ruler Bar -->
+      <div class="panel-ruler-bar" aria-hidden="true">
+        <span class="ruler-tick">0mm</span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-tick">50mm</span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-tick">100mm</span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-tick">150mm</span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-tick">200mm</span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-subtick"></span>
+        <span class="ruler-tick">250mm</span>
+      </div>
+    </section>
+
+    <!-- SECTION 01: SOBRE MÍ (Narrative Biography - 3 Verbatim Paragraphs) -->
+    <section class="hw-panel narrative-panel" id="sobre-mi">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 01 // DOSSIER BIOGRÁFICO</div>
+        <div class="cal-spec">VALIDACIÓN DE CALIDAD: AUDITADA</div>
+        <div class="cal-spec">STATUS: VERIFICADO</div>
+      </div>
+
+      <div class="section-title-wrap">
+        <span class="section-code">[SEC-01]</span>
+        <h2 class="section-heading">Sobre Mí &amp; Filosofía de Ingeniería</h2>
+      </div>
+
+      <div class="bio-cards-grid">
+        <!-- Paragraph 1: Commercial Track Record -->
+        <div class="hw-card bio-card">
+          <div class="card-machined-header">
+            <span class="card-index-tag">01.01 // TRAYECTORIA COMERCIAL</span>
+            <span class="card-status-dot"></span>
+          </div>
+          <div class="bio-card-body">
+            <p class="bio-text">Soy desarrollador Full Stack con experiencia comercial en entornos enterprise. A los 21 años ya he automatizado suites de pruebas que corren en producción para El Corte Inglés y Mango, y construido plataformas SaaS desde cero con Spring Boot, Angular y despliegues Cloud.</p>
+          </div>
+          <div class="card-footer-spec">
+            <span>ENTORNO: ENTERPRISE PROD</span>
+            <span>EDAD: 21 AÑOS</span>
+          </div>
+        </div>
+
+        <!-- Paragraph 2: Hybrid Dev + QA Philosophy -->
+        <div class="hw-card bio-card featured-bio-card">
+          <div class="card-machined-header">
+            <span class="card-index-tag">01.02 // ENFOQUE HÍBRIDO DEV + QA</span>
+            <span class="card-status-dot active-vermilion"></span>
+          </div>
+          <div class="bio-card-body">
+            <p class="bio-text">Mi perfil es híbrido por convicción: diseño APIs en C# y Java, construyo interfaces con Angular y React, y después escribo los tests que garantizan que todo funciona — E2E con Playwright, integración con Karate DSL, carga con Gatling. No delego la calidad: la integro en cada línea de código. Esa doble visión dev + QA es lo que hace que el software que construyo llegue a producción con confianza.</p>
+          </div>
+          <div class="card-footer-spec">
+            <span>CALIDAD: NO DELEGADA · INTEGRADA</span>
+            <span>CONFIANZA: PRODUCCIÓN</span>
+          </div>
+        </div>
+
+        <!-- Paragraph 3: Specialization & Availability -->
+        <div class="hw-card bio-card">
+          <div class="card-machined-header">
+            <span class="card-index-tag">01.03 // ESPECIALIZACIÓN &amp; DISPONIBILIDAD</span>
+            <span class="card-status-dot"></span>
+          </div>
+          <div class="bio-card-body">
+            <p class="bio-text">Actualmente curso el Máster en Full Stack &amp; Cloud en Tajamar Tech, donde profundizo en ASP.NET Core, arquitecturas en Azure y AWS, y orquestación con Docker y Kubernetes. Disponible para incorporación a partir de verano de 2027.</p>
+          </div>
+          <div class="card-footer-spec">
+            <span>MÁSTER: TAJAMAR TECH (814H)</span>
+            <span>DISPONIBLE: VERANO 2027</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: ENTERPRISE TRACK RECORD & PEDRO CUELLO TESTIMONIAL -->
+    <section class="hw-panel enterprise-panel" id="enterprise">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 02 // VALIDACIÓN ENTERPRISE &amp; PRODUCCIÓN</div>
+        <div class="cal-spec">AUDITADO POR TANTIN SOLUTIONS</div>
+        <div class="cal-spec">APROBADO PARA PRODUCCIÓN</div>
+      </div>
+
+      <div class="section-title-wrap">
+        <span class="section-code">[SEC-02]</span>
+        <h2 class="section-heading">Validación Enterprise en Producción</h2>
+        <p class="section-sub">Software probado en producción para El Corte Inglés, Mango y Simpleat.</p>
+      </div>
+
+      <!-- Enterprise Client Badges Grid -->
+      <div class="clients-chassis-grid">
+        <!-- El Corte Inglés -->
+        <div class="hw-card client-card">
+          <div class="client-logo-box">
+            <img src="../../img/LOGOECI.webp" alt="El Corte Inglés" class="client-img eci-logo">
+          </div>
+          <div class="client-info">
+            <h3 class="client-title">El Corte Inglés</h3>
+            <span class="client-role-tag">Microservicios Unity · Karate DSL</span>
+            <p class="client-desc">Automatización de pruebas de integración de API para los microservicios Unity con Karate DSL. Detección temprana de regresiones críticas antes del pase a producción.</p>
+          </div>
+          <div class="client-stat-strip">
+            <span class="stat-pill">APIs Unity</span>
+            <span class="stat-pill">0 Regresiones en Prod</span>
+          </div>
+        </div>
+
+        <!-- Mango -->
+        <div class="hw-card client-card">
+          <div class="client-logo-box">
+            <img src="../../img/logoMANGO.png" alt="Mango" class="client-img mango-logo">
+          </div>
+          <div class="client-info">
+            <h3 class="client-title">Mango</h3>
+            <span class="client-role-tag">POS Desktop · SonarQube · CQRS</span>
+            <p class="client-desc">Validación de la consistencia funcional del sistema de punto de venta (.NET / MAUI) integrado con SonarQube para análisis estático continuo y Clean Architecture.</p>
+          </div>
+          <div class="client-stat-strip">
+            <span class="stat-pill">.NET POS</span>
+            <span class="stat-pill">Quality Gates SonarQube</span>
+          </div>
+        </div>
+
+        <!-- Simpleat -->
+        <div class="hw-card client-card">
+          <div class="client-logo-box">
+            <img src="../../img/simpleat-icon.png" alt="Simpleat" class="client-img simpleat-logo">
+          </div>
+          <div class="client-info">
+            <h3 class="client-title">Simpleat</h3>
+            <span class="client-role-tag">SaaS QR · Playwright E2E · Gatling</span>
+            <p class="client-desc">Plataforma SaaS para restauración. Suites completas de extremo a extremo con Playwright y Cucumber BDD, pruebas de regresión de API con Karate y pruebas de estrés con Gatling.</p>
+          </div>
+          <div class="client-stat-strip">
+            <span class="stat-pill">100% Critical E2E</span>
+            <span class="stat-pill">Gatling Stress 4.2k req/s</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUDITED TESTIMONIAL: Pedro Cuello (100% Verbatim) -->
+      <div class="testimonial-instrument-housing">
+        <div class="housing-top-label">
+          <span class="housing-id">TESTIMONIAL AUDIO-VISUAL LOG // TANTIN SOLUTIONS</span>
+          <span class="housing-tag">AUDITORÍA FIRMADA</span>
+        </div>
+
+        <blockquote class="testimonial-quote">
+          "Detectó regresiones críticas en los servicios de El Corte Inglés antes de que llegaran a producción. Diseñó las suites de API que hoy siguen en uso."
+        </blockquote>
+
+        <div class="testimonial-author-plate">
+          <div class="author-avatar-badge">PC</div>
+          <div class="author-details">
+            <div class="author-name">Pedro Cuello</div>
+            <div class="author-company">Tantin Solutions</div>
+          </div>
+          <div class="author-seal">
+            <span class="seal-check">✓</span>
+            <span class="seal-text">VERIFICADO EN PRODUCCIÓN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: 4 FEATURED PROJECTS (Detailed Modular Cards) -->
+    <section class="hw-panel projects-panel" id="proyectos">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 03 // CATÁLOGO DE INGENIERÍA</div>
+        <div class="cal-spec">4 PROYECTOS DESTACADOS</div>
+        <div class="cal-spec">ARQUITECTURA MODULAR &amp; SAAS</div>
+      </div>
+
+      <div class="section-title-wrap">
+        <span class="section-code">[SEC-03]</span>
+        <h2 class="section-heading">Proyectos Destacados</h2>
+        <p class="section-sub">Arquitecturas desacopladas, Clean Architecture, WebSockets en tiempo real y optimización de conversión.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Simpleat -->
+        <article class="hw-card project-card" data-project="simpleat">
+          <div class="card-machined-header">
+            <span class="project-num">MOD-01 // SAAS</span>
+            <span class="project-tagline">SaaS · Menús Digitales · QR</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Simpleat</h3>
+            <p class="project-summary">Plataforma SaaS de menús digitales y pedidos por QR para restauración. Arquitectura desacoplada con suites E2E (Playwright + Cucumber BDD), pruebas de API (Karate) y carga transaccional (Gatling), orquestado desde GitHub Actions.</p>
+
+            <div class="project-specs-deck">
+              <div class="spec-row">
+                <span class="spec-name">Arquitectura:</span>
+                <span class="spec-val">Microservicios desacoplados &amp; SaaS Cloud</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">E2E Suite:</span>
+                <span class="spec-val">Playwright + Cucumber Living Docs</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Pruebas de Carga:</span>
+                <span class="spec-val">Gatling Java DSL (4,200 req/sec)</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="hw-badge">Playwright</span>
+              <span class="hw-badge">Cucumber BDD</span>
+              <span class="hw-badge">Karate DSL</span>
+              <span class="hw-badge">Gatling</span>
+              <span class="hw-badge">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="card-drawer-trigger-bar">
+            <button type="button" class="drawer-toggle-btn" data-target="drawer-simpleat" aria-expanded="false">
+              <span class="btn-indicator">+</span>
+              <span class="btn-text">DETALLES DE ARQUITECTURA</span>
+            </button>
+          </div>
+          <div class="project-drawer" id="drawer-simpleat" hidden>
+            <div class="drawer-inner">
+              <p>Cobertura 100% de los flujos críticos de usuario (escaneo QR, navegación de carta interactiva, mutación de pedidos y pasarela de pago). Orquestación automática en GitHub Actions antes de cada despliegue.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: ATLAS Platform -->
+        <article class="hw-card project-card" data-project="atlas">
+          <div class="card-machined-header">
+            <span class="project-num">MOD-02 // QA SAAS</span>
+            <span class="project-tagline">SaaS · Análisis de Calidad</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">ATLAS Platform</h3>
+            <p class="project-summary">Plataforma modular de análisis de calidad de software construida con Clean Architecture. Backend en Spring Modulith con PostgreSQL, frontend en Angular 20, contenedorizada con Docker.</p>
+
+            <div class="project-specs-deck">
+              <div class="spec-row">
+                <span class="spec-name">Backend Core:</span>
+                <span class="spec-val">Java 21 + Spring Modulith 3.3</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Frontend Core:</span>
+                <span class="spec-val">Angular 20 (Signals &amp; Standalone)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Persistencia:</span>
+                <span class="spec-val">PostgreSQL + Docker multi-stage</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="hw-badge">Spring Modulith</span>
+              <span class="hw-badge">Angular 20</span>
+              <span class="hw-badge">PostgreSQL</span>
+              <span class="hw-badge">Java 21</span>
+              <span class="hw-badge">Docker</span>
+            </div>
+          </div>
+          <div class="card-drawer-trigger-bar">
+            <button type="button" class="drawer-toggle-btn" data-target="drawer-atlas" aria-expanded="false">
+              <span class="btn-indicator">+</span>
+              <span class="btn-text">DETALLES DE ARQUITECTURA</span>
+            </button>
+          </div>
+          <div class="project-drawer" id="drawer-atlas" hidden>
+            <div class="drawer-inner">
+              <p>Módulos desacoplados mediante bounded contexts de Spring Modulith, verificados con pruebas arquitectónicas automáticas. Frontend reactivo con Angular Signals reduciendo el bundle de producción al mínimo.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Enlace Mental — TFG -->
+        <article class="hw-card project-card" data-project="enlace">
+          <div class="card-machined-header">
+            <span class="project-num">MOD-03 // REALTIME</span>
+            <span class="project-tagline">Juego Multijugador · WebSockets</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Enlace Mental — TFG</h3>
+            <p class="project-summary">Juego web multijugador de convergencia de palabras en tiempo real. Frontend en React, backend en Node.js con Socket.io y WebSockets para sincronización instantánea entre jugadores.</p>
+
+            <div class="project-specs-deck">
+              <div class="spec-row">
+                <span class="spec-name">Sincronización:</span>
+                <span class="spec-val">WebSockets bidireccionales &lt; 15ms</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Backend Runtime:</span>
+                <span class="spec-val">Node.js + Socket.io rooms</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Frontend SPA:</span>
+                <span class="spec-val">React + Hooks de estado reactivo</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="hw-badge">React</span>
+              <span class="hw-badge">Node.js</span>
+              <span class="hw-badge">Socket.io</span>
+              <span class="hw-badge">WebSockets</span>
+            </div>
+          </div>
+          <div class="card-drawer-trigger-bar">
+            <button type="button" class="drawer-toggle-btn" data-target="drawer-enlace" aria-expanded="false">
+              <span class="btn-indicator">+</span>
+              <span class="btn-text">DETALLES DE ARQUITECTURA</span>
+            </button>
+          </div>
+          <div class="project-drawer" id="drawer-enlace" hidden>
+            <div class="drawer-inner">
+              <p>Trabajo de Fin de Grado (TFG) con arquitectura de salas multijugador concurrentes, reconexión automática ante pérdida de paquetes y cálculo de colisión semántica en memoria.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Goated Wear -->
+        <article class="hw-card project-card" data-project="goated">
+          <div class="card-machined-header">
+            <span class="project-num">MOD-04 // COMMERCE</span>
+            <span class="project-tagline">E-commerce · Sportswear</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Goated Wear</h3>
+            <p class="project-summary">Infraestructura web y catálogo online para marca de ropa deportiva y camisetas de fútbol. Diseño de producto, gestión de inventario digital y optimización de conversión.</p>
+
+            <div class="project-specs-deck">
+              <div class="spec-row">
+                <span class="spec-name">Core Web Vitals:</span>
+                <span class="spec-val">&gt; 95 en Desktop y Mobile</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Especialización:</span>
+                <span class="spec-val">E-commerce, UX táctil y SEO</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-name">Inventario:</span>
+                <span class="spec-val">Gestión digital de variantes en tiempo real</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="hw-badge">E-commerce</span>
+              <span class="hw-badge">Web Design</span>
+              <span class="hw-badge">SEO</span>
+              <span class="hw-badge">Core Web Vitals &gt; 95</span>
+            </div>
+          </div>
+          <div class="card-drawer-trigger-bar">
+            <button type="button" class="drawer-toggle-btn" data-target="drawer-goated" aria-expanded="false">
+              <span class="btn-indicator">+</span>
+              <span class="btn-text">DETALLES DE ARQUITECTURA</span>
+            </button>
+          </div>
+          <div class="project-drawer" id="drawer-goated" hidden>
+            <div class="drawer-inner">
+              <p>Optimización extrema de imágenes WebP, compresión de assets estáticos y arquitectura responsive con tiempo de renderizado interactivo (LCP) inferior a 1.2 segundos.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 04: MATTER.JS 2D REAL-TIME PHYSICS SANDBOX (PHYSICAL LAB) -->
+    <section class="hw-panel physics-panel" id="skills-lab">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 04 // CÁMARA DE FÍSICA MATTER.JS 2D</div>
+        <div class="cal-spec">RIGID BODY SIMULATION // RESTITUTION: 0.55</div>
+        <div class="cal-spec">COLLISION SYNTHESIZER: ACTIVE</div>
+      </div>
+
+      <div class="section-title-wrap">
+        <span class="section-code">[SEC-04]</span>
+        <h2 class="section-heading">Cámara de Habilidades Físicas (Matter.js 2D Sandbox)</h2>
+        <p class="section-sub">Arrastra, lanza y apila las cápsulas tecnológicas de David. Los cuerpos rígidos reaccionan con masa, gravedad y colisiones elásticas sintetizadas por Web Audio.</p>
+      </div>
+
+      <!-- Physics Lab Control Console Deck -->
+      <div class="physics-control-deck">
+        <!-- Gravity Selector Buttons -->
+        <div class="deck-group">
+          <span class="deck-label">VECTOR GRAVEDAD:</span>
+          <div class="button-toggle-row" role="group" aria-label="Control de Gravedad">
+            <button type="button" class="tactile-control-btn active" id="btn-grav-1g" data-gravity="1.2">
+              <span class="btn-indicator">●</span>
+              <span>1G NORMAL</span>
+            </button>
+            <button type="button" class="tactile-control-btn" id="btn-grav-0g" data-gravity="0.0">
+              <span class="btn-indicator">○</span>
+              <span>0G ZERO-G</span>
+            </button>
+            <button type="button" class="tactile-control-btn" id="btn-grav-inv" data-gravity="-1.0">
+              <span class="btn-indicator">○</span>
+              <span>-1G INVERT</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Impulse Actions -->
+        <div class="deck-group">
+          <span class="deck-label">ACCIONES DE IMPULSO:</span>
+          <div class="button-toggle-row">
+            <button type="button" class="tactile-control-btn btn-shake" id="btn-shake-chamber">
+              <span class="btn-icon">⚡</span>
+              <span>AGITAR CÁMARA</span>
+            </button>
+            <button type="button" class="tactile-control-btn btn-respawn" id="btn-respawn-badges">
+              <span class="btn-icon">↺</span>
+              <span>RE-ENGRENDRAR</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Physics Telemetry LCD Screen -->
+        <div class="deck-group telemetry-deck-group">
+          <div class="chamber-lcd-screen">
+            <div class="chamber-lcd-col">
+              <span class="lcd-t-key">CUERPOS:</span>
+              <span class="lcd-t-val" id="lcd-bodies-count">24</span>
+            </div>
+            <div class="chamber-lcd-col">
+              <span class="lcd-t-key">GRAVEDAD:</span>
+              <span class="lcd-t-val" id="lcd-gravity-val">+1.2 Y</span>
+            </div>
+            <div class="chamber-lcd-col">
+              <span class="lcd-t-key">FPS MOTOR:</span>
+              <span class="lcd-t-val text-green" id="lcd-engine-fps">60 FPS</span>
+            </div>
+            <div class="chamber-lcd-col">
+              <span class="lcd-t-key">COLISIONES:</span>
+              <span class="lcd-t-val" id="lcd-collision-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics Canvas Container (data-lenis-prevent to avoid scroll hijacking) -->
+      <div class="physics-chamber-housing" id="physics-chamber" data-lenis-prevent="true">
+        <!-- Interactive 2D Canvas -->
+        <canvas id="physics-canvas" class="physics-canvas"></canvas>
+
+        <!-- Static Fallback Grid (Shown automatically if Matter.js fails or is disabled) -->
+        <div id="physics-fallback" class="physics-fallback-grid" hidden>
+          <div class="fallback-note">CÁMARA ESTÁTICA // MODO DE RESPALDO DE HABILIDADES</div>
+          <div class="fallback-badges-list" id="fallback-badges-list"></div>
+        </div>
+
+        <!-- Interaction Helper Notice -->
+        <div class="chamber-interaction-tip" id="chamber-tip">
+          <span class="tip-hand">👆</span>
+          <span class="tip-text">Haz clic o toca para arrastrar y lanzar los badges tecnológicos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: 31 SKILLS MATRIX (Comprehensive Categorized Spec Grid) -->
+    <section class="hw-panel skills-matrix-panel" id="habilidades">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 05 // MATRIZ COMPLETA DE 31 HABILIDADES</div>
+        <div class="cal-spec">5 CATEGORÍAS VERIFICADAS</div>
+        <div class="cal-spec">BACKEND · FRONTEND · CLOUD &amp; DEVOPS · QA · IDIOMAS</div>
+      </div>
+
+      <div class="section-title-wrap">
+        <span class="section-code">[SEC-05]</span>
+        <h2 class="section-heading">Matriz de Habilidades Técnicas (31 Habilidades)</h2>
+        <p class="section-sub">Inventario completo estructurado en arquitecturas de backend, frontend, infraestructura cloud y aseguramiento de calidad.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="matrix-filter-bar" role="tablist">
+        <button type="button" class="matrix-tab-btn active" data-category="all" role="tab" aria-selected="true">[TODAS // 31]</button>
+        <button type="button" class="matrix-tab-btn" data-category="backend" role="tab" aria-selected="false">BACKEND (8)</button>
+        <button type="button" class="matrix-tab-btn" data-category="frontend" role="tab" aria-selected="false">FRONTEND (8)</button>
+        <button type="button" class="matrix-tab-btn" data-category="cloud" role="tab" aria-selected="false">CLOUD &amp; DEVOPS (8)</button>
+        <button type="button" class="matrix-tab-btn" data-category="qa" role="tab" aria-selected="false">TESTING &amp; QA (8)</button>
+        <button type="button" class="matrix-tab-btn" data-category="idiomas" role="tab" aria-selected="false">IDIOMAS (2)</button>
+      </div>
+
+      <div class="matrix-categories-grid">
+        <!-- 1. Backend Architectures (8) -->
+        <div class="hw-card matrix-category-card" data-cat="backend">
+          <div class="card-machined-header">
+            <span class="cat-tag">CAT-01 // BACKEND ARCHITECTURES</span>
+            <span class="cat-count">8 SKILLS</span>
+          </div>
+          <ul class="skills-spec-list">
+            <li class="skill-row"><span class="skill-name">C# / ASP.NET Core</span><span class="skill-detail">MAUI · CQRS · EF Core · REST APIs</span></li>
+            <li class="skill-row"><span class="skill-name">Java / Spring Boot</span><span class="skill-detail">Spring Boot 3 · Spring Modulith · Security</span></li>
+            <li class="skill-row"><span class="skill-name">Node.js</span><span class="skill-detail">Express · Event Loop · WebSockets</span></li>
+            <li class="skill-row"><span class="skill-name">Spring Modulith</span><span class="skill-detail">Modular Monoliths · Clean Architecture</span></li>
+            <li class="skill-row"><span class="skill-name">EF Core</span><span class="skill-detail">LINQ · Code First · Migrations</span></li>
+            <li class="skill-row"><span class="skill-name">PostgreSQL / SQL Server</span><span class="skill-detail">Relational Schemas · Indexing · ACID</span></li>
+            <li class="skill-row"><span class="skill-name">Redis</span><span class="skill-detail">Cache Invalidation · Session State · Pub/Sub</span></li>
+            <li class="skill-row"><span class="skill-name">PHP</span><span class="skill-detail">Legacy Systems · Web Services</span></li>
+          </ul>
+        </div>
+
+        <!-- 2. Frontend Systems (8) -->
+        <div class="hw-card matrix-category-card" data-cat="frontend">
+          <div class="card-machined-header">
+            <span class="cat-tag">CAT-02 // FRONTEND SYSTEMS</span>
+            <span class="cat-count">8 SKILLS</span>
+          </div>
+          <ul class="skills-spec-list">
+            <li class="skill-row"><span class="skill-name">Angular</span><span class="skill-detail">Angular 20 · Signals · RxJS · Standalone</span></li>
+            <li class="skill-row"><span class="skill-name">React</span><span class="skill-detail">Hooks · State Management · Virtual DOM</span></li>
+            <li class="skill-row"><span class="skill-name">TypeScript</span><span class="skill-detail">Strict Mode · Generics · Type Safety</span></li>
+            <li class="skill-row"><span class="skill-name">Vue.js</span><span class="skill-detail">Composition API · Pinia · Single File Components</span></li>
+            <li class="skill-row"><span class="skill-name">Tailwind CSS</span><span class="skill-detail">Utility-First · Design Systems · Responsive</span></li>
+            <li class="skill-row"><span class="skill-name">Bootstrap 5</span><span class="skill-detail">Responsive Grids · Components · Accessibility</span></li>
+            <li class="skill-row"><span class="skill-name">JavaScript</span><span class="skill-detail">ES6+ · Asynchronous Promises · DOM API</span></li>
+            <li class="skill-row"><span class="skill-name">HTML5 / CSS3</span><span class="skill-detail">Semantic HTML · Modern CSS Grid · Flexbox</span></li>
+          </ul>
+        </div>
+
+        <!-- 3. Cloud & DevOps Infrastructure (8) -->
+        <div class="hw-card matrix-category-card" data-cat="cloud">
+          <div class="card-machined-header">
+            <span class="cat-tag">CAT-03 // CLOUD &amp; DEVOPS INFRASTRUCTURE</span>
+            <span class="cat-count">8 SKILLS</span>
+          </div>
+          <ul class="skills-spec-list">
+            <li class="skill-row"><span class="skill-name">AWS</span><span class="skill-detail">EC2 · S3 · IAM · CloudWatch</span></li>
+            <li class="skill-row"><span class="skill-name">Azure</span><span class="skill-detail">App Services · Azure SQL · Blob · DevOps</span></li>
+            <li class="skill-row"><span class="skill-name">Docker</span><span class="skill-detail">Containers · Docker Compose · Multi-Stage</span></li>
+            <li class="skill-row"><span class="skill-name">Linux</span><span class="skill-detail">Debian / Ubuntu · Bash Scripting · Systemd</span></li>
+            <li class="skill-row"><span class="skill-name">Nginx</span><span class="skill-detail">Reverse Proxy · SSL/TLS · Load Balancing</span></li>
+            <li class="skill-row"><span class="skill-name">Jenkins</span><span class="skill-detail">Declarative Pipelines · Groovy Scripts</span></li>
+            <li class="skill-row"><span class="skill-name">GitHub Actions</span><span class="skill-detail">Workflow Automation · Secrets · Matrix Builds</span></li>
+            <li class="skill-row"><span class="skill-name">GitLab CI</span><span class="skill-detail">CI YAML Pipelines · Runners · Artifacts</span></li>
+          </ul>
+        </div>
+
+        <!-- 4. Testing & QA Automation (8) -->
+        <div class="hw-card matrix-category-card" data-cat="qa">
+          <div class="card-machined-header">
+            <span class="cat-tag">CAT-04 // TESTING &amp; QA AUTOMATION</span>
+            <span class="cat-count">8 SKILLS</span>
+          </div>
+          <ul class="skills-spec-list">
+            <li class="skill-row"><span class="skill-name">Playwright</span><span class="skill-detail">End-to-End Automation · Cross-Browser · Traces</span></li>
+            <li class="skill-row"><span class="skill-name">Karate DSL</span><span class="skill-detail">API Integration Testing · El Corte Inglés Unity APIs</span></li>
+            <li class="skill-row"><span class="skill-name">Cucumber BDD</span><span class="skill-detail">Gherkin Specifications · Living Documentation</span></li>
+            <li class="skill-row"><span class="skill-name">JMeter</span><span class="skill-detail">Performance Testing · Thread Groups · Assertions</span></li>
+            <li class="skill-row"><span class="skill-name">Gatling</span><span class="skill-detail">Java DSL · Stress Testing · Simulation Models</span></li>
+            <li class="skill-row"><span class="skill-name">JUnit 5</span><span class="skill-detail">Unit Tests · Parameterized · Assertions</span></li>
+            <li class="skill-row"><span class="skill-name">SonarQube</span><span class="skill-detail">Static Code Analysis · Quality Gates · Debt</span></li>
+            <li class="skill-row"><span class="skill-name">Postman</span><span class="skill-detail">Collections · Newman Runner · Mock Servers</span></li>
+          </ul>
+        </div>
+
+        <!-- 5. Idiomas (2) -->
+        <div class="hw-card matrix-category-card" data-cat="idiomas">
+          <div class="card-machined-header">
+            <span class="cat-tag">CAT-05 // IDIOMAS</span>
+            <span class="cat-count">2 IDIOMAS</span>
+          </div>
+          <ul class="skills-spec-list">
+            <li class="skill-row"><span class="skill-name">Español</span><span class="skill-detail">Nativo · Lengua materna, comunicación técnica fluida</span></li>
+            <li class="skill-row"><span class="skill-name">Inglés</span><span class="skill-detail">B2 Certificado · Competencia profesional completa</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06: TRAYECTORIA LABORAL Y FORMACIÓN ACADÉMICA -->
+    <section class="hw-panel experience-panel" id="experiencia">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 06 // HISTORIAL LABORAL &amp; ACADÉMICO</div>
+        <div class="cal-spec">EXPERIENCIA ENTERPRISE EN PRODUCCIÓN</div>
+        <div class="cal-spec">FORMACIÓN OFICIAL ACREDITADA</div>
+      </div>
+
+      <div class="section-title-wrap">
+        <span class="section-code">[SEC-06]</span>
+        <h2 class="section-heading">Trayectoria Laboral &amp; Formación</h2>
+      </div>
+
+      <div class="timeline-dual-grid">
+        <!-- Left: Work Experience -->
+        <div class="timeline-column">
+          <div class="column-header-plate">
+            <span class="col-icon">💼</span>
+            <span class="col-title">EXPERIENCIA PROFESIONAL</span>
+          </div>
+
+          <!-- Role 1: Tantin Solutions Enterprise -->
+          <div class="timeline-item hw-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge-date">Mayo 2026 — Agosto 2026</span>
+              <span class="timeline-company">Tantin Solutions · Madrid</span>
+            </div>
+            <h3 class="timeline-role">QA Automation Engineer (Enterprise)</h3>
+            <ul class="timeline-bullet-list">
+              <li>Automaticé pruebas de integración de APIs con Karate DSL para los microservicios Unity de El Corte Inglés.</li>
+              <li>Validé la consistencia funcional del sistema POS de escritorio de Mango (.NET, MAUI, CQRS) integrado con SonarQube.</li>
+              <li>Diseñé escenarios de carga y estrés con JMeter y Gatling (Java DSL).</li>
+              <li>Construí y mantuve pipelines de CI/CD en Jenkins (Groovy) y GitLab.</li>
+            </ul>
+          </div>
+
+          <!-- Role 2: Tantin Solutions Intern -->
+          <div class="timeline-item hw-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge-date">Marzo 2026 — Mayo 2026</span>
+              <span class="timeline-company">Tantin Solutions · Madrid</span>
+            </div>
+            <h3 class="timeline-role">QA Automation Intern (Prácticas 2º DAW)</h3>
+            <ul class="timeline-bullet-list">
+              <li>Pruebas automatizadas con Karate DSL y JUnit en proyectos enterprise reales.</li>
+              <li>Integración directa en sprints Scrum con gestión de incidencias en Jira.</li>
+            </ul>
+          </div>
+
+          <!-- Role 3: CV Aranjuez -->
+          <div class="timeline-item hw-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge-date">Abril 2025 — Mayo 2025</span>
+              <span class="timeline-company">Club Voleibol Aranjuez · Madrid</span>
+            </div>
+            <h3 class="timeline-role">Front-end Developer (Voluntariado)</h3>
+            <ul class="timeline-bullet-list">
+              <li>Sitio web oficial del club con HTML5, CSS3 y JavaScript vanilla, optimizando Core Web Vitals y responsividad.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Academic Credentials -->
+        <div class="timeline-column">
+          <div class="column-header-plate">
+            <span class="col-icon">🎓</span>
+            <span class="col-title">FORMACIÓN ACADÉMICA</span>
+          </div>
+
+          <!-- Degree 1: Master Full Stack & Cloud -->
+          <div class="timeline-item hw-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge-date">2026 — 2027 · En curso</span>
+              <span class="timeline-company">Tajamar Tech · Madrid</span>
+            </div>
+            <h3 class="timeline-role">Máster en Desarrollo Full Stack &amp; Arquitecturas Cloud</h3>
+            <p class="timeline-desc">814 horas lectivas de profundización técnica en C#, ASP.NET Core, MAUI, arquitecturas distribuidas en Microsoft Azure y AWS, orquestación de contenedores con Docker y Kubernetes, y desarrollo frontend avanzado con Angular.</p>
+            <div class="degree-status-pill text-amber">
+              <span class="status-pulse-dot"></span>
+              <span>FINALIZACIÓN PREVISTA: JUNIO 2027</span>
+            </div>
+          </div>
+
+          <!-- Degree 2: DAW -->
+          <div class="timeline-item hw-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge-date">2024 — 2026 · Completado</span>
+              <span class="timeline-company">IES Domenico Scarlatti · Aranjuez, Madrid</span>
+            </div>
+            <h3 class="timeline-role">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+            <p class="timeline-desc">Formación técnica oficial en desarrollo web full stack, diseño de bases de datos relacionales SQL, arquitectura de servidores y desarrollo de interfaces interactivas.</p>
+            <div class="degree-status-pill text-green">
+              <span class="status-check">✓</span>
+              <span>TITULACIÓN OFICIAL COMPLETADA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07: CONTACTO & CONEXIÓN DE HARDWARE -->
+    <section class="hw-panel contact-panel" id="contacto">
+      <span class="chassis-screw screw-tl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-tr" aria-hidden="true"></span>
+      <span class="chassis-screw screw-bl" aria-hidden="true"></span>
+      <span class="chassis-screw screw-br" aria-hidden="true"></span>
+
+      <div class="panel-header-bar">
+        <div class="cal-spec">SECTION: 07 // PUERTOS DE COMUNICACIÓN</div>
+        <div class="cal-spec">DISPONIBILIDAD: VERANO 2027</div>
+        <div class="cal-spec">PROTOCOLO DIRECTO ABIERTO</div>
+      </div>
+
+      <div class="contact-chassis-box">
+        <div class="contact-header-block">
+          <span class="section-code">[SEC-07 // I/O PORTS]</span>
+          <h2 class="section-heading">Canales de Contacto Directo</h2>
+          <p class="section-sub">¿Interesado en incorporar a un Full Stack con mentalidad de QA que prevenga regresiones en producción? Conectemos.</p>
+        </div>
+
+        <div class="contact-channels-grid">
+          <!-- 1-Click Copy Email Channel -->
+          <div class="hw-card channel-card">
+            <div class="channel-icon-label">
+              <span class="ch-icon">✉</span>
+              <span class="ch-type">EMAIL DIRECTO</span>
+            </div>
+            <div class="channel-value" id="email-address-text">davidllanos2005@gmail.com</div>
+            <button type="button" class="btn-tactile btn-vermilion" id="btn-copy-email" aria-label="Copiar correo electrónico al portapapeles">
+              <span class="btn-label" id="copy-email-text">COPIAR EMAIL</span>
+              <span class="btn-icon">📋</span>
+            </button>
+          </div>
+
+          <!-- LinkedIn Channel -->
+          <div class="hw-card channel-card">
+            <div class="channel-icon-label">
+              <span class="ch-icon">🔗</span>
+              <span class="ch-type">LINKEDIN PROFESIONAL</span>
+            </div>
+            <div class="channel-value">in/david-castellanos-lopez</div>
+            <a href="https://es.linkedin.com/in/david-castellanos-lopez" target="_blank" rel="noopener noreferrer" class="btn-tactile btn-graphite">
+              <span class="btn-label">ABRIR PERFIL</span>
+              <span class="btn-icon">↗</span>
+            </a>
+          </div>
+
+          <!-- GitHub Channel -->
+          <div class="hw-card channel-card">
+            <div class="channel-icon-label">
+              <span class="ch-icon">🐙</span>
+              <span class="ch-type">GITHUB REPOSITORIOS</span>
+            </div>
+            <div class="channel-value">github.com/DCastellanos4</div>
+            <a href="https://github.com/DCastellanos4" target="_blank" rel="noopener noreferrer" class="btn-tactile btn-graphite">
+              <span class="btn-label">VER CÓDIGO</span>
+              <span class="btn-icon">↗</span>
+            </a>
+          </div>
+
+          <!-- CV Download Channel -->
+          <div class="hw-card channel-card">
+            <div class="channel-icon-label">
+              <span class="ch-icon">📄</span>
+              <span class="ch-type">CURRÍCULUM VITAE (EN)</span>
+            </div>
+            <div class="channel-value">CV David Castellanos - English.pdf</div>
+            <a href="../../docs/CV%20David%20Castellanos%20-%20English.pdf" download="CV_David_Castellanos.pdf" class="btn-tactile btn-bone">
+              <span class="btn-label">DESCARGAR PDF</span>
+              <span class="btn-icon">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Toast Notification for Email Copy -->
+        <div class="copy-toast" id="copy-toast" role="status" aria-live="polite" hidden>
+          <span class="toast-check">✓</span>
+          <span class="toast-msg">Email copiado al portapapeles: davidllanos2005@gmail.com</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- INDUSTRIAL FOOTER: Serial Number & Machine Plate -->
+  <footer class="hw-footer">
+    <div class="hw-footer-inner">
+      <div class="footer-meta-block">
+        <span class="footer-serial">SERIAL NO: DC-2026-TE-04-RAMS</span>
+        <span class="footer-copy">David Castellanos © 2026 · Construyo software que funciona y diseño los tests que lo demuestran.</span>
+      </div>
+
+      <div class="footer-links-row">
+        <a href="#inicio">INICIO</a>
+        <span class="div-slash">/</span>
+        <a href="#sobre-mi">SOBRE MÍ</a>
+        <span class="div-slash">/</span>
+        <a href="#enterprise">ENTERPRISE</a>
+        <span class="div-slash">/</span>
+        <a href="#proyectos">PROYECTOS</a>
+        <span class="div-slash">/</span>
+        <a href="#skills-lab">PHYSICS LAB</a>
+        <span class="div-slash">/</span>
+        <a href="#habilidades">HABILIDADES</a>
+        <span class="div-slash">/</span>
+        <a href="#contacto">CONTACTO</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Real-Time Rotary / Analog Dial Indicator HUD (Bottom-Left) -->
+  <div class="analog-hud" id="analog-hud" aria-hidden="true">
+    <div class="potentiometer-widget">
+      <div class="pot-dial" id="pot-dial-indicator"></div>
+      <div class="pot-readout">
+        <span class="pot-label">DIAL:</span>
+        <span class="pot-val" id="pot-val">00°</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Tactile Trigger (Scroll > 350px) -->
+  <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Volver arriba">
+    <span class="btt-arrow">▲</span>
+    <span class="btt-text">TOP</span>
+  </button>
+
+  <!-- UNIVERSAL FLOATING PREVIEW SWITCHER (INTERFACE CONTRACT) -->
+  <aside class="preview-switcher" aria-label="Selector de Variantes de Diseño">
+    <div class="switcher-inner">
+      <a href="../index.html" class="switcher-link" title="Ir al Hub Comparativo">Hub</a>
+      <span class="switcher-divider">/</span>
+      <a href="../preview-1/index.html" class="switcher-link active-p1" title="Variante 1: Precision Monospace">1</a>
+      <a href="../preview-2/index.html" class="switcher-link active-p2" title="Variante 2: Modern Kinetic Bento-Box">2</a>
+      <a href="../preview-3/index.html" class="switcher-link active-p3" title="Variante 3: Enterprise Telemetry &amp; Terminal">3</a>
+      <span class="switcher-divider">|</span>
+      <a href="../preview-4/index.html" class="switcher-link active-p4 active" aria-current="page" title="Variante 4: Industrial Hardware &amp; Physical Lab">4</a>
+      <a href="../preview-5/index.html" class="switcher-link active-p5" title="Variante 5: Interactive 3D Pipeline &amp; WebGL">5</a>
+      <a href="../preview-6/index.html" class="switcher-link active-p6" title="Variante 6: Kinetic Swiss Brutalism">6</a>
+    </div>
+  </aside>
+
+  <!-- Vendor Libraries: Matter.js 2D Physics & Lenis Inertial Scroll (Offline Local with CDN Fallback) -->
+  <script src="vendor/matter.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script>
+    if (typeof Matter === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"><\/script>');
+    }
+    if (typeof Lenis === 'undefined') {
+      document.write('<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Variant 4 Main Script (Physics sandbox, pure Web Audio synthesizer, Lenis scroll, tactile controls) -->
+  <script src="main.js"></script>
+</body>
+</html>
