@@ -1,21 +1,22 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>David Castellanos — Full Stack Developer & QA Engineer · C# · Java · Angular · Cloud</title>
+		<title>David Castellanos — Full Stack Developer & Multicloud · Node.js · .NET · Java · React · Angular</title>
 
 		<!-- SEO -->
-		<meta name="description" content="Desarrollador Full Stack y QA Automation Engineer con experiencia enterprise (El Corte Inglés, Mango). C#, .NET, Java, Angular, Playwright, Cloud. Disponible verano 2027." />
+		<meta name="description" content="Full Stack Developer focused on cloud (Oracle Cloud, AWS, Azure) and former QA Automation Engineer on El Corte Inglés and Mango projects. Node.js, .NET, Java, React, Angular. Available summer 2027." />
 		<meta name="author" content="David Castellanos" />
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="David Castellanos — Full Stack Developer & QA Engineer" />
-		<meta property="og:description" content="Perfil híbrido Full Stack + QA con experiencia validando software para El Corte Inglés y Mango. Disponible para incorporación verano 2027." />
+		<meta property="og:title" content="David Castellanos — Full Stack Developer & Multicloud" />
+		<meta property="og:description" content="Full Stack Developer with a cloud focus and a QA Automation background (El Corte Inglés, Mango). Available from summer 2027." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://dcastellanos4.github.io/" />
 		<meta property="og:image" content="https://dcastellanos4.github.io/img/Image.jpg" />
-		<meta property="og:locale" content="es_ES" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:locale:alternate" content="es_ES" />
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="img/logo.svg" />
@@ -34,7 +35,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg sticky-top" aria-label="Navegación principal">
+		<nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
 			<div class="container">
 				<a class="navbar-brand p-0" href="#">
 					David Castellanos
@@ -46,19 +47,24 @@
 					data-bs-target="#navbarNav"
 					aria-controls="navbarNav"
 					aria-expanded="false"
-					aria-label="Abrir menú de navegación"
+					aria-label="Toggle navigation menu"
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ms-auto">
-						<li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-						<li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-						<li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
-						<li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-						<li class="nav-item"><a class="nav-link" href="#portfolio">Proyectos</a></li>
-						<li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+						<li class="nav-item"><a class="nav-link" href="#home"><span data-i18n="nav_home">Home</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#about"><span data-i18n="nav_about">About</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#experience"><span data-i18n="nav_exp">Experience</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#skills"><span data-i18n="nav_skills">Skills</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#portfolio"><span data-i18n="nav_projects">Projects</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact"><span data-i18n="nav_contact">Contact</span></a></li>
+						<li class="nav-item lang-switch" role="group" aria-label="Language">
+							<button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+							<span class="lang-sep" aria-hidden="true">/</span>
+							<button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -71,15 +77,15 @@
 				<!-- Panel Izquierdo -->
 				<div class="hero-left-panel">
 					<div class="hero-left-content">
-						<p class="hero-greeting">Full Stack Developer &amp; QA Engineer</p>
+						<p class="hero-greeting">Full Stack Developer &amp; Multicloud</p>
 						<h1 class="hero-left-title">DAVID<br />CASTELLANOS</h1>
 						<p class="hero-left-subtitle">
-							Construyo software que funciona y diseño los tests que lo demuestran. Full Stack con mentalidad de calidad, experiencia enterprise y arquitecturas Cloud.
+							<span data-i18n="hero_sub">I build cloud applications with Node.js, .NET and Java. I started as a QA Automation Engineer, so testing and CI/CD pipelines are part of how I design software.</span>
 						</p>
 						<div class="d-flex gap-2 gap-sm-3 align-items-center flex-wrap">
-							<a href="#portfolio" class="btn-view-work">VER LO QUE CONSTRUYO <i class="bi bi-arrow-up-right"></i></a>
+							<a href="#portfolio" class="btn-view-work"><span data-i18n="hero_work">SEE WHAT I BUILD</span> <i class="bi bi-arrow-up-right"></i></a>
 							<a href="docs/CV David Castellanos - English.pdf" class="btn btn-ghost" download="CV_David_Castellanos.pdf">
-								<i class="bi bi-file-earmark-pdf me-2"></i>DESCARGAR CV
+								<i class="bi bi-file-earmark-pdf me-2"></i><span data-i18n="hero_cv">DOWNLOAD CV</span>
 							</a>
 						</div>
 					</div>
@@ -98,7 +104,7 @@
 							</div>
 						</div>
 						<p class="hero-brands-text">
-							Software probado en producción para El Corte Inglés, Mango y Simpleat.
+							<span data-i18n="hero_brands">Experience on projects for El Corte Inglés, Mango and Simpleat.</span>
 						</p>
 					</div>
 				</div>
@@ -116,15 +122,15 @@
 						<!-- Tarjeta de Disponibilidad -->
 						<div class="availability-card">
 							<span class="avail-label">
-								<span class="avail-dot"></span> INCORPORACIÓN
+								<span class="avail-dot"></span> <span data-i18n="avail_label">AVAILABLE FROM</span>
 							</span>
-							<h2 class="avail-title">Verano<br/>2027</h2>
+							<h2 class="avail-title"><span data-i18n="avail_title">Summer<br/>2027</span></h2>
 						</div>
 
 						<!-- Tarjeta de Testimonio -->
 						<div class="testimonial-card">
 							<p class="testi-quote">
-								"Detectó regresiones críticas en los servicios de El Corte Inglés antes de que llegaran a producción. Diseñó las suites de API que hoy siguen en uso."
+								<span data-i18n="testi_quote">"He caught critical regressions in the El Corte Inglés services before they reached production. He designed the API suites that are still in use today."</span>
 							</p>
 							<div class="testi-author">
 								<div class="avatar-item" style="margin: 0; width: 28px; height: 28px;">PC</div>
@@ -145,15 +151,15 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-9">
-						<h2 class="section-label mb-4">Sobre Mí</h2>
+						<h2 class="section-label mb-4"><span data-i18n="lbl_about">About Me</span></h2>
 						<p class="about-text">
-							Soy <strong>desarrollador Full Stack</strong> con experiencia comercial en entornos enterprise. A los 21 años ya he automatizado suites de pruebas que corren en producción para <strong>El Corte Inglés</strong> y <strong>Mango</strong>, y construido plataformas SaaS desde cero con <strong>Spring Boot</strong>, <strong>Angular</strong> y despliegues Cloud.
+							<span data-i18n="about_1">I'm a <strong>Full Stack Developer</strong> with a cloud focus. I build applications with <strong>Node.js</strong>, <strong>C# / .NET</strong> and <strong>Java</strong> on the backend and <strong>React</strong> and <strong>Angular</strong> on the frontend. My most ambitious personal project, <strong>F.R.I.D.A.Y-bot</strong>, is a self-hosted AI assistant with a hexagonal architecture, deployed on <strong>Oracle Cloud</strong> with a CI/CD pipeline.</span>
 						</p>
 						<p class="about-text">
-							Mi perfil es híbrido por convicción: diseño APIs en <strong>C#</strong> y <strong>Java</strong>, construyo interfaces con <strong>Angular</strong> y <strong>React</strong>, y después escribo los tests que garantizan que todo funciona — E2E con <strong>Playwright</strong>, integración con <strong>Karate DSL</strong>, carga con <strong>Gatling</strong>. No delego la calidad: la integro en cada línea de código. Esa doble visión dev + QA es lo que hace que el software que construyo llegue a producción con confianza.
+							<span data-i18n="about_2">I started as a <strong>QA Automation Engineer</strong> on enterprise projects for <strong>El Corte Inglés</strong> and <strong>Mango</strong>, working with <strong>Karate DSL</strong>, <strong>Gatling</strong>, <strong>JMeter</strong> and <strong>Jenkins</strong>. That experience shaped how I work: test early, automate the pipeline and keep the architecture clean.</span>
 						</p>
 						<p class="about-text">
-							Actualmente curso el <strong>Máster en Full Stack &amp; Cloud en Tajamar Tech</strong>, donde profundizo en ASP.NET Core, arquitecturas en Azure y AWS, y orquestación con Docker y Kubernetes. Disponible para incorporación a partir de <strong>verano de 2027</strong>.
+							<span data-i18n="about_3">I'm currently doing the <strong>Master in Full Stack &amp; Cloud at Tajamar Tech</strong> and preparing the <strong>AWS</strong>, <strong>Azure</strong> and <strong>Power Platform</strong> certifications. Available from <strong>summer 2027</strong> and open to international relocation.</span>
 						</p>
 					</div>
 				</div>
@@ -163,13 +169,13 @@
 		<!-- EXPERIENCE -->
 		<section id="experience" class="dark-section">
 			<div class="container">
-				<h2 class="section-label mb-5">Experiencia Laboral</h2>
+				<h2 class="section-label mb-5"><span data-i18n="lbl_exp">Work Experience</span></h2>
 				<div class="row justify-content-center">
 					<div class="col-md-9">
 						<div class="timeline">
 
 							<div class="timeline-item">
-								<div class="timeline-date">Mayo 2026<br />Agosto 2026</div>
+								<div class="timeline-date"><span data-i18n="d_qa">May 2026<br />Aug 2026</span></div>
 								<div class="timeline-card">
 									<div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
 										<div>
@@ -179,40 +185,53 @@
 										<span class="badge-retro">Enterprise</span>
 									</div>
 									<ul class="timeline-list">
-										<li>Automaticé pruebas de integración de APIs con <strong>Karate DSL</strong> para los microservicios Unity de <strong>El Corte Inglés</strong>, reduciendo el tiempo de validación de releases.</li>
-										<li>Validé la consistencia funcional del sistema POS de escritorio de <strong>Mango</strong> (.NET, MAUI, CQRS) integrado con <strong>SonarQube</strong> para análisis estático continuo.</li>
-										<li>Diseñé escenarios de carga y estrés con <strong>JMeter</strong> y <strong>Gatling (Java DSL)</strong> que identificaron cuellos de botella antes de despliegues en producción.</li>
-										<li>Construí y mantuve pipelines de CI/CD en <strong>Jenkins</strong> (Groovy) y <strong>GitLab</strong>, ejecutando suites de regresión automatizadas en cada commit.</li>
+										<li><span data-i18n="qa_1">Automated API integration tests with <strong>Karate DSL</strong> for the Unity microservices of <strong>El Corte Inglés</strong>, reducing release validation time.</span></li>
+										<li><span data-i18n="qa_2">Validated the functional consistency of <strong>Mango</strong>'s desktop POS system (.NET, MAUI, CQRS), integrated with <strong>SonarQube</strong> for continuous static analysis.</span></li>
+										<li><span data-i18n="qa_3">Designed load and stress scenarios with <strong>JMeter</strong> and <strong>Gatling (Java DSL)</strong> that identified bottlenecks before production deployments.</span></li>
+										<li><span data-i18n="qa_4">Built and maintained CI/CD pipelines in <strong>Jenkins</strong> (Groovy) and <strong>GitLab</strong>, running automated regression suites on every commit.</span></li>
 									</ul>
 								</div>
 							</div>
 
 							<div class="timeline-item">
-								<div class="timeline-date">Marzo 2026<br />Mayo 2026</div>
+								<div class="timeline-date"><span data-i18n="d_intern">Mar 2026<br />May 2026</span></div>
 								<div class="timeline-card">
 									<div class="mb-3">
 										<h5>
 											QA Automation Intern
-											<span class="fw-normal text-muted small">(Prácticas 2º DAW)</span>
+											<span class="fw-normal text-muted small"><span data-i18n="intern_tag">(DAW internship)</span></span>
 										</h5>
 										<p class="text-muted fw-bold mb-0 small">Tantin Solutions &middot; Madrid</p>
 									</div>
 									<ul class="timeline-list">
-										<li>Diseñé y ejecuté pruebas automatizadas con <strong>Karate DSL</strong> y <strong>JUnit</strong> en proyectos enterprise reales desde la primera semana de incorporación.</li>
-										<li>Integración directa en sprints Scrum con gestión de incidencias en <strong>Jira</strong>, participando en dailies y refinamientos de backlog.</li>
+										<li><span data-i18n="int_1">Designed and ran automated tests with <strong>Karate DSL</strong> and <strong>JUnit</strong> on real enterprise projects from my first week.</span></li>
+										<li><span data-i18n="int_2">Joined Scrum sprints directly, managing issues in <strong>Jira</strong> and taking part in dailies and backlog refinement.</span></li>
 									</ul>
 								</div>
 							</div>
 
 							<div class="timeline-item">
-								<div class="timeline-date">Abril 2025<br />Mayo 2025</div>
+								<div class="timeline-date"><span data-i18n="d_vol">Apr 2025<br />May 2025</span></div>
 								<div class="timeline-card">
 									<div class="mb-3">
 										<h5>Front-end Developer</h5>
-										<p class="text-muted fw-bold mb-0 small">Club Voleibol Aranjuez &middot; Madrid (Voluntariado)</p>
+										<p class="text-muted fw-bold mb-0 small"><span data-i18n="vol_org">Club Voleibol Aranjuez &middot; Madrid (Volunteer)</span></p>
 									</div>
 									<ul class="timeline-list">
-										<li>Diseñé, desarrollé y desplegué el sitio web oficial del club con <strong>HTML5</strong>, <strong>CSS3</strong> y <strong>JavaScript</strong> vanilla, optimizando Core Web Vitals y responsividad.</li>
+										<li><span data-i18n="vol_1">Designed, built and deployed the club's official website with <strong>HTML5</strong>, <strong>CSS3</strong> and vanilla <strong>JavaScript</strong>, optimizing Core Web Vitals and responsiveness.</span></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="timeline-item">
+								<div class="timeline-date"><span data-i18n="d_coach">2023<br />Present</span></div>
+								<div class="timeline-card">
+									<div class="mb-3">
+										<h5><span data-i18n="coach_title">Volleyball Coach</span></h5>
+										<p class="text-muted fw-bold mb-0 small"><span data-i18n="coach_org">Madrid Volleyball Federation &middot; Madrid</span></p>
+									</div>
+									<ul class="timeline-list">
+										<li><span data-i18n="coach_1">Sole coach of a mixed cadet team that qualified for the zonal competition last season.</span></li>
 									</ul>
 								</div>
 							</div>
@@ -226,7 +245,7 @@
 		<!-- SKILLS -->
 		<section id="skills">
 			<div class="container">
-				<h2 class="section-label mb-5">Habilidades</h2>
+				<h2 class="section-label mb-5"><span data-i18n="nav_skills">Skills</span></h2>
 				<div class="row justify-content-center">
 					<div class="col-lg-11">
 						<div class="row g-4 justify-content-center">
@@ -234,9 +253,9 @@
 								<div class="skill-group">
 									<p class="skill-group-title"><i class="bi bi-code-slash me-2"></i>Backend</p>
 									<div class="skill-tags">
+										<span class="skill-tag highlight">Node.js / Express</span>
 										<span class="skill-tag highlight">C# / ASP.NET Core</span>
 										<span class="skill-tag highlight">Java / Spring Boot</span>
-										<span class="skill-tag">Node.js</span>
 										<span class="skill-tag">Spring Modulith</span>
 										<span class="skill-tag">EF Core</span>
 										<span class="skill-tag">PostgreSQL / SQL Server</span>
@@ -264,14 +283,27 @@
 								<div class="skill-group">
 									<p class="skill-group-title"><i class="bi bi-cloud me-2"></i>Cloud &amp; DevOps</p>
 									<div class="skill-tags">
-										<span class="skill-tag highlight">AWS</span>
-										<span class="skill-tag highlight">Azure</span>
+										<span class="skill-tag highlight">Oracle Cloud</span>
 										<span class="skill-tag highlight">Docker</span>
+										<span class="skill-tag highlight">GitHub Actions</span>
+										<span class="skill-tag"><span data-i18n="sk_aws">AWS (learning)</span></span>
+										<span class="skill-tag"><span data-i18n="sk_azure">Azure (learning)</span></span>
 										<span class="skill-tag">Linux</span>
 										<span class="skill-tag">Nginx</span>
 										<span class="skill-tag">Jenkins (Groovy)</span>
-										<span class="skill-tag">GitHub Actions</span>
 										<span class="skill-tag">GitLab CI</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="skill-group">
+									<p class="skill-group-title"><i class="bi bi-cpu me-2"></i><span data-i18n="sk_ai">AI &amp; Security</span></p>
+									<div class="skill-tags">
+										<span class="skill-tag highlight">LLM (Groq, OpenAI, Ollama)</span>
+										<span class="skill-tag highlight">RAG</span>
+										<span class="skill-tag">MCP</span>
+										<span class="skill-tag">JWT</span>
+										<span class="skill-tag">RBAC</span>
 									</div>
 								</div>
 							</div>
@@ -292,10 +324,10 @@
 							</div>
 							<div class="col-sm-6 col-lg-4">
 								<div class="skill-group">
-									<p class="skill-group-title"><i class="bi bi-translate me-2"></i>Idiomas</p>
+									<p class="skill-group-title"><i class="bi bi-translate me-2"></i><span data-i18n="sk_lang">Languages</span></p>
 									<div class="skill-tags">
-										<span class="skill-tag highlight">Español (Nativo)</span>
-										<span class="skill-tag highlight">Inglés (B2 certificado)</span>
+										<span class="skill-tag highlight"><span data-i18n="sk_es">Spanish (Native)</span></span>
+										<span class="skill-tag highlight"><span data-i18n="sk_en">English (B2 certified)</span></span>
 									</div>
 								</div>
 							</div>
@@ -308,17 +340,59 @@
 		<!-- PROJECTS -->
 		<section id="portfolio" class="dark-section">
 			<div class="container">
-				<h2 class="section-label mb-5">Proyectos</h2>
+				<h2 class="section-label mb-5"><span data-i18n="nav_projects">Projects</span></h2>
 				<div class="row g-4 justify-content-center">
+
+					<!-- F.R.I.D.A.Y-bot -->
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100">
+							<div class="card-body">
+								<p class="card-tagline"><span data-i18n="tg_fri">AI · Cloud · In development</span></p>
+								<h5 class="card-title fw-bold">F.R.I.D.A.Y-bot</h5>
+								<p class="card-text small">
+									<span data-i18n="pr_fri">Self-hosted personal AI assistant controlled through WhatsApp and deployed on Oracle Cloud. Multi-provider LLM tool calling (Groq, OpenAI, Ollama), hybrid RAG and MCP servers on a hexagonal architecture. GitHub Actions CI/CD pipeline with automated quality gates.</span>
+								</p>
+								<div class="mt-auto pt-3 d-flex flex-wrap gap-1">
+									<span class="skill-tag highlight">Node.js</span>
+									<span class="skill-tag highlight">Oracle Cloud</span>
+									<span class="skill-tag">Redis / BullMQ</span>
+									<span class="skill-tag">RAG</span>
+									<span class="skill-tag">GitHub Actions</span>
+								</div>
+								<a href="https://github.com/DCastellanos4/F.R.I.D.A.Y-bot" class="card-repo-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-1"></i><span data-i18n="repo">View code</span></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Enlace Mental — TFG -->
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100">
+							<div class="card-body">
+								<p class="card-tagline"><span data-i18n="tg_enl">Multiplayer Game · WebSockets</span></p>
+								<h5 class="card-title fw-bold">Enlace Mental <span class="fw-normal text-muted small"><span data-i18n="tfg">— DAW final project</span></span></h5>
+								<p class="card-text small">
+									<span data-i18n="pr_enl">Real-time multiplayer web game where players try to type the same word. Rooms and rounds over WebSockets (Socket.io), JWT authentication and near-match detection with Levenshtein distance. React 19 frontend, deployed with Docker Compose and Nginx.</span>
+								</p>
+								<div class="mt-auto pt-3 d-flex flex-wrap gap-1">
+									<span class="skill-tag highlight">React</span>
+									<span class="skill-tag highlight">Node.js</span>
+									<span class="skill-tag">Socket.io</span>
+									<span class="skill-tag">SQLite</span>
+									<span class="skill-tag">Docker</span>
+								</div>
+								<a href="https://github.com/DCastellanos4/enlace-mental" class="card-repo-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-1"></i><span data-i18n="repo">View code</span></a>
+							</div>
+						</div>
+					</div>
 
 					<!-- Simpleat -->
 					<div class="col-md-6 col-lg-4">
 						<div class="card h-100">
 							<div class="card-body">
-								<p class="card-tagline">SaaS · Menús Digitales · QR</p>
+								<p class="card-tagline"><span data-i18n="tg_sim">SaaS · Digital Menus · QR</span></p>
 								<h5 class="card-title fw-bold">Simpleat</h5>
 								<p class="card-text small">
-									Plataforma SaaS de menús digitales y pedidos por QR para restauración. Arquitectura desacoplada con suites E2E (Playwright + Cucumber BDD), pruebas de API (Karate) y carga transaccional (Gatling), orquestado desde GitHub Actions.
+									<span data-i18n="pr_sim">SaaS platform for digital menus and QR ordering for restaurants. Decoupled architecture with E2E suites (Playwright + Cucumber BDD), API tests (Karate) and transactional load tests (Gatling), orchestrated from GitHub Actions.</span>
 								</p>
 								<div class="mt-auto pt-3 d-flex flex-wrap gap-1">
 									<span class="skill-tag highlight">Playwright</span>
@@ -335,10 +409,10 @@
 					<div class="col-md-6 col-lg-4">
 						<div class="card h-100">
 							<div class="card-body">
-								<p class="card-tagline">SaaS · Análisis de Calidad</p>
+								<p class="card-tagline"><span data-i18n="tg_atl">SaaS · Quality Analysis</span></p>
 								<h5 class="card-title fw-bold">ATLAS Platform</h5>
 								<p class="card-text small">
-									Plataforma modular de análisis de calidad de software construida con Clean Architecture. Backend en Spring Modulith con PostgreSQL, frontend en Angular 20, contenedorizada con Docker.
+									<span data-i18n="pr_atl">Modular software quality analysis platform built with Clean Architecture. Spring Modulith backend with PostgreSQL, Angular 20 frontend, containerized with Docker.</span>
 								</p>
 								<div class="mt-auto pt-3 d-flex flex-wrap gap-1">
 									<span class="skill-tag highlight">Spring Modulith</span>
@@ -351,25 +425,6 @@
 						</div>
 					</div>
 
-					<!-- Enlace Mental — TFG -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100">
-							<div class="card-body">
-								<p class="card-tagline">Juego Multijugador · WebSockets</p>
-								<h5 class="card-title fw-bold">Enlace Mental <span class="fw-normal text-muted small">— TFG</span></h5>
-								<p class="card-text small">
-									Juego web multijugador de convergencia de palabras en tiempo real. Frontend en React, backend en Node.js con Socket.io y WebSockets para sincronización instantánea entre jugadores.
-								</p>
-								<div class="mt-auto pt-3 d-flex flex-wrap gap-1">
-									<span class="skill-tag highlight">React</span>
-									<span class="skill-tag highlight">Node.js</span>
-									<span class="skill-tag">Socket.io</span>
-									<span class="skill-tag">WebSockets</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
 					<!-- Goated Wear -->
 					<div class="col-md-6 col-lg-4">
 						<div class="card h-100">
@@ -377,7 +432,7 @@
 								<p class="card-tagline">E-commerce · Sportswear</p>
 								<h5 class="card-title fw-bold">Goated Wear</h5>
 								<p class="card-text small">
-									Infraestructura web y catálogo online para marca de ropa deportiva y camisetas de fútbol. Diseño de producto, gestión de inventario digital y optimización de conversión.
+									<span data-i18n="pr_goa">Web infrastructure and online catalog for a sportswear and football jersey brand. Product design, digital inventory management and conversion optimization.</span>
 								</p>
 								<div class="mt-auto pt-3 d-flex flex-wrap gap-1">
 									<span class="skill-tag highlight">E-commerce</span>
@@ -395,7 +450,7 @@
 		<!-- EDUCATION -->
 		<section id="education">
 			<div class="container">
-				<h2 class="section-label mb-5">Formación</h2>
+				<h2 class="section-label mb-5"><span data-i18n="lbl_edu">Education</span></h2>
 				<div class="row justify-content-center">
 					<div class="col-md-9">
 
@@ -403,13 +458,13 @@
 							<div class="edu-year">2026 - 2027</div>
 							<div>
 								<h5>
-									Máster en Desarrollo Full Stack &amp; Arquitecturas Cloud
+									<span data-i18n="edu_m">Master in Full Stack Development &amp; Cloud Architectures</span>
 								</h5>
 								<p class="text-muted fw-bold mb-2 small">
-									Tajamar Tech &middot; Madrid &middot; <span class="badge-retro">En curso</span>
+									Tajamar Tech &middot; Madrid &middot; <span class="badge-retro"><span data-i18n="edu_prog">In progress</span></span>
 								</p>
 								<p class="small mb-0">
-									Especialización de 814 horas en C#, ASP.NET Core, EF Core, Angular, React, Docker, Kubernetes y arquitecturas en Microsoft Azure y AWS. Finalización: junio 2027.
+									<span data-i18n="edu_md">814-hour specialization in C#, ASP.NET Core, EF Core, Angular, React, Docker, Kubernetes and Microsoft Azure and AWS architectures. Completion: June 2027.</span>
 								</p>
 							</div>
 						</div>
@@ -418,13 +473,13 @@
 							<div class="edu-year">2024 - 2026</div>
 							<div>
 								<h5>
-									Técnico Superior en Desarrollo de Aplicaciones Web (DAW)
+									<span data-i18n="edu_d">Higher Vocational Degree in Web Application Development (DAW)</span>
 								</h5>
 								<p class="text-muted fw-bold mb-2 small">
 									IES Domenico Scarlatti &middot; Aranjuez, Madrid
 								</p>
 								<p class="small mb-0">
-									Diseño de bases de datos relacionales, desarrollo web frontend/backend, control de versiones (Git) y metodologías ágiles.
+									<span data-i18n="edu_dd">Relational database design, frontend/backend web development, version control (Git) and agile methodologies.</span>
 								</p>
 							</div>
 						</div>
@@ -437,13 +492,13 @@
 		<!-- CONTACT -->
 		<footer id="contact" class="text-center">
 			<div class="container">
-				<h2 class="section-label d-inline-block mb-4">Hablemos</h2>
+				<h2 class="section-label d-inline-block mb-4"><span data-i18n="lbl_contact">Let's talk</span></h2>
 				<p class="mb-3">
-					<a id="email-copy" href="mailto:davidllanos2005@gmail.com" class="contact-link" title="Haz clic para copiar el correo">
+					<a id="email-copy" href="mailto:davidllanos2005@gmail.com" class="contact-link" title="Click to copy the email">
 						davidllanos2005@gmail.com
 					</a>
 				</p>
-				<p class="mb-4 text-muted small">Madrid &middot; Incorporación verano 2027 &middot; Abierto a remoto</p>
+				<p class="mb-4 text-muted small"><span data-i18n="ct_line">Madrid &middot; Available summer 2027 &middot; Open to remote work and international relocation</span></p>
 				<div class="d-flex justify-content-center gap-2 gap-sm-3 flex-wrap">
 					<a
 						href="https://es.linkedin.com/in/david-castellanos-lopez"
@@ -460,15 +515,15 @@
 						rel="noopener noreferrer"
 					><i class="bi bi-github me-2"></i>GitHub</a>
 					<a href="docs/CV David Castellanos - English.pdf" class="btn btn-primary" download="CV_David_Castellanos.pdf">
-						<i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV
+						<i class="bi bi-file-earmark-pdf me-2"></i><span data-i18n="ct_cv">Download CV</span>
 					</a>
 				</div>
-				<p class="mt-5 small text-muted">&copy; 2026 David Castellanos. Todos los derechos reservados.</p>
+				<p class="mt-5 small text-muted"><span data-i18n="copy">&copy; 2026 David Castellanos. All rights reserved.</span></p>
 			</div>
 		</footer>
 
 		<!-- Floating Back to Top Button -->
-		<button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+		<button id="back-to-top" class="back-to-top" aria-label="Back to top">
 			<i class="bi bi-arrow-up"></i>
 		</button>
 
@@ -477,6 +532,7 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+		<script src="js/i18n.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

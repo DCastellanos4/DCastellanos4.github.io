@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             navigator.clipboard.writeText('davidllanos2005@gmail.com').then(function () {
                 const prev = emailLink.textContent;
-                emailLink.textContent = '¡Copiado al portapapeles!';
+                emailLink.textContent = (window.i18n ? window.i18n.text('Copied to clipboard!', '¡Copiado al portapapeles!') : 'Copied to clipboard!');
                 emailLink.style.color = 'var(--orange-base)';
                 emailLink.style.borderColor = 'var(--orange-base)';
 

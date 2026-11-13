@@ -1150,3 +1150,45 @@ footer#contact .text-muted.small {
         transform: none !important;
     }
 }
+
+
+/* ── Repo link in project cards ──────────────────── */
+.card-repo-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--orange-light);
+    text-decoration: none;
+}
+.card-repo-link:hover {
+    color: var(--orange-base);
+    text-decoration: underline;
+}
+
+
+/* ── Language switch (EN / ES) ───────────────────── */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 0.75rem;
+}
+.lang-btn {
+    background: none;
+    border: 0;
+    padding: 0.25rem 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-radius: 6px;
+}
+.lang-btn:hover { color: var(--orange-base); }
+.lang-btn.active { color: var(--orange-base); }
+.lang-btn:focus-visible { outline: 2px solid var(--orange-base); outline-offset: 2px; }
+.lang-sep { color: var(--text-dim); opacity: 0.5; }
+@media (max-width: 991.98px) {
+    .lang-switch { margin: 0.5rem 0 0; }
+}
